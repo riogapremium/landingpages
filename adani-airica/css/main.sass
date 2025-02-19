@@ -1,0 +1,1981 @@
+$themeColor : #044039
+$secondaryColor: #fcfcfc
+$titleColor: #044039
+$opacity: 0.2
+$themeColorWithOpacity: rgba($themeColor, $opacity)
+
+  
+  
+html,body
+  padding: 0
+  margin: 0
+
+
+
+
+
+.lato-regular
+  font-family: "Lato", sans-serif
+  font-weight: 400
+  font-style: normal
+
+.crimson-text-regular 
+  font-family: "Crimson Text", serif
+  font-weight: 400
+  font-style: normal
+
+
+.crimson-text-semibold 
+  font-family: "Crimson Text", serif
+  font-weight: 600
+  font-style: normal
+
+
+.crimson-text-bold 
+  font-family: "Crimson Text", serif
+  font-weight: 700
+  font-style: normal
+
+
+.crimson-text-regular-italic 
+  font-family: "Crimson Text", serif
+  font-weight: 400
+  font-style: italic
+
+
+.crimson-text-semibold-italic 
+  font-family: "Crimson Text", serif
+  font-weight: 600
+  font-style: italic
+
+
+.crimson-text-bold-italic 
+  font-family: "Crimson Text", serif
+  font-weight: 700
+  font-style: italic
+
+
+
+
+.josefin-sans-light
+  font-family: "Josefin Sans", sans-serif
+  font-optical-sizing: auto
+  font-weight: 300
+  font-style: normal
+
+
+.josefin-sans-regular
+  font-family: "Josefin Sans", sans-serif
+  font-optical-sizing: auto
+  font-weight: 400
+  font-style: normal
+
+
+.josefin-sans-bold
+  font-family: "Josefin Sans", sans-serif
+  font-optical-sizing: auto
+  font-weight: 700
+  font-style: normal
+
+
+
+.josefin-sans-italic
+  font-family: "Josefin Sans", sans-serif
+  font-optical-sizing: auto
+  font-weight: 400
+  font-style: italic
+
+.josefin-sans-bold-italic
+  font-family: "Josefin Sans", sans-serif
+  font-optical-sizing: auto
+  font-weight: 700
+  font-style: italic
+
+
+.poppins-thin 
+  font-family: "Poppins", sans-serif
+  font-weight: 100
+  font-style: normal
+
+
+.poppins-extralight 
+  font-family: "Poppins", sans-serif
+  font-weight: 200
+  font-style: normal
+
+
+.poppins-light 
+  font-family: "Poppins", sans-serif
+  font-weight: 300
+  font-style: normal
+
+
+.poppins-regular 
+  font-family: "Poppins", sans-serif
+  font-weight: 400
+  font-style: normal
+
+
+.poppins-medium 
+  font-family: "Poppins", sans-serif
+  font-weight: 500
+  font-style: normal
+
+
+.poppins-semibold 
+  font-family: "Poppins", sans-serif
+  font-weight: 600
+  font-style: normal
+
+
+.poppins-bold 
+  font-family: "Poppins", sans-serif
+  font-weight: 700
+  font-style: normal
+
+
+.poppins-extrabold 
+  font-family: "Poppins", sans-serif
+  font-weight: 800
+  font-style: normal
+
+
+.poppins-black 
+  font-family: "Poppins", sans-serif
+  font-weight: 900
+  font-style: normal
+
+
+.poppins-thin-italic 
+  font-family: "Poppins", sans-serif
+  font-weight: 100
+  font-style: italic
+
+
+.poppins-extralight-italic 
+  font-family: "Poppins", sans-serif
+  font-weight: 200
+  font-style: italic
+
+
+.poppins-light-italic 
+  font-family: "Poppins", sans-serif
+  font-weight: 300
+  font-style: italic
+
+
+.poppins-regular-italic 
+  font-family: "Poppins", sans-serif
+  font-weight: 400
+  font-style: italic
+
+
+.poppins-medium-italic 
+  font-family: "Poppins", sans-serif
+  font-weight: 500
+  font-style: italic
+
+
+.poppins-semibold-italic 
+  font-family: "Poppins", sans-serif
+  font-weight: 600
+  font-style: italic
+
+
+.poppins-bold-italic 
+  font-family: "Poppins", sans-serif
+  font-weight: 700
+  font-style: italic
+
+
+.poppins-extrabold-italic
+  font-family: "Poppins", sans-serif
+  font-weight: 800
+  font-style: italic
+
+
+.poppins-black-italic
+  font-family: "Poppins", sans-serif
+  font-weight: 900
+  font-style: italic
+
+.AnimatePrice
+  display: inline-block
+  padding: 2px
+  position: relative
+  overflow: hidden
+  border-radius: 14px
+  background: $themeColorWithOpacity
+  transition: 1s linear
+  // border: 3px solid #afafaf
+
+  .enquireNowBtn
+    position: relative
+    color: $themeColor
+    background: #fff
+    
+    
+form
+  width: 100%
+  display: flex
+
+ 
+.AnimatePrice::before
+  position: absolute
+  content: ""
+  background: conic-gradient(from 40deg at 50% 50%,#FFFFFF00  43%, $themeColor 100%)
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  // translate: -150px 0px
+  rotate: 0deg
+  
+  // animation: rotate 2s linear infinite
+
+.AnimatePrice::before
+  animation-name: rotate
+  animation-duration: 3s
+  transform: scale(10)
+  animation-iteration-count: infinite
+  animation-timing-function: linear
+
+
+@keyframes rotate 
+
+  from
+    rotate: 0deg
+    
+  to
+    rotate: 360deg
+
+
+    
+// @keyframes borderapp
+  
+//   from
+//     border: 1px solid #000
+    
+//   to
+//     border: 0px solid #000
+  
+    
+.row
+  max-width: unset
+
+.owl-carousel .owl-stage-outer
+  overflow: unset !important
+
+.popupBack
+  position: fixed
+  z-index: 20
+  background: #00000070
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  display: none
+  backdrop-filter: blur(5px)
+  
+.GalleryPopup
+  position: fixed
+  display: flex
+  z-index: 21
+  background: #fff
+  top: 50%
+  left: 50%
+  // width: 80vw
+  // height: 80vh
+  transform: translate(-50%, -50%) scale(0)
+  align-items: center
+  justify-content: center
+  transition: .3s ease-out
+  overflow: hidden
+  border-radius: 12px
+  width: 70%
+  border-radius: 20px
+
+
+  .closeGallery
+    display: inline-block
+    position: absolute
+    color: #fff
+    top: 15px
+    right: 15px
+    width: 15px
+    
+
+
+  img
+    width: 100%
+
+
+
+header
+    background: #fff
+    // backdrop-filter: saturate(180%) blur(20px)
+    position: fixed
+    width: 100%
+    z-index: 20
+    // box-shadow: 0 0 14px -5px $themeColor
+
+
+
+    .inner
+        margin: auto 5%
+
+
+    .navbar-brand
+      img
+        height: 30px
+       
+    .nav-link
+         color: #000 !important
+         font-size: 12px
+    .headernumber
+      display: flex
+      align-items: center
+
+@media only screen and (min-width: 1800px)
+  .nav-link
+      font-size: 14px !important
+
+    
+
+.navbar-collapse
+    flex-grow: 0
+
+.enquireNowBtn
+    
+    background: $themeColor
+    text-align: center
+    
+    color: #fff
+    border-radius: 12px
+    font-size: 15px
+    align-items: center
+    display: flex
+    justify-content: center
+    padding: 10px 13px
+
+    img
+      width: 25px
+      margin-right: 10px
+      height: auto
+
+.outer
+    width: 100
+
+
+
+section
+    width: 100%
+    padding: 4% 0
+    justify-content: center
+    overflow: hidden
+    // display: flex
+    // align-items: center
+    // transition: .5s ease-out
+
+    
+.sectitle
+  font-size: 45px
+  text-align: center
+  color: $titleColor
+  margin-bottom: 15px
+
+.secsubtitle
+  font-size: 20px
+  text-align: center
+    
+
+.owl-nav
+  display: inline-block
+  float: right
+  margin-right: 10%
+
+  .owl-prev, .owl-next    
+    border-radius: 50px !important
+    padding: 0px 18px !important
+    font-size: 30px !important
+    color: #000 !important
+
+    
+  
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.jost-regular 
+  font-family: "Jost", serif
+  font-optical-sizing: auto
+  font-weight: 400
+  font-style: normal
+
+.banner
+  display: flex
+
+  align-items: center
+  justify-content: center
+  height: 100vh
+  // position: fixed
+  z-index: 2
+  transition: 1s ease-out
+  top: 0
+  left: 0
+  
+.bannerShrink
+  // background-image: url(../img/banner2.webp)
+  background-size: cover
+  background-position: center  
+  z-index: 9
+  width: 100%
+  height: 100vh
+  overflow: hidden
+  position: relative
+  display: flex
+  // align-items: center
+  justify-content: left
+
+  .bannerSlider 
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 0
+    .item
+      height: 100%
+      width: 100%
+      background-position: top
+      background-size: cover
+    .owl-item
+      height: 100vh
+
+    // iframe 
+    //   height: 100%
+    //   width: 100%
+
+  .offerBoxOuter
+    osition: relative
+    width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    background: linear-gradient(45deg, #000, transparent,transparent)
+    z-index: 1
+    position: absolute
+
+
+    .AnimatePrice
+        padding: 0px
+
+    .AnimatePrice::before
+      // background: conic-gradient(from 40deg at 50% 50%,#FFFFFF00  43%, yellow 100%)
+
+    .mobBannerInner
+      display: none
+    .offerInner
+      position: relative
+      padding: 20px
+      border-radius: 12px
+      text-align: left
+      color: #fff
+      left: 50px
+      // border: 1px solid
+      // text-align: center
+      // background: #fff
+      // width: 565px
+      // text-align: center
+
+    #sitevisit
+      color: $themeColor
+      width: unset
+      display: inline-block
+
+      .img
+        width: 100%
+        height: auto
+
+      
+
+        
+      
+
+      // .offerInner
+      //   display: flex
+      //   justify-content: space-between
+
+    .offerTitle
+      // padding: 20px 0px
+      // border-bottom: 1px solid #00000091
+      font-size: 30px
+      // bottom: -20px
+      position: relative
+
+      img
+        filter: brightness(50)
+        width: 550px
+        width: 280px
+
+    .AnimatePrice
+      background: unset
+    .AnimatePrice::before
+      background: unset
+    .offerConifg
+      
+      padding: 20px 0px
+      // border-bottom: 1px solid #00000091
+      font-size: 25px
+
+      .offerLoc
+        font-size: 18px
+
+    .paymentPlanFig
+      // font-size: 30px
+      img
+        filter: brightness(50)
+
+    .offerUSP
+      font-size: 20px
+
+    .offerPaymentplan
+      padding: 20px 0px
+      // border-bottom: 1px solid #00000091
+      font-size: 18px
+
+    .offerButtons
+      padding-top: 20px 
+      font-size: 20px
+      // display: flex
+      // justify-content: space-evenly
+
+    
+
+      a
+        text-decoration: none
+        width: 100%
+
+      .whatsapp-img
+        width: 27px
+        margin-right: 8px
+
+      .enquireNowBtn
+        width: 100%
+        // height: 100%
+        background: #fff
+        color: #fff
+
+   
+
+
+  
+.Highlights 
+  
+  // background: 
+
+  .item
+    height: 170px
+    padding: 20px
+    // width: 350px
+    border-radius: 12px
+    overflow: hidden
+    position: relative
+    // box-shadow: 0 0 14px -5px
+    // margin: 10px
+    background-position: center
+    background-size: cover 
+    color: #fff
+    box-shadow: 0 0 14px -10px $themeColor
+
+
+  .item::before
+    background: #00000061
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+   
+    
+
+  // @media only screen and (min-width: 1380px)
+  //   .item
+  //     height: 170px
+  //     padding: 20px
+  //     // width: 350px
+  //     border-radius: 12px
+  //     // box-shadow: 0 0 14px -5px
+  //     // margin: 10px
+  //     background: $secondaryColor
+  //     color: #000
+
+  
+
+  .highCont
+    font-size: 18px
+    margin-top: 5px
+    line-height: 27px
+    position: relative
+    text-shadow: 0 0 4px black
+
+  .downloadBrochureOuter
+    background: $secondaryColor
+    border-radius: 12px
+    padding: 30px
+    position: relative
+    box-shadow: 0 0 14px -10px $themeColor
+
+
+  .dnHeroimageOuter
+    border-radius: 12px
+    overflow: hidden
+    display: flex
+    height: 350px
+    box-shadow: 0 0 14px -10px $themeColor
+    position: relative
+
+    iframe
+      width: 100%
+
+    img
+      width: 100%
+      // height: 380px
+  .dnHeroimageOuter2:before
+    content: 'Click to view video'
+    position: absolute
+    top: 0
+    left: 0
+    background: #00000069
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 100%
+    backdrop-filter: blur(5px)
+    color: #fff
+
+
+  
+  .dnTextOuter
+    font-size: 30px
+    display: flex
+    align-items: center
+    text-align: left
+    height: 100%
+    justify-content: center
+    text-align: justify
+
+    .secsubtitle
+      text-align: left
+
+    .enquireNowBtn
+      
+      display: inline-block
+      font-size: 17px
+      width: 100%
+      
+
+
+       
+.Configuration
+  background: $secondaryColor
+  .container 
+    overflow: hidden
+  
+    .configTabButtons
+      display: flex
+      justify-content: center
+
+      .configTabButtonsOuter
+        display: flex
+        justify-content: space-between
+        .TabBtns
+          border: 1px solid $themeColor
+          border-radius: 12px
+          background: #fff
+          color: $themeColor 
+          padding: 10px 50px
+          margin: 10px 10px
+          // box-shadow: 0 0 14px -10px 
+          cursor: pointer
+
+        .TabBtns-active
+          background: $themeColor
+          color: #fff
+
+  .bodyContent 
+    display: flex
+    justify-content: center
+
+    .hideConfig
+      display: none
+
+    .showConfig
+      display: flex
+
+    .row
+      justify-content: center
+
+    .floorplanbackDrop::before 
+      content: 'Click to View Plan'
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      background: rgb(255 255 255 / 45%)
+      backdrop-filter: blur(2px)
+
+    .floorplanbackDrop2::before
+      content: 'Request Initiated will share soon'
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      background: rgb(255 255 255 / 45%)
+      backdrop-filter: blur(2px)
+      text-align: center
+
+
+  .item
+    // background: #ffffff
+    // border-radius: 12px
+    overflow: hidden
+    padding: 10px
+    position: relative
+    // margin: 20px
+    // box-shadow: 0 0 14px -10px
+
+    
+
+
+    .floorplanImg
+      border-bottom: 1px solid #757575
+      padding-bottom: 20px
+      margin-bottom: 20px
+    .floorPlanBottom
+      line-height: 25px
+      // display: flex
+      text-align: center
+      justify-content: space-between
+      align-items: center
+  
+      .congigDetails
+        margin-bottom: 8px
+        // color: $themeColor
+
+        .configSQ
+          font-size: 20px
+          color: #000
+          margin-top: 15px
+          margin-bottom: 15px
+
+    
+    .enquireNowBtn
+      padding: 6px 30px
+      display: inline-block
+      color: $themeColor
+
+    .fpOuter
+      position: relative
+      background: #ffffff
+      border-radius: 12px
+      overflow: hidden
+      padding: 20px
+      // margin: 20px
+      box-shadow: 0 0 14px -10px $themeColor
+
+      .specialOffer
+        display: inline-block
+        position: absolute
+        top: 0
+        left: 0
+        background: $themeColor
+        z-index: 1
+        color: #fff
+        padding: 6px 15px
+        font-size: 14px
+        border-radius: 0px 0px 12px 0px
+
+
+.starting
+  display: none
+
+
+.Aminities
+ 
+  // background: $secondaryColor
+  position: relative
+  
+
+
+  .container
+    position: relative
+    overflow: hidden
+  .displayImage
+   
+    display: block
+
+    height: 100%
+    // margin: 5px
+
+  #amiBtn
+    justify-content: center
+
+  .item
+    height: 170px
+    padding: 20px
+    // width: 350px
+    border-radius: 12px
+    overflow: hidden
+    position: relative
+    // box-shadow: 0 0 14px -5px
+    // margin: 10px
+    background-position: center
+    background-size: cover 
+    color: #fff
+    box-shadow: 0 0 14px -10px $themeColor
+
+
+  .item::before
+    background: rgba(0, 0, 0, 30%)
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+   
+    
+
+  @media only screen and (min-width: 1380px)
+
+    .item
+      height: 170px
+      padding: 20px
+      // width: 350px
+      border-radius: 12px
+      // box-shadow: 0 0 14px -5px
+      // margin: 10px
+      background: $secondaryColor
+      color: #000
+
+   
+  
+
+  .highCont
+    font-size: 22px
+    margin-top: 5px
+    line-height: 27px
+    position: relative
+    text-shadow: 0 0 4px black
+
+  .downloadBrochureOuter
+    background: $secondaryColor
+    border-radius: 12px
+    padding: 30px
+    position: relative
+    box-shadow: 0 0 14px -10px $themeColor
+
+  .wideImg
+    display: block
+    // background: #000
+    height: 100%
+    border-radius: 12px
+    display: flex
+    justify-content: center
+    align-items: center
+    overflow: hidden
+    position: relative
+    box-shadow: 0 0 14px -10px $themeColor
+
+    .AmiName
+      display: inline-block
+      position: absolute
+      top: 30px
+      left: 0
+      background: #000000bd
+      color: #fff
+      z-index: 3
+      padding: 5px 15px 5px 15px
+      text-shadow: 0 0 10px black
+      font-size: 20px
+
+
+    img 
+      
+      position: absolute
+      width: 100%
+      height: 100%
+      object-fit: cover
+      // transition: .5s ease-out
+
+
+  .imgBtn
+    // background: #000
+    border-radius: 12px
+    display: block
+    height: 100px
+    overflow: hidden
+    box-shadow: 0 0 14px -10px $themeColor
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+
+  .imgtext
+    text-align: center
+    margin-bottom: 5px
+    font-size: 15px
+    margin-bottom: 15px
+
+
+
+
+.Gallery
+  // height: 100vh
+  background: $secondaryColor
+  // background: $secondaryColor
+
+  .owl-stage-outer
+    overflow: unset
+
+  .item
+    border-radius: 12px
+    // box-shadow: 0 0 14px -5px
+    overflow: hidden
+    box-shadow: 0 0 14px -10px $themeColor
+
+.virtual
+  iframe
+    width: 100%
+    height: 60vh
+    border-radius: 12px
+    box-shadow: 0 0 14px -5px #000
+    margin-top: 10px
+
+
+
+
+.Video
+  .videoOuter
+    display: flex
+    justify-content: center
+    width: 100%
+    margin-top: 10px
+
+    .videoContentOuter
+      width: 70%
+      height: 480px
+      overflow: hidden
+      border-radius: 12px
+
+      iframe
+        width: 100%
+        height: 100%
+
+
+.Location
+  position: relative
+  background-image: url("../img/mapback.webp")
+  // padding: 100px
+  // border-radius: 12px
+  // box-shadow: 0 0 14px -10px
+  // display: flex
+  // justify-content: center
+  // backdrop-filter: blur(10px)
+  background-attachment: fixed
+  background-position: center
+  background-repeat: no-repeat
+  //  -o-background-size: cover
+  // -moz-background-size: cover
+  // -webkit-background-size: cover
+  background-size: cover
+  overflow: hidden
+
+
+  // background: $secondaryColor
+
+ 
+  .locMap
+    display: none
+
+  .sectitle, .secsubtitle
+    color: #fff
+
+
+  .bodyContent
+    
+    .locMobile
+      display: none
+
+    
+
+    .outerLoc
+      justify-content: center
+      display: flex
+      margin-top: 20px
+
+
+      .colnew
+        transition: .5s ease-out
+        width: 16%
+        margin: 0 10px
+
+    .locmapOuter
+      padding: 0px
+
+    .expandConnect
+      position: relative
+      background: $secondaryColor
+      padding: 0px
+      overflow: hidden
+      width: 100%
+      padding: 0px
+      border-radius: 12px
+      display: flex
+      // transition: .6s ease-out
+
+      .closeExpand
+        display: none
+        position: absolute
+        top: 0px
+        right: 10px
+        font-size: 30px
+        color: grey
+        cursor: pointer
+
+    .conContent
+      display: none
+      padding: 10px 0px
+      
+      .conContentInner
+        display: flex
+        align-items: center
+        
+        height: 100%
+
+        ul
+          margin: 0
+          font-size: 15px
+          padding-right: 30px
+
+
+    .locTabsOuter
+      background: #ffffff
+      // width: 163px
+      padding: 20px
+      // margin-top: 20
+      // border-radius: 12px
+      box-shadow: 0 0 14px -10px $themeColor
+      
+
+      .locIcon
+        padding-bottom: 20px
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+
+        img
+          width: 100%
+
+      .locItems
+        justify-content: space-between
+        display: flex
+        color: $themeColor
+        padding-top: 10
+        border-top: 2px solid #7d7d7def
+        font-size: 15px
+      
+
+   
+.Location::before
+  content: ""
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0 
+  background: rgba(0, 0, 0, 0.5)
+      
+
+    
+
+
+.About
+  padding-bottom: 80px
+  background: $secondaryColor
+  .bodyContent
+    text-align: center
+
+    .aboutSection
+      font-size: 15px
+      margin-bottom: 10px
+      text-align: center
+
+    .reraSection
+      font-size: 13px
+      margin-bottom: 10px
+
+    .disclaimer
+      font-size: 8px
+
+      .reraimg
+        height: 90px
+        margin-top: 10px
+
+    .privacy
+      margin-top: 20px
+      font-size: 13px
+      cursor: pointer
+
+  .reraDetailsOuter
+    display: flex
+    justify-content: center
+    .row
+      justify-content: center
+
+    .itemRera
+      margin-bottom: 10px
+      .reraText
+        font-size: 10px
+
+
+
+
+.footerPop
+    
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    // width: 25%
+    // height: 50%
+    background: rgba(255, 255, 255, .8)
+    backdrop-filter: saturate(180%) blur(20px)
+    z-index: 21
+    box-shadow: 0 0 14px -5px $themeColor
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 12px
+    // display: none
+
+    .closeform
+      display: inline-block
+      position: absolute
+      top: 15px
+      right: 15px
+      width: 12px
+
+    .or
+        margin: 10px 0px
+
+    a
+      color: unset
+      text-decoration: none
+
+    .enqtext
+      color: $themeColor
+      margin-bottom: 10px
+      font-size: 30px
+
+    .phoneEnq
+      font-size: 17px
+      margin-bottom: 10px
+    
+    .enqOffer
+      // font-size: px
+      margin-bottom: 10px
+
+
+    .captcha
+      font-size: 8px
+      margin-bottom: 15px
+
+    .usps
+      display: flex
+      justify-content: center
+      margin-top: -5px
+      margin-bottom: 10px
+      display: none
+
+      img
+        width: 40px
+        margin-bottom: 10px
+
+    .uspOuter
+      width: 31%
+
+    .inner
+      // width: 85%
+      // height: 85%
+      font-size: 15px
+      text-align: center
+      padding: 20px
+
+      .phoneNumber
+        display: flex
+
+      input, select
+        background: unset
+        border: none
+        box-shadow: none
+        border-bottom: 1px solid #6d767e 
+        padding: 5px 10px
+        font-size: 15px
+        border-radius: 0
+        
+      select
+        width: 50%
+        padding: 5px 10px
+        text-align: center
+
+      .iti
+        width: 100%
+        // padding: 5px 25px
+        
+        margin-bottom: 16px
+
+      .form-control:focus, input[type="tel"]:focus
+        color: #000
+        background-color: unset
+        border-color: #000
+        outline: 0
+        box-shadow: unset
+      .enquireNowBtn
+        width: 100%
+
+      .phone
+        width: 100%
+
+      .whatsapp-img
+        width: 27px
+        margin-right: 8px
+      .slide-submit
+        display: none
+
+      
+
+      
+    
+
+.footerSticky
+    
+    position: fixed
+    bottom: 0%
+    left: 0%
+    
+    width: 100%
+    // height: 50%
+    background: rgba(255, 255, 255, .8)
+    backdrop-filter: saturate(180%) blur(20px)
+    z-index: 20
+    box-shadow: 0 0 14px -5px $themeColor
+    display: flex
+    align-items: center
+    justify-content: center
+    // display: none
+
+    .closeform
+      display: none
+     
+
+    .mobileFooter
+      display: none
+    a
+      color: unset
+      text-decoration: none
+
+    .enqtext
+      color: $themeColor
+      font-size: 18px
+      display: flex
+      /* width: 130px */
+      align-items: center
+    .phoneOuter
+      display: none
+    .phoneEnq
+      font-size: 17px
+      margin-bottom: 10px
+    
+    .enqOffer
+      // font-size: px
+      margin-bottom: 20px
+      display: none
+
+    .captcha
+      font-size: 8px
+      margin-right: 17px
+      // display: none
+      width: 180px
+
+    .usps
+      display: none
+      justify-content: space-between
+      margin-bottom: 20px
+
+      img
+        width: 40px
+        margin-bottom: 10px
+
+    .uspOuter
+      width: 31%
+
+    .inner
+      // width: 85%
+      // height: 85%
+      font-size: 15px
+      text-align: center
+      padding: 9px
+      display: flex
+
+      .phoneNumber
+        display: flex
+
+      input, select
+        background: unset
+        border: none
+        box-shadow: none
+        border-bottom: 1px solid #6d767e
+        padding: 5px 10px
+        font-size: 13px
+        border-radius: 0
+        width: 180px
+        margin: auto 20px
+        
+      select
+        width: 180px
+        padding: 5px 10px
+        text-align: center
+
+
+      .iti
+        bottom: -5px
+        // width: 100%
+        // padding: 5px 25px
+        
+        // margin-bottom: 16px
+      
+      .iti__selected-country
+        top: -2px
+  
+
+      .form-control:focus, input[type="tel"]:focus
+        color: #000
+        background-color: unset
+        border-color: #000
+        outline: 0
+        box-shadow: unset
+
+      .whatsapp-img
+        width: 27px
+        margin-right: 8px
+
+      .enquireNowBtn
+        // width: 232px
+
+      .or,.countWhatsApp
+        display: none
+      .phone
+        width: 100%
+
+      .slide-submit
+        display: none
+
+
+
+.appearText
+  opacity: 0
+  transition: .1s ease-out
+  // transform: translate(-100px, 00px)
+  transform: scale(0.8)
+
+.zoomIn
+  transition: .5s ease-out
+
+.zoomIn:hover
+  transform: scale(1.02) !important
+  box-shadow: 0 0 14px -5px $themeColor !important
+  
+
+
+.loadingImg
+  display: flex
+  position: fixed
+  top: 0%
+  left: 0
+  width: 100%
+  height: 100%
+  background: rgba(250, 250, 252, .8)
+  backdrop-filter: saturate(180%) blur(20px)
+  z-index: 30
+  justify-content: center
+  align-items: center
+  transition: .8s cubic-bezier(0.12, 0.71, 0.42, 0.96)
+  padding: 30px
+  
+
+  .loadingImgOuter
+    width: 100% 
+    text-align: center
+
+    img
+      max-width: 70%
+      height: auto
+
+  .loadingicon
+    width: 100%
+    display: flex
+    justify-content: center
+    margin-top: 10px
+    
+
+    img
+      width: 50px
+
+  
+  
+  .loadMessage
+    text-align: center
+    margin-top: 20px
+    font-size: 20px
+
+  // mobile
+
+@media only screen and (max-width: 600px)
+
+  header
+    nav
+      .navbar-brand
+        padding: 0
+      .navbar-toggler
+        background: url(../img/hamburger.png)
+        border: none
+        background-position: center
+        background-size: 50%
+        background-repeat: no-repeat
+        transition: 0.5s ease-out
+
+      button:hover, button:focus, .button:hover, .button:focus
+
+        // background: url(../img/close.png)
+        border: none
+        // background-position: center
+        // background-size: 70%
+        // background-repeat: no-repeat
+      .navbar-toggler:focus
+        box-shadow: none
+      .headernumber
+        display: none
+      .enquireNowBtn
+        display: none
+      .hideContact
+        display: none
+        
+  section
+    padding: 15% 0px
+  .container
+    text-align: center
+    width: 100vw
+
+  .banner
+    // box-shadow: 0 0 14px -5px #000
+  .bannerShrink
+    // background-image: url(../img/banner1.jpg)
+    background-position: top
+    background-size: contain
+    background-repeat: no-repeat
+    width: 100%
+    height: 100vh
+    // border-radius: 30px
+    // transition: 2s ease-out
+    // animation-name: changeback
+    // animation-duration: 12s
+    // animation-iteration-count: infinite
+    // animation-timing-function: linear
+
+    // @keyframes changeback 
+    //   0%   
+    //     background-image: url(../img/banner1.jpg)
+    //   50%  
+    //     background-image: url(../img/banner1.jpg)
+    //   60%  
+    //     background-image: url(../img/banner2.jpg)
+    //   90% 
+    //     background-image: url(../img/banner2.jpg)
+    //   100% 
+    //     background-image: url(../img/banner1.jpg)
+      //     from
+      //   background-image: url(../img/banner1.jpg)
+        
+      // to
+      //   background-image: url(../img/banner2.jpg)
+
+    .bannerSlider 
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      z-index: 0
+      .item
+        height: 100%
+        width: 100%
+        background-position: top
+        background-size: cover
+        background-repeat: no-repeat
+
+
+    .offerBoxOuter
+      background: unset
+      align-items: flex-end
+      justify-content: center
+      align-items: center
+      background: #0000008a
+
+      .mobBannerInner
+        display: block
+
+        .offerButtons
+          display: flex
+          justify-content: center
+          margin-top: 85px
+
+          .enquireNowBtn
+            border: 1px solid #fff
+            background: unset
+            color: #fff !important
+
+        .mobBannerImg
+          text-align: center
+          img
+            filter: brightness(60)
+            width: 80%
+
+        .newAnimatedtextbox 
+          margin-top: 20px
+          color: #fff
+          display: flex
+          justify-content: center
+          text-align: center
+          font-size: 25px
+
+        
+            
+
+          .anitext
+            position: absolute
+            opacity: 0
+
+          .anitext1
+            animation: ani1 10s infinite
+          .anitext2
+            animation: ani2 10s infinite
+          .anitext3
+            animation: ani3 10s infinite
+
+          @keyframes ani1
+            0%
+              opacity: 0
+            15%
+              opacity: 1
+            30%
+              opacity: 0
+
+          @keyframes ani2
+            30%
+              opacity: 0
+            45%
+              opacity: 1
+            60%
+              opacity: 0
+
+          @keyframes ani3
+            60%
+              opacity: 0
+            80%
+              opacity: 1
+            100%
+              opacity: 0
+            
+
+      .offerInner
+        text-align: center
+        bottom: 0%
+        transition: .6s ease-out
+        display: none
+        // background: #fff
+
+        color: #fff
+        // border-radius: 40px 40px 0px 0px
+        // box-shadow: 0 0 14px -5px #000
+        width: 100%
+
+        .offerUSP
+          font-size: 16px
+        .AnimatePrice
+          width: 100%
+          position: relative
+          margin: 10px 0px 3px 0px
+          padding: 3px
+          background: $themeColorWithOpacity
+
+        .AnimatePrice::before
+          animation-duration: 5s
+          // background: conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0) 43%, $themeColor 100%)
+
+        .offerConifg
+          position: relative
+          z-index: 2
+          font-size: 15px
+          color: #fff
+          // background: #fff
+          // border: 1px solid
+          // margin: 10px 0px
+          padding: 10px 10px
+          border-radius: 12px
+
+          
+              
+        .offerLoc
+          font-size: 15px
+
+        .paymentPlanFig
+          img
+            filter: brightness(40px)
+          // font-size: 25px
+
+
+        .offerButtons
+          padding-top: 10px
+          display: flex
+          justify-content: center
+
+       
+          #sitevisit
+            background: unset
+            border: 1px solid #fff
+            color: #fff
+            width: 100%
+            
+
+
+
+      .offerInner
+        left: 0
+        
+    
+
+  .top 
+    text-align: center
+    margin-bottom: 10px
+
+    .sectitle
+      font-size: 25px
+
+    .secsubtitle
+      font-size: 20px
+
+
+  .Highlights
+    .downloadBrochureOuter
+      padding: 10px 10px
+      text-align: center
+      display: flex
+      justify-content: center
+
+      .dnHeroimageOuter
+        height: 200px
+        margin-top: 20px
+
+      .dnTextOuter
+        padding: 30px 0px 0
+        text-align: center
+        height: unset
+
+        .enquireNowBtn
+          width: 100%
+        .dnTextInner
+          text-align: justify
+        .secsubtitle
+          text-align: center
+
+        #mainVideo
+          margin-top: 20px
+
+    // iframe
+    //   pointer-events: none !important
+
+
+  .virtual
+    iframe
+      width: 100%
+      height: 40vh
+      // margin-top: 40px
+
+
+  .Configuration
+    .container
+      .configTabButtons
+        display: block
+        .configTabButtonsOuter
+          display: block
+
+          .TabBtns
+            border: 1px solid $themeColor
+            border-radius: 12px
+            background: #fff
+            color: $themeColor 
+            cursor: pointer
+            padding: 10px 20px
+            margin: 10px 2px
+            cursor: pointer
+            display: inline-block
+
+          .TabBtns-active
+            background: $themeColor
+            color: #fff
+
+      .bottom
+        .bodyContent
+          // #tower2
+          //   display: inline-flex
+          //   justify-content: center
+          .hideConfig
+            justify-content: center
+
+        .AnimatePrice, .enquireNowBtn
+          width: 100%
+          // transition: .2s linear
+
+        .AnimatePrice::before
+          background: conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0) 43%, $themeColor 100%)
+          transform: scale(20)
+
+   
+
+
+
+  .Aminities
+
+
+    .col-md-8
+      display: none
+    .amiOuter
+      display: flex
+      justify-content: center
+    .row
+      // display: inline
+      
+  .Location
+    padding: 25% 0px
+    .bodyContent
+      .outerLoc
+        display: none
+      .locMap
+        display: block
+        border-radius: 12px
+        overflow: hidden
+        margin-bottom: 10px
+        box-shadow: 0 0 14px -5px #000
+        // display: none
+      .locMobile
+        display: block
+        border-radius: 12px
+        overflow: hidden
+        .accordion-button:not(.collapsed)
+          background-color: $themeColorWithOpacity
+
+        button:hover, button:focus, .button:hover, .button:focus
+          background-color: $themeColorWithOpacity
+          color: #000
+
+        .accordion-button:focus
+          box-shadow: unset
+
+        .accordion-button:focus
+          border-color: $themeColor
+
+        .accordion-button:not(.collapsed)::after
+          filter: brightness(0)
+
+        .accordion-button:not(.collapsed)
+          color: #000
+
+        .accordion-button
+          padding: 10px 15px
+          font-size: 18px
+
+          img 
+            width: 40px
+            margin-right: 15px
+
+        ul
+          text-align: left
+          padding: 0px
+
+  .footerPop
+    width: 90%
+
+
+  
+
+    // transform: scale(1)
+
+  .footerSticky
+    bottom: -0.1px
+
+    .closeform
+      display: none
+
+    .mobileFooter
+      // height: 100px
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+
+      .mobFooterPhone, .mobFooterWhatsapp
+        width: 50%
+        text-align: center
+        height: 50px
+        display: flex
+        align-items: center
+        justify-content: center
+
+        .enquireNowBtn
+          font-size: 14px !important
+
+        img
+          width: 35px
+          height: auto
+      .phoneOuter
+        display: block
+
+        .phoneEnq
+          font-size: 14px !important
+
+        .phoneEnq
+          margin: 0
+
+      .enquireNowBtn
+        border-radius: 0
+        background: unset
+        padding: 0
+        display: block
+        width: 100%
+      // .mobFooterInner
+
+        
+
+
+    .inner
+      display: none
+
+  .footerPop
+    .inner
+      .countWhatsApp
+        display: none
+      .slide-submit
+          display: flex
+
+      .enqtext
+        font-size: 25px
+        margin-bottom: 0
+
+    .closeform
+      top: unset
+      right: 50%
+      width: 12px
+      bottom: -67px
+      border: 1px solid #fff
+      padding: 12px 18px
+      width: 50px
+      transform: translate(50%, 0)
+      border-radius: 50px
+
+      img
+        filter: brightness(40)
+
+  
+
+  .GalleryPopup
+    width: 100%
+    border-radius: 0
+    overflow: unset
+
+    .closeGallery
+      top: unset
+      right: 50%
+      width: 12px
+      bottom: -67px
+      border: 1px solid #fff
+      padding: 12px 18px
+      width: 50px
+      transform: translate(50%, 0)
+      border-radius: 50px
+
+      img
+        filter: brightness(100)
+
+.enqNowFlotaing
+  position: fixed
+  top: 20%
+  right: 0px
+  background: $themeColor
+  writing-mode: vertical-rl
+  text-orientation: mixed
+  color: #fff
+  transform: rotate(180deg)
+  padding: 17px 5px
+  box-shadow: 0 0 14px -5px #000
+  border-radius: 0px 12px 12px 0
+  z-index: 9
+
+.loading .dot 
+    animation: blink 1s infinite
+    opacity: 0
+
+.loading .dot:nth-child(2)
+    animation-delay: 0.3s
+
+.loading .dot:nth-child(3)
+    animation-delay: 0.6s
+
+@keyframes blink
+    0%, 20%, 100%
+      opacity: 0
+    10%, 30%
+      opacity: 1
+
+
+.floorplanbackDrop
+  // filter: blur(2px)
+  position: relative
+
+.floorplanbackDrop2
+  // filter: blur(2px)
+  position: relative
+  // .sliderOuter
+  //   z-index: 10
+  //   width: 100%
+  //   position: fixed
+  //   bottom: 0
+  //   left: 0
+  //   padding: 10px
+
+  //   .slide-submit
+  //     box-shadow: 0 0 14px -5px $themeColor
+  //     height: 45px
