@@ -1,0 +1,1793 @@
+$themeColor : #ba9a50
+// $themeColor : #25505b
+$opacity: 0.2
+$themeColorWithOpacity: rgba($themeColor, $opacity)
+
+  
+  
+// html,body
+//   padding: 0
+//   margin: 0
+//   color: #6d6d6d
+
+
+
+@font-face 
+  font-family: FuturaBT-Book
+  src: url(../font/FuturaBT-Book.otf)
+
+@font-face 
+  font-family: HistoryPro
+  src: url(../font/HistoryPro-Two.woff2)
+
+
+
+.HistoryPro
+  font-family: HistoryPro 
+
+.FuturaBT-Book
+  font-family: FuturaBT-Book
+
+.owl-theme .owl-nav [class*=owl-]
+  font-family: math
+
+.nanum-myeongjo-regular
+  font-family: "Nanum Myeongjo", serif
+  font-weight: 400
+  font-style: normal
+
+
+.nanum-myeongjo-bold
+  font-family: "Nanum Myeongjo", serif
+  font-weight: 700
+  font-style: normal
+
+
+.nanum-myeongjo-extrabold 
+  font-family: "Nanum Myeongjo", serif
+  font-weight: 800
+  font-style: normal
+
+
+
+
+.AnimatePrice
+  display: inline-block
+  padding: 2px
+  position: relative
+  overflow: hidden
+  border-radius: 12px
+  background: $themeColorWithOpacity
+  transition: 1s linear
+  // border: 3px solid #afafaf
+
+  .enquireNowBtn
+    position: relative
+    color: $themeColor
+    background: #fff
+    
+    
+form
+  width: 100%
+  display: flex
+
+ 
+.AnimatePrice::before
+  position: absolute
+  content: ""
+  background: conic-gradient(from 40deg at 50% 50%,#FFFFFF00  43%, $themeColor 100%)
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  // translate: -150px 0px
+  rotate: 0deg
+  
+  // animation: rotate 2s linear infinite
+
+.AnimatePrice::before
+  animation-name: rotate
+  animation-duration: 3s
+  transform: scale(8)
+  animation-iteration-count: infinite
+  animation-timing-function: linear
+
+
+@keyframes rotate 
+
+  from
+    rotate: 0deg
+    
+  to
+    rotate: 360deg
+
+
+    
+// @keyframes borderapp
+  
+//   from
+//     border: 1px solid #000
+    
+//   to
+//     border: 0px solid #000
+  
+    
+.row
+  max-width: unset
+
+.owl-carousel .owl-stage-outer
+  overflow: unset !important
+
+.popupBack
+  position: fixed
+  z-index: 20
+  background: #00000070
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  display: none
+  backdrop-filter: blur(5px)
+  
+.GalleryPopup
+  position: fixed
+  display: flex
+  z-index: 21
+  background: #fff
+  top: 50%
+  left: 50%
+  // width: 80vw
+  // height: 80vh
+  transform: translate(-50%, -50%) scale(0)
+  align-items: center
+  justify-content: center
+  transition: .3s ease-out
+  overflow: hidden
+  border-radius: 12px
+  width: 70%
+  border-radius: 12px
+
+
+  .closeGallery
+    display: inline-block
+    position: absolute
+    color: #fff
+    top: 15px
+    right: 15px
+    width: 15px
+    
+
+
+  img
+    width: 100%
+
+
+
+header
+    background: #fff
+    backdrop-filter: saturate(180%) blur(20px)
+    position: fixed
+    width: 100%
+    z-index: 20
+    box-shadow: 0 0 14px -5px $themeColor
+    transition: .3s ease-out
+    top:-70px
+
+
+
+    .inner
+        margin: auto 5%
+
+
+    .navbar-brand
+      img
+        width: 190px
+       
+    .nav-link
+         color: #000 !important
+         font-size: 14px
+
+@media only screen and (min-width: 1800px)
+  .nav-link
+      font-size: 16px !important
+
+    
+
+.navbar-collapse
+    flex-grow: 0
+
+.enquireNowBtn
+    
+    background: $themeColor
+    text-align: center
+    
+    color: #fff
+    border-radius: 12px
+    font-size: 15px
+    align-items: center
+    display: flex
+    justify-content: center
+    padding: 7px 15px
+
+    img
+      width: 25px
+      margin-right: 10px
+
+.outer
+    width: 100
+
+
+
+section
+    width: 100%
+    padding: 4% 0
+    justify-content: center
+    overflow: hidden
+    // display: flex
+    // align-items: center
+    // transition: .5s ease-out
+
+    
+.sectitle
+  font-size: 35px
+  text-align: center
+  color: $themeColor
+  margin-bottom: 15px
+
+.secsubtitle
+  font-size: 20px
+  text-align: center
+    
+
+.owl-nav
+  display: inline-block
+  float: right
+  margin-right: 10%
+
+  .owl-prev, .owl-next    
+    border-radius: 12px !important
+    padding: 0px 18px !important
+    font-size: 30px !important
+    color: #000 !important
+
+    
+  
+
+.banner
+  display: flex
+
+  align-items: center
+  justify-content: center
+  height: 100%
+  // position: fixed
+  z-index: 2
+  transition: 1s ease-out
+  top: 0
+  left: 0
+  padding: 0
+  
+.bannerShrink
+  // background-image: url(../img/banner2.webp)
+  background-size: cover
+  background-position: center  
+  z-index: 9
+  width: 100%
+  height: 100%
+  overflow: hidden
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: left
+
+  .videobanner
+    position: absolute
+    width: 100vw
+    height: 100%
+    object-fit: cover
+    /* position: fixed; */
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    z-index: -1
+
+  // .mobvideo
+  //   display: none
+
+  .bannerSlider 
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 0
+    .item
+      height: 100%
+      width: 100%
+      background-position: top
+      background-size: cover
+
+
+    // iframe 
+    //   height: 100%
+    //   width: 100%
+
+  .offerBoxOuter
+    osition: relative
+    width: 100%
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    background: rgba(0, 0, 0, 0.7)
+    z-index: 1
+
+
+    .AnimatePrice
+        padding: 5px
+
+    .AnimatePrice::before
+      // background: conic-gradient(from 40deg at 50% 50%,#FFFFFF00  43%, yellow 100%)
+
+
+    .offerInner
+      opacity: 0
+      position: absolute
+      padding: 20px
+      border-radius: 12px
+      text-align: center
+      color: #fff
+      // top: 58%
+      transition: 1s ease-out
+      // left: 50px
+      // border: 1px solid
+      // text-align: center
+      // background: #fff
+      // width: 565px
+      // text-align: center
+
+    #sitevisit
+      // color: $themeColor
+
+      
+
+        
+      
+
+      // .offerInner
+      //   display: flex
+      //   justify-content: space-between
+
+    .offerTitle
+      // padding: 20px 0px
+      // border-bottom: 1px solid #00000091
+      font-size: 30px
+      // bottom: -20px
+      position: relative
+
+      img
+        filter: brightness(50)
+        // width: 550px
+        width: 15%
+
+    .AnimatePrice
+      background: unset
+    .AnimatePrice::before
+      background: unset
+    .offerConifg
+      
+      padding: 10px 0px
+      // border-bottom: 1px solid #00000091
+      font-size: 20px
+
+      .offerLoc
+        font-size: 15px
+
+    .paymentPlanFig
+      .projnametitle
+        font-size: 60px !important
+      .projloctitle
+        font-size: 25px !important
+      // font-size: 70px
+
+    .offerUSP
+      font-size: 25px
+
+    .offerPaymentplan
+      padding: 20px 0px
+      // border-bottom: 1px solid #00000091
+      font-size: 18px
+
+    .offerButtons
+      padding-top: 20px 
+      font-size: 20px
+      display: flex
+      justify-content: center
+
+      .enquireNowBtn
+        width: max-content
+        font-size: 20px
+      
+      // display: flex
+      // justify-content: space-evenly
+
+    
+
+      a
+        text-decoration: none
+        width: 100%
+
+      .whatsapp-img
+        width: 27px
+        margin-right: 8px
+
+      .enquireNowBtn
+        // width: 100%
+        // height: 100%
+        background: unset
+        border: 1px solid
+        color: #fff
+
+   
+
+
+  
+.Highlights 
+  
+
+
+  .item
+    height: 170px
+    padding: 20px
+    // width: 350px
+    border-radius: 12px
+    overflow: hidden
+    position: relative
+    // box-shadow: 0 0 14px -5px
+    // margin: 10px
+    background-position: center
+    background-size: cover 
+    color: #fff
+    box-shadow: 0 0 14px -10px $themeColor
+    margin: 10px 10px
+
+
+  .item::before
+    background: #00000061
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+   
+    
+
+  // @media only screen and (min-width: 1380px)
+  //   .item
+  //     height: 170px
+  //     padding: 20px
+  //     // width: 350px
+  //     border-radius: 12px
+  //     // box-shadow: 0 0 14px -5px
+  //     // margin: 10px
+  //     background: #fffdf9
+  //     color: #000
+
+  
+
+  .highCont
+    font-size: 20px
+    margin-top: 5px
+    line-height: 27px
+    position: relative
+    text-shadow: 0 0 4px black
+    width: 100%
+    height: 100%
+    // justify-content: center
+    // display: flex
+    // align-items: center
+    // text-align: center
+
+  .downloadBrochureOuter
+    background: #fffdf9
+    border-radius: 12px
+    padding: 30px
+    position: relative
+    box-shadow: 0 0 14px -8px $themeColor
+
+
+  .dnHeroimageOuter
+    border-radius: 12px
+    overflow: hidden
+    // height: 350px
+    box-shadow: 0 0 14px -10px $themeColor
+
+    iframe
+      width: 100%
+      height: 100%
+
+  
+  .dnTextOuter
+    font-size: 30px
+    display: flex
+    align-items: center
+    text-align: left
+    height: 100%
+    justify-content: center
+    text-align: justify
+
+    .secsubtitle
+      text-align: left
+
+    .aboutContent
+      text-align: center
+
+    .dnBroBtnOuter
+      text-align: center
+    .enquireNowBtn
+      
+      display: inline-block
+      // font-size: 17px
+      // width: 100%
+      
+
+// background-color: #fff;
+// opacity: 1;
+.Partners
+  padding-bottom: 100px
+  position: relative
+  background-image: url(../img/dpback.png)
+  background-position: bottom
+  background-repeat: no-repeat
+  background-size: contain
+  overflow: hidden
+  
+
+  .sectitle
+    // color: #fff
+  .container
+    position: relative
+
+
+  .bodyContent
+    display: flex
+    justify-content: center
+    // border-radius: 12px
+    // padding-top: 10px
+
+  .col-7, .col-5
+    justify-content: flex-start
+    display: flex
+    align-items: center
+    font-size: 12px
+    border-bottom: 1px solid $themeColorWithOpacity
+
+    padding: 30px 10px
+
+  .col-7, .col-5 
+    img
+      width: 100px
+
+  .w-100
+    border-bottom: 1px solid $themeColorWithOpacity
+    
+@media only screen and (min-width: 1300px)
+  .Partners
+    padding-bottom: 360px
+    .col-7, .col-5
+      justify-content: center
+      text-align: center
+      font-size: 11px
+      border-bottom: 0
+      margin-top: 10px
+      padding: 5px 10px 
+
+
+@media only screen and (min-width: 1440px)
+  .Partners
+    padding-bottom: 480px
+    .col-7, .col-5
+      padding: 5px 10px 
+      
+   
+
+// .Partners::before 
+//     content: ""
+//     position: absolute
+//     width: 100%
+//     height: 100%
+//     top: 0
+//     left: 0
+//     background: rgba(0, 0, 0, 0.5)
+       
+.Configuration
+  // background: #fffdf9
+  
+  .container 
+    overflow: hidden
+  
+    .configTabButtons
+      display: flex
+      justify-content: center
+
+      .configTabButtonsOuter
+        display: flex
+        justify-content: center
+        .TabBtns
+          border: 1px solid $themeColor
+          border-radius: 12px
+          background: #fff
+          color: $themeColor 
+          font-size: 15px
+          padding: 6px 20px
+          margin: 10px 5px
+          // box-shadow: 0 0 14px -10px 
+          cursor: pointer
+
+        .TabBtns-active
+          background: $themeColor
+          color: #fff
+
+  .bodyContent 
+    display: flex
+    justify-content: center
+
+    
+     
+    .hideConfig
+      display: none
+
+    .showConfig
+      display: flex
+      justify-content: center
+
+
+    .row
+      justify-content: center
+
+    .floorplanbackDrop::before 
+      content: 'Click to View Plan'
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      background: rgb(255 255 255 / 50%)
+      backdrop-filter: blur(2px)
+
+
+    .floorplanback2Drop::before 
+      content: 'Request Initiated. Will share soon'
+
+
+  .item
+    // background: #ffffff
+    // border-radius: 12px
+    // position: relative
+    overflow: hidden
+    padding: 10px
+    // margin: 20px
+    // box-shadow: 0 0 14px -10px
+   
+
+    .floorplanImg
+      border-bottom: 1px solid #757575
+      padding-bottom: 20px
+      margin-bottom: 20px
+    .floorPlanBottom
+      line-height: 25px
+      // display: flex
+      text-align: center
+      justify-content: space-between
+      align-items: center
+  
+      .congigDetails
+        margin-bottom: 8px
+        // color: $themeColor
+
+        .configSQ
+          font-size: 10px
+          color: #6d6d6d
+          margin: 10px 0px 20px
+
+    
+    .enquireNowBtn
+      // padding: 6px 30px
+      display: inline-block
+      color: $themeColor
+      padding: 3px 20px
+
+    .fpOuter
+      position: relative
+      background: #ffffff
+      border-radius: 12px
+      overflow: hidden
+      padding: 20px
+      // margin: 20px
+      box-shadow: 0 0 14px -8px $themeColor
+
+      .bestSellerOuter
+        position: absolute
+        top: 0
+        left: 0
+        background: $themeColor
+        z-index: 1
+        color: #fff
+        padding: 2px 14px
+        border-radius: 0 0 12px
+
+
+.starting
+  display: none
+
+
+.Aminities
+  // background: #fffdf9
+ 
+  position: relative
+  
+
+
+  .container
+    position: relative
+    overflow: hidden
+  .displayImage
+   
+    display: block
+
+    height: 100%
+    // margin: 5px
+
+  .item
+    height: 170px
+    padding: 20px
+    // width: 350px
+    border-radius: 12px
+    overflow: hidden
+    position: relative
+    // box-shadow: 0 0 14px -5px
+    // margin: 10px
+    background-position: center
+    background-size: cover 
+    color: #fff
+    box-shadow: 0 0 14px -7px $themeColor
+
+
+  .item::before
+    background: rgba(0, 0, 0, 30%)
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+   
+    
+
+  @media only screen and (min-width: 1380px)
+
+    .item
+      height: 170px
+      padding: 20px
+      // width: 350px
+      border-radius: 12px
+      // box-shadow: 0 0 14px -5px
+      // margin: 10px
+      background: #fffdf9
+      color: #000
+
+   
+  
+
+  .highCont
+    font-size: 22px
+    margin-top: 5px
+    line-height: 27px
+    position: relative
+    text-shadow: 0 0 4px black
+
+  .downloadBrochureOuter
+    background: #fffdf9
+    border-radius: 12px
+    padding: 30px
+    position: relative
+    box-shadow: 0 0 14px -8px $themeColor
+
+  .wideImg
+    display: block
+    // background: #000
+    height: 100%
+    border-radius: 12px
+    display: flex
+    justify-content: center
+    align-items: center
+    overflow: hidden
+    position: relative
+    box-shadow: 0 0 14px -10px $themeColor
+
+    .AmiName
+      display: inline-block
+      position: absolute
+      top: 30px
+      left: 0
+      background: #000000bd
+      color: #fff
+      z-index: 3
+      padding: 5px 15px 5px 15px
+      text-shadow: 0 0 10px black
+      font-size: 20px
+
+
+    img 
+      
+      position: absolute
+      width: 100%
+      height: 100%
+      object-fit: cover
+      // transition: .5s ease-out
+
+
+  .imgBtn
+    // background: #000
+    border-radius: 12px
+    display: block
+    height: 100px
+    overflow: hidden
+    box-shadow: 0 0 14px -10px $themeColor
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+
+  .imgtext
+    text-align: center
+    margin-bottom: 5px
+
+
+
+
+.Gallery
+  // height: 100vh
+  // background: #fffdf9
+
+  .owl-stage-outer
+    overflow: unset
+
+  .item
+    border-radius: 12px
+    // box-shadow: 0 0 14px -5px
+    overflow: hidden
+    box-shadow: 0 0 14px -10px $themeColor
+
+.virtual
+  iframe
+    width: 100%
+    height: 60%
+    border-radius: 12px
+    box-shadow: 0 0 14px -5px #000
+    margin-top: 10px
+
+
+
+
+.Video
+  .videoOuter
+    display: flex
+    justify-content: center
+    width: 100%
+    margin-top: 10px
+
+    .videoContentOuter
+      width: 70%
+      height: 480px
+      overflow: hidden
+      border-radius: 12px
+
+      iframe
+        width: 100%
+        height: 100%
+
+
+.Location
+  position: relative
+  background: #fffdf9
+  background-image: url("../img/map.webp")
+  // padding: 100px
+  // border-radius: 12px
+  // box-shadow: 0 0 14px -10px
+  // display: flex
+  // justify-content: center
+  // backdrop-filter: blur(10px)
+  // background-attachment: fixed
+  background-position: center
+  background-repeat: no-repeat
+  //  -o-background-size: cover
+  // -moz-background-size: cover
+  // -webkit-background-size: cover
+  background-size: cover
+  overflow: hidden
+  .locMap
+    display: none
+  .sectitle, .secsubtitle
+    color: #ffffff
+  .bodyContent
+    .locMobile
+      display: none
+    .outerLoc
+      justify-content: center
+      display: flex
+      margin-top: 20px
+
+
+      .colnew
+        transition: .5s ease-out
+        width: 16%
+        margin: 0 10px
+
+    .locmapOuter
+      padding: 0px
+
+    .expandConnect
+      position: relative
+      background: #fffdf9
+      padding: 0px
+      overflow: hidden
+      width: 100%
+      padding: 0px
+      border-radius: 12px
+      display: flex
+      // transition: .6s ease-out
+
+      .closeExpand
+        display: none
+        position: absolute
+        top: 0px
+        right: 10px
+        font-size: 30px
+        color: grey
+        cursor: pointer
+
+    .conContent
+      display: none
+      padding: 10px 0px
+      
+      .conContentInner
+        display: flex
+        align-items: center
+        
+        height: 100%
+
+        ul
+          margin: 0
+          font-size: 17px
+
+
+    .locTabsOuter
+      background: #ffffff
+      // width: 163px
+      padding: 20px
+      // margin-top: 20
+      // border-radius: 12px
+      box-shadow: 0 0 14px -10px $themeColor
+      
+
+      .locIcon
+        padding-bottom: 20px
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+
+        img
+          width: 100%
+
+      .locItems
+        justify-content: space-between
+        display: flex
+        color: $themeColor
+        padding-top: 10
+        border-top: 2px solid #7d7d7def
+        font-size: 18px
+      
+
+   
+.Location::before
+  content: ""
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0 
+  background: rgba(0, 0, 0, 0.5)
+      
+
+    
+
+
+.About
+  padding-bottom: 80px
+  
+  .bodyContent
+    text-align: center
+
+    .aboutSection
+      font-size: 14px
+      margin-bottom: 10px
+      text-align: center
+
+    .reraSection
+      font-size: 13px
+      margin-bottom: 10px
+
+    .disclaimer
+      font-size: 8px
+
+      .reraimg
+        width: 80px
+        margin-top: 10px
+
+    .privacy
+      margin-top: 20px
+      font-size: 13px
+      cursor: pointer
+
+
+
+
+.footerPop
+    
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    // width: 25%
+    // height: 50%
+    background: rgba(255, 255, 255, .8)
+    backdrop-filter: saturate(180%) blur(20px)
+    z-index: 21
+    box-shadow: 0 0 14px -5px $themeColor
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 12px
+    // display: none
+    overflow: hidden
+    background-image: url(../img/background.webp) !important
+    background-position: center !important
+    background-size: contain !important
+    background-repeat: repeat !important
+
+    .closeform
+      display: inline-block
+      position: absolute
+      top: 15px
+      right: 15px
+      width: 12px
+
+    .or
+        margin: 10px 0px
+
+    a
+      color: unset
+      text-decoration: none
+
+    .enqtext
+      color: $themeColor
+      margin-bottom: 10px
+      font-size: 18px
+
+    .phoneEnq
+      font-size: 17px
+      margin-bottom: 10px
+      color: $themeColor
+    
+    .enqOffer
+      // font-size: px
+      margin-bottom: 10px
+
+
+    .captcha
+      font-size: 8px
+      margin-bottom: 15px
+
+    .usps
+      display: flex
+      justify-content: center
+      margin-bottom: 20px
+      display: none
+
+      img
+        width: 40px
+        margin-bottom: 10px
+
+    .uspOuter
+      width: 31%
+
+    .inner
+      width: 100%
+      // height: 85%
+      font-size: 15px
+      text-align: center
+      padding: 20px
+
+      .phoneNumber
+        display: flex
+
+      input, select
+        background: unset
+        border: none
+        box-shadow: none
+        border-bottom: 1px solid #6d767e 
+        padding: 5px 10px
+        font-size: 15px
+        border-radius: 0
+        
+      select
+        width: 50%
+        padding: 5px 10px
+        text-align: center
+
+      .iti
+        width: 100%
+        // padding: 5px 25px
+        
+        margin-bottom: 16px
+
+      .form-control:focus, input[type="tel"]:focus
+        color: #000
+        background-color: unset
+        border-color: #000
+        outline: 0
+        box-shadow: unset
+      .enquireNowBtn
+        width: 100%
+
+      .phone
+        width: 100%
+
+      .whatsapp-img
+        width: 27px
+        margin-right: 8px
+      .slide-submit
+        display: none
+
+      
+
+      
+    
+
+.footerSticky
+    
+    position: fixed
+    bottom: -60px
+    left: 0%
+    
+    width: 100%
+    // height: 50%
+    background: rgba(255, 255, 255, .8)
+    backdrop-filter: saturate(180%) blur(20px)
+    z-index: 20
+    box-shadow: 0 0 14px -5px $themeColor
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: .3s ease-out
+    // display: none
+
+    .closeform
+      display: none
+     
+
+    .mobileFooter
+      display: none
+    a
+      color: unset
+      text-decoration: none
+
+    .enqtext
+      color: $themeColor
+      font-size: 18px
+      display: flex
+      /* width: 130px */
+      align-items: center
+    .phoneOuter
+      display: none
+    .phoneEnq
+      font-size: 17px
+      margin-bottom: 10px
+      color: $themeColor
+    
+    .enqOffer
+      // font-size: px
+      margin-bottom: 20px
+      display: none
+
+    .captcha
+      font-size: 8px
+      margin-right: 17px
+      // display: none
+      width: 180px
+
+    .usps
+      display: none
+      justify-content: space-between
+      margin-bottom: 20px
+
+      img
+        width: 40px
+        margin-bottom: 10px
+
+    .uspOuter
+      width: 31%
+
+    .inner
+      // width: 85%
+      // height: 85%
+      font-size: 15px
+      text-align: center
+      padding: 9px
+      display: flex
+
+      .phoneNumber
+        display: flex
+
+      input, select
+        background: unset
+        border: none
+        box-shadow: none
+        border-bottom: 1px solid #6d767e
+        padding: 5px 10px
+        font-size: 13px
+        border-radius: 0
+        width: 180px
+        margin: auto 20px
+        
+      select
+        width: 180px
+        padding: 5px 10px
+        text-align: center
+
+
+      .iti
+        bottom: -5px
+        // width: 100%
+        // padding: 5px 25px
+        
+        // margin-bottom: 16px
+      
+      .iti__selected-country
+        top: -2px
+  
+
+      .form-control:focus, input[type="tel"]:focus
+        color: #000
+        background-color: unset
+        border-color: #000
+        outline: 0
+        box-shadow: unset
+
+      .whatsapp-img
+        width: 27px
+        margin-right: 8px
+
+      .enquireNowBtn
+        // width: 232px
+
+      .or,.countWhatsApp
+        display: none
+      .phone
+        width: 100%
+
+      .slide-submit
+        display: none
+
+
+
+.appearText
+  opacity: 0
+  transition: .2s ease-out
+  // transform: translate(-100px, 00px)
+  transform: scale(0.8)
+
+.zoomIn
+  transition: .5s ease-out
+
+.zoomIn:hover
+  transform: scale(1.02) !important
+  box-shadow: 0 0 20px -5px  $themeColor !important
+  
+// .loadingImgLeft
+//   width: 100%
+//   height: 50%
+//   bottom: 0
+//   left: 0
+//   position: fixed
+//   background: #fff
+//   z-index: 21
+//   transition: .5s ease-in-out
+
+// .loadingImgRight
+//   width: 100%
+//   height: 50%
+//   top: 0
+//   right: 0
+//   position: fixed
+//   background: #fff
+//   z-index: 21
+//   transition: .5s ease-in-out
+
+// .loadingImg
+//   display: flex
+//   position: fixed
+//   top: 0%
+//   left: 0
+//   width: 100%
+//   height: 100%
+//   // background: rgba(250, 250, 252, .8)
+//   // backdrop-filter: saturate(180%) blur(20px)
+//   z-index: 30
+//   justify-content: center
+//   align-items: center
+//   transition: .5s ease-in-out
+//   padding: 30px
+//   opacity: 1
+  
+
+//   .loadingImgOuter
+//     width: 100% 
+//     text-align: center
+
+//     img
+//       width: 50%
+
+//   .loadingicon
+//     width: 100%
+//     display: flex
+//     justify-content: center
+//     margin-top: 10px
+    
+
+//     img
+//       width: 100px
+
+  
+  
+//   .loadMessage
+//     text-align: center
+//     margin-top: 20px
+//     font-size: 20px
+
+  // mobile
+
+@media only screen and (max-width: 600px)
+
+  .loadingImgOuter
+    img
+      width: 100% !important
+
+  header
+    nav
+      .navbar-brand
+        padding: 0
+      .navbar-toggler
+        background: url(../img/hamburger.png)
+        border: none
+        background-position: center
+        background-size: 50%
+        background-repeat: no-repeat
+        transition: 0.5s ease-out
+
+      button:hover, button:focus, .button:hover, .button:focus
+
+        // background: url(../img/close.png)
+        border: none
+        // background-position: center
+        // background-size: 70%
+        // background-repeat: no-repeat
+      .navbar-toggler:focus
+        box-shadow: none
+      .enquireNowBtn
+        display: none
+      .hideContact
+        display: none
+
+    .hidNavmenu
+      display: none !important
+        
+
+  section
+    padding: 10% 0px
+  .container
+    text-align: center
+    width: 100vw
+
+  .banner
+    box-shadow: 0 0 14px -5px #000
+  .bannerShrink
+    // background-image: url(../img/banner1.jpg)
+    background-position: top
+    background-size: cover
+    background-repeat: no-repeat
+
+    // .deskvideo
+    //   display: none
+    
+    // .mobvideo
+    //   display: block
+    
+
+    .bannerSlider 
+      position: absolute
+      top: -30%
+      left: 0
+      width: 100%
+      height: 100%
+      z-index: 0
+      // height: 80%
+      .item
+        height: 100%
+        width: 100%
+        background-position: top
+        background-size: cover
+
+
+    .offerBoxOuter
+      // background: unset
+      // align-items: flex-end
+      // justify-content: center
+
+      .offerTitle
+        font-size: 15px
+        img
+         width: 30%
+         margin-bottom: 10px
+
+      .offerInner
+        
+        text-align: center
+        // bottom: 45px
+        transition: .6s ease-out
+        // background: #fff
+        font-weight: 600
+        color: #fff
+        border-radius: 12px
+        // box-shadow: 0 0 14px -5px #000
+        // transform: scale(0.8)
+        opacity: 1
+        top: unset
+       
+        // width: 100%
+
+        .offerUSP
+          font-size: 15px
+          margin-bottom: 10px
+
+        .AnimatePrice
+          width: 100%
+          position: relative
+          margin: 10px 0px
+          padding: 3px
+          background: $themeColorWithOpacity
+
+        .AnimatePrice::before
+          animation-duration: 5s
+          background: conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0) 43%, $themeColor 100%)
+
+        .offerConifg
+          position: relative
+          z-index: 2
+          font-size: 15px
+          // background: #fff
+          // border: 1px solid
+          // margin: 10px 0px
+          padding: 10px 10px
+          border-radius: 12px
+        .offerLoc
+          font-size: 15px
+
+        .paymentPlanFig
+          font-size: 15px
+          margin: 10px 0px
+          .projnametitle
+            font-size: 30px !important
+          .projloctitle
+            font-size: 15px !important
+
+
+        .offerButtons
+          padding-top: 10px
+          display: flex
+          justify-content: center
+          // margin-bottom: 20px
+
+       
+          #sitevisit
+            // background: $themeColor
+            // color: #fff
+            font-size: 15px
+
+
+
+      .offerInner
+        // left: 0
+        
+    
+
+  .top 
+    text-align: left
+    margin-bottom: 10px
+
+    .sectitle
+      font-size: 20px
+
+    .secsubtitle
+      font-size: 20px
+
+
+  .Highlights
+    padding-bottom: 10px
+    .downloadBrochureOuter
+      padding: 30px 10px
+      text-align: center
+      display: flex
+      justify-content: center
+
+      .dnHeroimageOuter
+        // height: 200px
+        margin-top: 20px
+
+      .dnTextOuter
+        // padding: 30px 0px 0
+        text-align: center
+        height: unset
+
+        .enquireNowBtn
+          // width: 100%
+        .dnTextInner
+          text-align: center
+
+        .secsubtitle
+          text-align: center
+
+        #mainVideo
+          margin-top: 20px
+
+    // iframe
+    //   pointer-events: none !important
+
+
+  .virtual
+    iframe
+      width: 100%
+      height: 40%
+      // margin-top: 40px
+
+
+  .Configuration
+    .container
+      .configTabButtons
+        display: block
+        .configTabButtonsOuter
+          // display: block
+
+      .bottom
+        .bodyContent
+          #tower2
+            display: inline-flex
+            justify-content: center
+          .hideConfig
+            justify-content: center
+
+        .AnimatePrice, .enquireNowBtn
+          // width: 100%
+          // transition: .2s linear
+
+        .AnimatePrice::before
+          background: conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0) 43%, $themeColor 100%)
+          transform: scale(20)
+
+   
+
+
+
+  .Aminities
+    .col-md-8
+      display: none
+    .amiOuter
+      display: flex
+      justify-content: center
+    .row
+      // display: inline
+      
+  .Location
+    padding: 25% 0px
+    .bodyContent
+      .outerLoc
+        display: none
+      .locMap
+        display: none
+        border-radius: 12px
+        overflow: hidden
+        margin-bottom: 10px
+        box-shadow: 0 0 14px -5px $themeColorWithOpacity
+      .locMobile
+        display: block
+        border-radius: 12px
+        overflow: hidden
+        box-shadow: 0 0 14px -5px $themeColorWithOpacity
+        .accordion-button:not(.collapsed)
+          background-color: $themeColorWithOpacity
+
+        button:hover, button:focus, .button:hover, .button:focus
+          background-color: $themeColorWithOpacity
+          color: #000
+
+        .accordion-button:focus
+          box-shadow: unset
+
+        .accordion-button:focus
+          border-color: $themeColor
+
+        .accordion-button:not(.collapsed)::after
+          filter: brightness(0)
+
+        .accordion-button:not(.collapsed)
+          color: #000
+
+        .accordion-button
+          padding: 10px 15px
+          font-size: 18px
+
+          img 
+            width: 40px
+            margin-right: 15px
+
+        ul
+          text-align: left
+          padding: 0px
+
+  .footerPop
+    width: 90%
+
+
+  
+
+    // transform: scale(1)
+
+  .footerSticky
+    // bottom: -0.1px
+
+    .closeform
+      display: none
+
+    .mobileFooter
+      // height: 100px
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+
+      .mobFooterPhone, .mobFooterWhatsapp
+        width: 50%
+        text-align: center
+        height: 50px
+        display: flex
+        align-items: center
+        justify-content: center
+
+        .enquireNowBtn
+          font-size: 14px !important
+
+        img
+          width: 35px
+      .phoneOuter
+        display: block
+
+        .phoneEnq
+          font-size: 14px !important
+
+        .phoneEnq
+          margin: 0
+
+      .enquireNowBtn
+        border-radius: 0
+        background: unset
+        padding: 0
+        display: block
+        width: 100%
+        display: flex
+      // .mobFooterInner
+
+        
+
+
+    .inner
+      display: none
+
+  .footerPop
+    .inner
+      .countWhatsApp
+        display: none
+      .slide-submit
+          display: flex
+
+      .enqtext
+        font-size: 20px
+        margin-bottom: 10px
+
+  
+
+  .GalleryPopup
+    width: 100%
+    border-radius: 0
+
+    .closeGallery
+      top: 10px
+      right: 10px
+      width: 15px
+
+.enqNowFlotaing
+  display: none
+  position: fixed
+  bottom: 60px
+  right: 10px
+  background: #A57C3A
+  /* writing-mode: vertical-rl; */
+  /* text-orientation: mixed; */
+  color: #fff
+  /* transform: rotate(180deg); */
+  padding: 9px
+  box-shadow: 0 0 14px -5px #000
+  border-radius: 12px
+  z-index: 1
+  width: 55px
+
+
+// .altBack
+//   background-image:  linear-gradient(135deg, #fffbf2 25%, transparent 25%), linear-gradient(225deg, #fffbf2 25%, transparent 25%), linear-gradient(45deg, #fffbf2 25%, transparent 25%), linear-gradient(315deg, #fffbf2 25%, #fff 25%) !important
+//   background-position:  10px 0, 10px 0, 0 0, 0 0 !important
+//   background-size: 20px 20px !important
+//   background-repeat: repeat !important
+
+.altBack
+  background-image: url(../img/background.webp) !important
+  background-position: center !important
+  background-size: contain !important
+  background-repeat: repeat !important
+
+footer
+  // transition: .5s ease-out
+  // bottom: -60px 
+
+.floorplanbackDrop
+  // filter: blur(2px)
+  position: relative
+  // .sliderOuter
+  //   z-index: 10
+  //   width: 100%
+  //   position: fixed
+  //   bottom: 0
+  //   left: 0
+  //   padding: 10px
+
+  //   .slide-submit
+  //     box-shadow: 0 0 14px -5px $themeColor
+  //     height: 45px
+
+.floatingring
+  position: fixed
+  border: 1px solid #ede4d2
+  width: 300px
+  height: 300px
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  border-radius: 300px
+  z-index: -1
+

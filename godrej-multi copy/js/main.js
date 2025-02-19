@@ -1,0 +1,810 @@
+
+
+
+
+
+$(document).ready(function() {
+
+
+    // Custom Toggle Function Start
+    (function($) {
+        $.fn.clickToggle = function(func1, func2) {
+            var funcs = [func1, func2];
+            this.data('toggleclicked', 0);
+            this.click(function() {
+                var data = $(this).data();
+                var tc = data.toggleclicked;
+                $.proxy(funcs[tc], this)();
+                data.toggleclicked = (tc + 1) % 2;
+            });
+            return this;
+        };
+    }(jQuery));
+    // Custom Toggle Function Start
+
+
+// Form Submit Operations
+    var queryString = window.location.search;
+
+    // Parse the query string into an object
+    var params = new URLSearchParams(queryString);
+
+    // Extract the parameters
+    var dataShow = params.get('showData');
+    var typeofDataForm = params.get('type');
+    var tirgplan = params.get('plan');
+    var popupopen = 0
+
+    $("#utm_source").attr("value",params.get('utm_source'))
+    $("#utm_medium").attr("value",params.get('utm_medium'))
+    $("#utm_campaign").attr("value",params.get('utm_campaign'))
+    $("#utm_term").attr("value",params.get('utm_term'))
+
+    // alert(typeofDataForm)
+
+    // console.log(dataShow)
+
+    if(typeofDataForm == "Check Price" || typeofDataForm == "View Floor Plan" || typeofDataForm == "Download Plans"){
+        $(".loadMessage").html("Request Initiated, Will get back to you soon")
+    }else if(typeofDataForm == "Download Brochure"){
+        $(".loadMessage").html("Request Initiated, Brochure will be shared soon!")
+
+    }else if(typeofDataForm == "Schedule Virtual Tour" || typeofDataForm == "Enquire Now" || typeofDataForm == "Know More" || typeofDataForm == "Play Video"){
+        $(".loadMessage").html("Thank you for your enquiry<br>Our Sales Advisor will call you in 30 mins")
+    }
+
+    if(dataShow == 'true'){
+        // alert();
+        // $(".GalleryPopup").after(' <div class="GalleryPopup"><div class="closeGallery"><img loading="lazy" alt="Godrej Vistas" src="./img/close2.png" alt=""></div><img loading="lazy" alt="Godrej Vistas" src="" id="galImg" /></div>');
+        
+
+        $(".dnBroBtnOuter .formPopTrigger").removeClass("formPopTrigger")
+
+
+        // Floor plans
+
+        $(".floorplanImg").removeClass("floorplanbackDrop")
+        $(".floorplanImg").removeClass("formPopTrigger")
+        $(".floorplanImg").addClass("zoomImg")
+
+
+        $(".floorPlanBottom .formPopTrigger").removeClass("formPopTrigger")
+        $(".actual_price").each(function(){
+            $(this).html($(this).attr("data-checkprice"))
+        })
+        $(".starting").removeClass("starting")
+
+        $(".dnHeroimageOuter").removeClass("videoTigger")
+        $(".Highlights iframe").css("pointer-events","unset !important")
+
+
+        // Videos
+        $(".videoTop").removeClass("formPopTrigger");
+        $(".videoTop iframe").css("pointer-events","unset")
+        // $(".videos .bodyContent .videoTop iframe")
+
+        setTimeout(()=>{
+            $(".loadingImg").css("top","100%");
+        },3000)
+        // alert(tirgplan[tirgplan.length -1])
+
+       
+        setTimeout(()=>{
+            if(tirgplan[tirgplan.length -1] == 2){
+                $('.TabBtns[data-showdata="tower1"]').trigger("click")
+            }
+            $("#tabConfigClick").attr("href","#"+tirgplan)
+        },500)
+
+        
+        
+        setTimeout(()=>{
+            $("#tabConfigClick .tabConfigClick").trigger("click")
+        },2000)
+
+
+
+    }else{
+
+        // $(".loadingImg").css("display","none")
+
+        setTimeout(()=>{
+            $(".loadingImg").css("top","-100%");
+        },800)
+
+        $("#aboutDB").attr("href",null)
+        $("#aboutDB").attr("download",null)
+
+        // setTimeout(()=>{
+        //     if(popupopen == 0){
+        //         $("#popload").trigger("click");
+        //     }
+        // },1000)
+
+        
+        
+        setTimeout(()=>{
+            if(popupopen == 0){
+                $(".usps").css("display","flex")
+                $("#popload").trigger("click");
+            }
+            
+        },30000)
+    }
+
+
+
+
+
+
+
+    
+
+// Aminities Tabs Start
+    $(".imgBtn").parent().click(function(){
+        var imgpath = $(this).children(".imgBtn").children("img").attr("src")
+
+        $(".AmiName").html($(this).children(".imgtext").html())
+
+        $("#Aminities #amiImg .swap-not-active").attr("src", imgpath)
+        $(".swap-active").fadeOut();
+        $(".swap-active").addClass("temp")
+        $(".imgBtn").parent().css("pointer-events","none")
+       
+        setTimeout(function(){
+            $(".swap-not-active").addClass("swap-active").removeClass("swap-not-active")
+            $(".temp").removeClass("swap-active temp").addClass("swap-not-active")
+            $(".swap-active").css("z-index",2)
+            $(".swap-not-active").css("z-index",1)
+            $("#Aminities #amiImg .swap-not-active").css("display","inline-block")
+            $(".imgBtn").parent().css("pointer-events","unset")
+        }, 600)
+        
+        
+        // $("#Aminities #amiImg .swap-active").fadeOut()
+
+        // $("#Aminities #amiImg #swapper").attr("id", "frontswapper")
+       
+        // setTimeout(function(){
+        //     $("#Aminities #amiImg img").attr("src", imgpath)
+        //     $("#Aminities #amiImg img").fadeIn()
+        // }, 500)
+
+        // alert($(this).children(".imgBtn").attr("class"))
+    })
+
+    // Aminities Tabs End
+
+    var winHeight = $(window).height();
+    var winWidth = $(window).width();
+    var about = 0
+
+    // $(".banner").click(function(){
+    //     $(this).css("top",-winHeight)
+    // })
+
+    $("#homenav").click(function(){
+        $(".banner").css("top", 0)
+    })
+
+    // if(winWidth > 600){
+    //     $(".bannerSlider .item").each(function(){
+    //         $(this).css("background-image","url("+$(this).attr("data-imgattr")+")")
+    //     })
+    // }
+
+
+
+    $(window).scroll(function(){
+        
+        if(winWidth > 500)
+        {
+            if($(".banner").offset().top - $(window).scrollTop() > -winHeight/2){
+
+           
+                $(".bannerShrink").css({
+                    // "height": (winHeight+ ($(".banner").offset().top - $(window).scrollTop()/3)),
+                        // "width": (winWidth+ ($(".banner").offset().top - $(window).scrollTop()/2)),
+                    // "border-radius": ($(".banner").offset().top + $(window).scrollTop())/20
+                })
+                // console.log($(".banner").offset().top - $(window).scrollTop());
+                
+            
+             }
+            //  console.log($(".Highlights .sectitle").offset().top)
+        }
+
+        if($("#projects").offset().top - $(window).scrollTop() < 0){
+
+            $("header").css("top","0")
+        
+        }else{
+            $("header").css("top","-60px")
+        
+        
+        }
+
+        
+
+
+            // console.log($(".appearText").offset().top - $(window).scrollTop())
+
+            $(".appearText").each(function() {
+                if ($(this).offset().top - $(window).scrollTop() < (winHeight)) {
+                    // alert()
+                    $(this).css({"opacity":"1", "transform":"scale(1)"})
+                    
+                
+                }
+            });
+
+            var themeColor =  $("#popload").css("background")
+            // $(".AnimatePrice").each(function() {
+            //     if ($(this).offset().top - $(window).scrollTop() < (winHeight)) {
+                    
+            //         $(this).addClass("animateTrigger")
+            //         setTimeout(()=>{
+            //             $(this).css("background",themeColor)
+            //         },2500)
+                
+                    
+                
+            //     }
+            // });
+
+
+            if ($("#About").offset().top - $(window).scrollTop() < (winHeight)) {
+                // alert()
+                
+                if(about == 0){
+                    $("#popload").trigger("click");
+                }
+                about = 1
+                
+                // $(this).css({"opacity":"1", "transform":"scale(1)"})
+                
+            
+            }
+      
+          
+            // $(".Highlights").css("height", ogHeightH + ($(".Highlights .owl-prev").offset().top - $(window).scrollTop()))
+      
+            
+      
+            // $(".configuration").css("height", ogHeightC + ($(".configuration .secsubtitle").offset().top - $(window).scrollTop()))
+      
+            // $(".Aminities").css("height", ogHeightA + ($(".Aminities .displayImage").offset().top - $(window).scrollTop()))
+
+    
+    })
+
+
+//  Config Tabs Function Starts
+
+$(".TabBtns").click(function(){
+    $(".TabBtns").removeClass("TabBtns-active")
+    $(this).addClass("TabBtns-active")
+    $(".hideConfig").hide()
+    $("#"+$(this).attr("data-showData")).css("display","inline-flex")
+})
+
+
+// Config Tabs Function Ends
+
+// COnfig tabs mobile
+
+$(".unitOptButton").click(function(){
+   
+});
+
+$(".optionsBodyOuter").each(function(){
+    $(this).parent().attr("data-bodyheight",$(this).height())
+})
+
+$('.unitOptButton').clickToggle(function() {
+    $("img", this).css("rotate", "0deg")
+    $(this).next().css("height",$(this).next().attr("data-bodyheight")+"px");
+    $(".changeTextUnit", this).html("Hide Unit Options")
+    
+}, function() {
+    $("img", this).css("rotate", "180deg")
+    $(".changeTextUnit", this).html("Show Unit Options")
+    $(this).next().css("height","0px");
+});
+
+
+// offer tab
+
+var imagesize = $(".mainOfferOuter").width()
+// alert(imagesize)
+setTimeout(()=>{
+    $(".mainOfferOuter").css("left","-"+imagesize+"px");
+},3000);
+
+
+// $(".offerbutton").click(function(){
+//     alert();
+// })
+$('.offerbutton').clickToggle(function() {
+  $(".mainOfferOuter").css("left","0");
+//    alert();
+
+}, function() {
+    // alert();
+    $(".mainOfferOuter").css("left","-"+imagesize+"px");
+  
+});
+
+
+$(".crossbtn").click(function(){
+    $(".offerbutton").trigger("click")
+    // $(".mainOfferOuter").css("left","-"+imagesize+"px");
+    $(this).css("top","unset")
+})
+
+
+// Location Btn 
+
+$(".locBtn").click(function(){
+    $(".locBtn").removeClass("active")
+    $(this).addClass("active")
+
+    var locationdisplay = $(this).attr("data-loctarget")
+    $(".OuterProj").css("display","none")
+    $("."+locationdisplay).css("display","flex")
+
+    if( locationdisplay == 'All'){
+        $(".OuterProj").css("display","flex")
+    }
+})
+
+
+// Connectivity Start
+
+setTimeout(()=>{
+    var conWidth = $("#connectLoc").width();
+    // var locIconWidth = $("#connectLoc .locIcon").width()
+
+    $(".locTabsOuter, .expandConnect").css("width",conWidth)
+    // 
+   
+    $(".expandConnect").parent().css("width",conWidth)
+
+    setTimeout(()=>{
+        var locIconWidth = $("#connectLoc .locIcon").width()
+        $(".locIcon").css("width",locIconWidth)
+    },500)
+    
+    // alert(locIconWidth)
+    
+    
+    // alert(conWidth)
+
+    $(".locTabsOuter").click(function(){
+        $(".locTabsOuter").css("pointer-events","none");
+        $(".closeExpand").removeClass("active-connect")
+        $(this).prev().addClass("active-connect")
+
+        $(".closeExpand").each(function(){
+            if(!$(this).hasClass("active-connect")){
+                $(this).trigger("click")
+            }
+        })
+       
+        
+        $(this).prev().show()
+        // alert();
+        $(this).parent().parent().css("width","50%");
+        $(".expandConnect").css("width","100%");
+        setTimeout(()=>{
+            
+            $(this).next().fadeIn()
+            
+            
+        },300)
+        setTimeout(()=>{
+            
+            $(".locTabsOuter").css("pointer-events","unset");
+            
+        },550)
+        
+    })
+    $(".closeExpand").click(function(){
+            $(this).removeClass("active-connect")
+            $(this).fadeOut();
+            $(this).parent().children(".conContent").hide()
+            // $(this).parent().css("width",conWidth)
+            // alert($(this).parent().parent().attr("class"));
+            $(this).parent().parent().css("width",conWidth)
+            setTimeout(()=>{
+                
+                $(this).parent().css("width",conWidth)
+                
+            },550)
+    
+        })
+   
+        
+        
+
+},800)
+
+
+
+
+    // Connectivity Ends
+
+
+
+    // Zoom Image Popup Start
+
+    $(".zoomImg").click(function(){
+        // alert();
+        var imgData = $(this).children("img").attr("src");
+        $(".popupBack").fadeIn();
+        $(".GalleryPopup #galImg").attr("src", imgData)
+        $(".GalleryPopup").css("transform", "translate(-50%, -50%) scale(1)")
+
+    })
+
+    // Zoom Image Popup Start
+
+
+    function formatDate(date) {
+        var day = ("0" + date.getDate()).slice(-2);
+        var month = ("0" + (date.getMonth() + 1)).slice(-2);
+        var year = date.getFullYear();
+        return year + "-" + month + "-" + day;
+      }
+  
+      // Initialize the datepicker
+      $("#sitevisitform").datepicker({
+        dateFormat: "dd-mm-yy",
+        minDate: 0, // No past dates
+        maxDate: "+1M", // Max date 2 months from now
+        defaultDate: new Date(), // Default to today
+        onSelect: function(dateText, inst) {
+          $(this).val(dateText); // Set the value when a date is selected
+        }
+      });
+  
+      // Set the default value to today's date
+      var today = new Date();
+      var formattedToday = formatDate(today);
+    //   $("#sitevisitform").val(formattedToday);
+
+
+// Pop Up Close Code
+
+
+    var flag = 0; 
+    var sitevisite = 0;
+
+    $(".popupBack, .closeGallery, .closeform").click(function(){
+        popupopen = 0
+
+        $(".popupBack").fadeOut();
+        $(".GalleryPopup").css("transform", "translate(-50%, -50%) scale(0)")
+        if(flag=1){
+            $("footer").removeClass()
+            $("footer").addClass("footerSticky");
+            $('footer').hide()
+            $('footer').fadeIn();
+
+            var formtype = "Enquire Now"
+            $("#typeofForm").attr("value",formtype)
+            $(".enqtext").html(formtype)
+            if(formtype == "Enquire Now")
+                formtype = "Get Instant Call Back"
+
+            
+            
+            $("#submitBtn").html(formtype)
+            flag=0;
+
+            $("#sitevisitform").hide()
+            $("#configDetails").attr("value",'')
+            $("#project_name").attr("value","Godrej Properties")
+        }
+        $(".slide-submit button").css("transition","all 400ms ease-out")
+        if(winWidth < 600){
+            $(".mobileFooter").show()
+        }
+        
+        $(".usps").css("display","none")
+       
+
+
+    })
+    
+
+
+    var getPrice = ''
+    var formtypeData 
+    var plantrigger = ''
+
+    $(".formPopTrigger").click(function(){
+        popupopen = 1
+
+        
+        flag = 1;
+        var formtype = $(this).html()
+        formtypeData = $(this).attr("data-formtype")
+        var configDetails = ''
+        getPrice = $(this).attr("data-price")
+        priceBtn = $(this)
+        projname = ''
+
+        $("#typeofForm").attr("value",formtype)
+
+        if(formtypeData == "Schedule Virtual Tour"){
+            $("#sitevisitform").show()
+        }
+        
+        $(".mobileFooter").hide()
+
+        
+        $(".enqtext").html(formtypeData)
+        if(formtype == "Enquire Now")
+            formtype = "Get Instant Call Back"
+        
+        if(formtypeData == "View Floor Plan")
+            formtype = "View Floor Plan"
+
+        
+
+        if(formtypeData == "Check Price" || formtypeData == "View Floor Plan" ){
+            configDetails = $(this).attr("data-configdetails")
+            plantrigger = $(this).attr("data-redirect")
+            projname = $(this).attr("data-projname")
+            // alert($(this).closest("#"+plantrigger).attr("class"))
+        }
+        // alert(formtypeData);
+        if(formtypeData == "Play Video"){
+            // alert();
+            formtype = "Play Video"
+
+        }
+
+        if(formtypeData == "The 1% Plan"){
+            formtype = "Get Offer Details"
+            formtypeData = "offer"
+            projname = "Godrej Properties"
+        }
+
+
+
+        if(formtypeData == "Download Brochure"){
+            
+            formtype = "Download Brochure"
+            projname = $(this).attr("data-projname")
+
+        }
+
+       
+        if(formtypeData == "Enquire Now"){
+            
+            formtype = "Enquire Now"
+            projname = $(this).attr("data-projname")
+            // formtypeData = "Enquire Now"
+        }
+
+        if(formtypeData == "Know More"){
+            
+            formtype = "Enquire Now"
+            projname = $(this).attr("data-projname")
+            // formtypeData = "Enquire Now"
+        }
+
+
+       
+        
+        // console.log(plantrigger)
+        // alert($(this).attr("data-configdetails"))
+        $("#typeofForm").attr("value",formtypeData)
+        $("#projdetailsform").attr("value",projname)
+        $("#configDetails").attr("value",configDetails)
+        $("#project_name").attr("value",projname)
+
+        
+        $("#submitBtn").html(formtype)
+
+        $(".popupBack").fadeIn();
+        // alert();
+        $("footer").removeClass()
+        
+        $("footer").addClass("footerPop");
+        $('footer').hide()
+        $('footer').fadeIn();
+
+        setTimeout(()=>{
+            $(".slide-submit button").css("left","12px")
+            // $(".lineswipe").css("left","100%")
+            setTimeout(()=>{
+                $(".slide-submit button").css("left","0px")
+                
+                setTimeout(()=>{
+                    
+                    $(".slide-submit button").css("transition","all 100ms linear")
+                },400)
+               
+            },300)
+
+        },500)
+        
+
+    })
+
+
+    // $("#submitBtn").click(function(){
+    //     $(".popupBack").fadeOut();
+    //     $(".GalleryPopup").css("transform", "translate(-50%, -50%) scale(0)")
+    //     if(flag=1){
+    //         $("footer").removeClass()
+    //         $("footer").addClass("footerSticky");
+    //         $('footer').hide()
+    //         $('footer').fadeIn();
+
+    //         var formtype = "Enquire Now"
+    //         $("#typeofForm").attr("value",formtype)
+    //         $(".enqtext").html(formtype)
+    //         if(formtype == "Enquire Now")
+    //             formtype = "Get Instant Call Back"
+            
+    //         $("#submitBtn").html(formtype)
+    //         flag=0;
+
+    //         $("#sitevisitform").hide()
+    //     }
+    //     $(".slide-submit button").css("transition","all 400ms ease-out")
+    //     $(".mobileFooter").show()
+
+    // })
+
+    
+// For Mobile Devices
+
+if(winWidth < 600){
+    setTimeout(()=>{
+        $(".offerInner").css("bottom","0%")
+    },20)
+
+
+    $("#sitevisit img").attr("src","./img/calender.gif")
+}
+
+
+// setTimeout(()=>{
+//     $(".loadingImg").css("top","100%");
+// },1500)
+
+// $("#popload").trigger("click");
+
+
+
+   
+
+$(".videoTigger").click(function(){
+    $("#popload").trigger("click");
+})
+    
+
+// setTimeout(()=>{
+//     $(".popupOffer").css("display","flex")
+    
+// },1500)
+
+// $(".closeOfferInner2").click(function(){
+//     $(".popupOffer").fadeOut()
+// })
+
+
+
+// on load 
+// $(".floorplanbackDrop").click(function(){
+//     $("#popload").trigger("click");
+// })
+
+
+
+
+// Submit Form Data
+
+
+let form = document.querySelector("form");
+
+form.addEventListener('submit', (e) => {
+    // alert();
+    e.preventDefault();
+    
+    $("#submitBtn").html('Submitting! Please Wait<span class="loading"> <span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></span>');
+    $("#submitBtn").css("pointer-events","none");
+    var newphone = $(".iti__selected-dial-code").html()+$("#phone").val()
+    // alert($("#phone").val())
+    $("#phone2").attr("value","'"+newphone.replace(/(?!\+)\s+/g, ''))
+    // alert(newphone)
+    let data = new FormData(form);
+    // console.log(data)
+    
+    
+    fetch('https://script.google.com/macros/s/AKfycbyZZh85c6V3-6wVcYRk2kuTNt2GOd_DZ_5NqlGco-zljNwTZnHIH7pPEV8DWkfnITYIRA/exec', {
+        method: "POST",
+        body: data
+        
+    })
+    .then(res => res.text())
+    .then(responseText => {
+
+        // console.log("First response:", responseText);
+        // Handle the response from the first fetch (optional)
+        
+        
+        // Now make a second fetch request to your PHP script to send the email
+        let emailData = new FormData();
+        emailData.append('name', form.name.value); 
+        emailData.append('email', form.email.value);
+        emailData.append('country', $(".iti__a11y-text").html());
+        emailData.append('phone', form.phone.value);
+        emailData.append('type', form.type.value); 
+        emailData.append('config', form.config.value || '');
+        emailData.append('date', form.date.value || ''); 
+        emailData.append('project_name', form.project_name.value || ''); 
+        emailData.append('utm_source', form.utm_source.value || ''); 
+        emailData.append('utm_medium', form.utm_medium.value || ''); 
+        emailData.append('utm_campaign', form.utm_campaign.value || ''); 
+        emailData.append('utm_term', form.utm_term.value || ''); 
+        console.log("timer 1");
+        return fetch('sendmail.php', { // Replace with your PHP email script
+            method: 'POST',
+            body: emailData
+        });
+        
+    })
+    .then(res => res.text())
+    .then(emailResponse => {
+        // console.log("timer 2");
+        // console.log("Email response:", emailResponse);
+        // Handle the response from the email sending
+        // if(formtypeData == "Download Brochure"){
+        //     $("#dbbtn .dbbtn").trigger("click")
+        // }
+        $("#submitBtn").html("Submitted");
+        $("#submitBtn").css("pointer-events","unset");
+        // Optionally redirect after successful email send
+        if($(location).attr("href") == "https://godrej-homes-mumbai.com")
+        {
+            variques = "?"
+        }
+        else{
+            variques = "&"
+        }
+
+
+        
+        window.location.href = "https://godrej-homes-mumbai.com?showData=true&type=" + formtypeData + "&plan=" + plantrigger;
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        $("#submitBtn").html("Error, try again.");
+    });
+});
+
+
+
+$(".nav-item").click(function(){
+    $(".navbar-toggler-icon").trigger("click")
+})
+
+
+
+// Config Button 
+
+$(".checkconfiguration").click(function(){
+    $(this).next().css("top","0%")
+})
+
+$(".closeConfigPop").click(function(){
+    $(this).parent().css("top","100%");
+})
+
+});
