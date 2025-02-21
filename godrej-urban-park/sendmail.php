@@ -118,6 +118,7 @@ curl_setopt_array($curl2, [
                     ["name" => "Rioga Premium", "email" => "info@riogapremium.com"],
                     ["name" => "Yash S", "email" => "yashs@riogapremium.com"],
                     ["name" => "Shweta M", "email" => "shwetam@riogapremium.com"],
+                    ["name" => "Ritesh K", "email" => "riteshk@riogapremium.com"],
                     
                     
                 ],
