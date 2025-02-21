@@ -6,6 +6,9 @@
 $(document).ready(function() {
 
 
+
+
+
     // Custom Toggle Function Start
     (function($) {
         $.fn.clickToggle = function(func1, func2) {
@@ -21,6 +24,11 @@ $(document).ready(function() {
         };
     }(jQuery));
     // Custom Toggle Function Start
+
+    $.getJSON("https://api.ipify.org/?format=json", function(e) {
+        // alert(e.ip);
+        $("#ipaddress").attr("value",e.ip)
+    });
 
 
 // Form Submit Operations
@@ -133,6 +141,37 @@ $(document).ready(function() {
     }
 
 
+
+
+
+// offer tab
+
+var imagesize = $(".mainOfferOuter").width()
+// alert(imagesize)
+setTimeout(()=>{
+    $(".mainOfferOuter").css("left","-"+imagesize+"px");
+},3000);
+
+
+// $(".offerbutton").click(function(){
+//     alert();
+// })
+$('.offerbutton').clickToggle(function() {
+  $(".mainOfferOuter").css("left","0");
+//    alert();
+
+}, function() {
+    // alert();
+    $(".mainOfferOuter").css("left","-"+imagesize+"px");
+  
+});
+
+
+$(".crossbtn").click(function(){
+    $(".offerbutton").trigger("click")
+    // $(".mainOfferOuter").css("left","-"+imagesize+"px");
+    $(this).css("top","unset")
+})
 
 
 
@@ -471,6 +510,7 @@ setTimeout(()=>{
 
             $("#sitevisitform").hide()
             $("#configDetails").attr("value",'')
+            $("#project_name").attr("value","L&T Realty")
         }
         $(".slide-submit button").css("transition","all 400ms ease-out")
         if(winWidth < 600){
@@ -550,7 +590,7 @@ setTimeout(()=>{
         // console.log(plantrigger)
         // alert($(this).attr("data-configdetails"))
 
-        $("#projdetailsform").attr("value",projname)
+        $("#project_name").attr("value",projname)
         $("#configDetails").attr("value",configDetails)
 
         
@@ -674,7 +714,7 @@ form.addEventListener('submit', (e) => {
     // console.log(data)
     
     
-    fetch('https://script.google.com/macros/s/AKfycbx39_2jioAlpFLbEjqbFJVyAzaO_iro8xWgVgOUeKN5WeDEJqwdlsdspBqYQ4wJf44/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbyZZh85c6V3-6wVcYRk2kuTNt2GOd_DZ_5NqlGco-zljNwTZnHIH7pPEV8DWkfnITYIRA/exec', {
         method: "POST",
         body: data
         
@@ -694,12 +734,13 @@ form.addEventListener('submit', (e) => {
         emailData.append('phone', form.phone.value);
         emailData.append('type', form.type.value); 
         emailData.append('config', form.config.value || '');
-        emailData.append('date', form.date.value || ''); 
-        emailData.append('projname', form.projdetailsform.value || ''); 
+        emailData.append('date', form.date.value || '');  
         emailData.append('utm_source', form.utm_source.value || ''); 
         emailData.append('utm_medium', form.utm_medium.value || ''); 
         emailData.append('utm_campaign', form.utm_campaign.value || ''); 
         emailData.append('utm_term', form.utm_term.value || ''); 
+        emailData.append('project_name', form.project_name.value || '');
+        // emailData.append('project_name', form.project_name.value); 
         console.log("timer 1");
         return fetch('sendmail.php', { // Replace with your PHP email script
             method: 'POST',
@@ -728,7 +769,7 @@ form.addEventListener('submit', (e) => {
 
 
         
-        window.location.href = $(location).attr("href") + variques +"showData=true&type=" + formtypeData + "&plan=" + plantrigger;
+        window.location.href = "https://lt-realty-homes.com/?showData=true&type=" + formtypeData + "&plan=" + plantrigger;
     })
     .catch(error => {
         console.error('Error:', error);
