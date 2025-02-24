@@ -2054,8 +2054,55 @@ Spread across a thoughtfully planned landscape, Adani Airica features five majes
 
 
 
-        <div class="privacy"><a href="privacy_policy.html" target="_blank">Privacy Policy And Terms And Conditions</a></div>
+        <!-- <div class="privacy"><a href="privacy_policy.html" target="_blank">Privacy Policy And Terms And Conditions</a></div> -->
         
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy with reCAPTCHA v2</title>
+
+    <!-- Load Google reCAPTCHA v2 -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script>
+        function verifyRecaptcha(event) {
+            event.preventDefault(); // Prevent immediate navigation
+            grecaptcha.execute();
+        }
+
+        function onRecaptchaSuccess() {
+            console.log("reCAPTCHA verified! Redirecting...");
+            window.location.href = "privacy_policy.html"; // Redirect on success
+        }
+
+        function onRecaptchaError() {
+            console.error("reCAPTCHA failed. Please try again.");
+            alert("Verification failed. Please try again.");
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Click the Privacy Policy Link</h2>
+    <a href="#" id="privacyPolicyLink" onclick="verifyRecaptcha()">Privacy Policy</a>
+
+    <!-- Invisible reCAPTCHA -->
+    <div class="g-recaptcha"
+         data-sitekey="6Lehp-AqAAAAAHjXFnJUpKor4EKNnnJ-sBJQ4CFs"
+         data-callback="onRecaptchaSuccess"
+         data-expired-callback="onRecaptchaError"
+         data-error-callback="onRecaptchaError"
+         data-size="invisible">
+    </div>
+
+</body>
+</html>
+
+
+
 
         </div>
         </div>
