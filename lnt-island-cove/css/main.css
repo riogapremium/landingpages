@@ -390,6 +390,13 @@ section {
   align-items: center;
   justify-content: left;
 }
+.bannerShrink .videoOuter {
+  width: 100%;
+  position: absolute;
+}
+.bannerShrink .videoOuter .videobanner {
+  width: 100%;
+}
 .bannerShrink .bannerSlider {
   position: absolute;
   top: 0;
@@ -404,6 +411,9 @@ section {
   background-position: top;
   background-size: cover;
 }
+.bannerShrink .bannerSlider .item video {
+  width: 100%;
+}
 .bannerShrink .bannerSlider .owl-item {
   height: 100vh;
 }
@@ -413,7 +423,7 @@ section {
   height: 100%;
   display: flex;
   align-items: center;
-  background: linear-gradient(45deg, #000, transparent, transparent);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.431372549), transparent);
   z-index: 1;
 }
 .bannerShrink .offerBoxOuter .AnimatePrice {
@@ -458,11 +468,14 @@ section {
 .bannerShrink .offerBoxOuter .offerConifg .offerLoc {
   font-size: 18px;
 }
+.bannerShrink .offerBoxOuter .paymentPlanFig {
+  font-size: 25px;
+}
 .bannerShrink .offerBoxOuter .paymentPlanFig img {
   filter: brightness(50);
 }
 .bannerShrink .offerBoxOuter .offerUSP {
-  font-size: 20px;
+  font-size: 25px;
 }
 .bannerShrink .offerBoxOuter .offerPaymentplan {
   padding: 20px 0px;
@@ -524,11 +537,30 @@ section {
   border-radius: 12px;
   overflow: hidden;
   display: flex;
-  height: 350px;
-  box-shadow: 0 0 14px -10px #4d7f8a;
+}
+.Highlights .dnHeroimageOuter .brochureImage {
+  background: #4d7f8a;
+  padding-bottom: 20px;
+  margin-bottom: -8px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.Highlights .dnHeroimageOuter .brochureImage .brochureimg {
+  width: 100%;
+  height: 100%;
+}
+.Highlights .dnHeroimageOuter .secsubtitle {
+  text-align: left;
+}
+.Highlights .dnHeroimageOuter .enquireNowBtn {
+  display: inline-block;
+  font-size: 17px;
+  width: 100%;
+  padding: 0 0 12px 0px;
 }
 .Highlights .dnHeroimageOuter iframe {
   width: 100%;
+  pointer-events: none;
 }
 .Highlights .dnHeroimageOuter img {
   width: 100%;
@@ -541,6 +573,17 @@ section {
   height: 100%;
   justify-content: center;
   text-align: justify;
+}
+.Highlights .dnTextOuter .brochureImage {
+  background: #000000;
+  padding-bottom: 20px;
+  margin-bottom: -8px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.Highlights .dnTextOuter .brochureImage .brochureimg {
+  width: 100%;
+  height: 100%;
 }
 .Highlights .dnTextOuter .secsubtitle {
   text-align: left;
@@ -640,10 +683,10 @@ section {
   margin-bottom: 8px;
 }
 .Configuration .item .floorPlanBottom .congigDetails .configSQ {
-  font-size: 18px;
+  font-size: 20px;
   color: #000;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .Configuration .item .enquireNowBtn {
   padding: 6px 30px;
@@ -659,7 +702,7 @@ section {
   box-shadow: 0 0 14px -10px #4d7f8a;
 }
 .Configuration .item .fpOuter .specialOffer {
-  display: block;
+  display: inline-block;
   position: absolute;
   top: 0;
   left: 0;
@@ -794,14 +837,209 @@ section {
   box-shadow: 0 0 14px -10px #4d7f8a;
 }
 
-.virtual iframe {
+.virtual .virtualouterpop {
   width: 100%;
-  height: 60vh;
+  height: 50vh;
   border-radius: 12px;
-  box-shadow: 0 0 14px -5px #000;
-  margin-top: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.virtual .virtualouterpop iframe {
+  width: 100%;
+  height: 100%;
+}
+.virtual .virtualouter::before {
+  content: "Unlock Virtual Tour";
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 25px;
 }
 
+.videowalk .bodyContent {
+  overflow: hidden;
+}
+.videowalk .videomain {
+  height: 60vh;
+}
+.videowalk .videomain iframe {
+  pointer-events: none;
+}
+.videowalk .videomain .videoreplace {
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.videowalk #sync1 .item {
+  background: #0c83e7;
+  margin: 0px;
+  color: #FFF;
+  border-radius: 3px;
+  text-align: center;
+  height: 55vh;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.videowalk #sync1 .item iframe {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.videowalk #sync1 .owl-dots {
+  opacity: 0;
+}
+.videowalk #sync2 {
+  margin-top: 20px;
+}
+.videowalk #sync2 .item {
+  margin: 0px;
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.videowalk #sync2 .item h1 {
+  font-size: 18px;
+}
+.videowalk #sync2 .imageVideoOuter {
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 14px -10px;
+}
+.videowalk #sync2 .videothumbouter {
+  padding: 0;
+}
+.videowalk #sync2 .videothumbouter .videothumbnail {
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 14px -10px;
+}
+.videowalk #sync2 .videotextOuter {
+  padding: 0;
+  display: flex;
+  padding: 10px;
+}
+.videowalk #sync2 .videotextOuter .videotextInner {
+  text-align: left;
+}
+.videowalk #sync2 .videotextOuter .videotextInner .videotitle {
+  margin-top: 8px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.videowalk #sync2 .videotextOuter .videotextInner .videodescription {
+  font-size: 18px;
+}
+.videowalk #sync1.owl-theme {
+  position: relative;
+}
+.videowalk #sync1.owl-theme .owl-next, .videowalk #sync1.owl-theme .owl-prev {
+  width: 22px;
+  height: 40px;
+  margin-top: -20px;
+  position: absolute;
+  top: 50%;
+}
+.videowalk #sync1.owl-theme .owl-prev {
+  left: 10px;
+}
+.videowalk #sync1.owl-theme .owl-next {
+  right: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .videowalk .videomain {
+    height: 25vh;
+  }
+  .videowalk #sync1 .item {
+    background: #0c83e7;
+    margin: 0px;
+    color: #FFF;
+    border-radius: 3px;
+    text-align: center;
+    height: 25vh;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .videowalk #sync1 .item iframe {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .videowalk #sync1 .owl-dots {
+    opacity: 0;
+  }
+  .videowalk #sync2 {
+    margin-top: 10px;
+  }
+  .videowalk #sync2 .item {
+    margin: 0px;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+  }
+  .videowalk #sync2 .item h1 {
+    font-size: 18px;
+  }
+  .videowalk #sync2 .imageVideoOuter {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 0 14px -10px;
+  }
+  .videowalk #sync2 .videothumbouter {
+    padding: 0;
+  }
+  .videowalk #sync2 .videothumbouter .videothumbnail {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 0 14px -10px;
+  }
+  .videowalk #sync2 .videotextOuter {
+    padding: 0;
+    display: block;
+  }
+  .videowalk #sync2 .videotextOuter .videotextInner {
+    text-align: left;
+  }
+  .videowalk #sync2 .videotextOuter .videotextInner .videotitle {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+  }
+  .videowalk #sync2 .videotextOuter .videotextInner .videodescription {
+    font-size: 12px;
+  }
+  .videowalk #sync1.owl-theme {
+    position: relative;
+  }
+  .videowalk #sync1.owl-theme .owl-next, .videowalk #sync1.owl-theme .owl-prev {
+    width: 22px;
+    height: 40px;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+  }
+  .videowalk #sync1.owl-theme .owl-prev {
+    left: 10px;
+  }
+  .videowalk #sync1.owl-theme .owl-next {
+    right: 10px;
+  }
+}
 .Video .videoOuter {
   display: flex;
   justify-content: center;
@@ -1212,7 +1450,7 @@ section {
   text-align: center;
 }
 .loadingImg .loadingImgOuter img {
-  max-width: 70%;
+  max-width: 80%;
   height: auto;
 }
 .loadingImg .loadingicon {
@@ -1272,6 +1510,9 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
   }
+  .bannerShrink .videoOuter {
+    margin-top: -60px;
+  }
   .bannerShrink .bannerSlider {
     position: absolute;
     top: -10%;
@@ -1303,7 +1544,7 @@ section {
     width: 100%;
   }
   .bannerShrink .offerBoxOuter .offerInner .offerUSP {
-    font-size: 15px;
+    font-size: 18px;
   }
   .bannerShrink .offerBoxOuter .offerInner .AnimatePrice {
     width: 100%;
@@ -1314,18 +1555,20 @@ section {
   }
   .bannerShrink .offerBoxOuter .offerInner .AnimatePrice::before {
     animation-duration: 5s;
-    background: conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0) 43%, #4d7f8a 100%);
   }
   .bannerShrink .offerBoxOuter .offerInner .offerConifg {
     position: relative;
     z-index: 2;
-    font-size: 15px;
+    font-size: 16px;
     background: #fff;
     padding: 10px 10px;
     border-radius: 12px;
   }
   .bannerShrink .offerBoxOuter .offerInner .offerLoc {
     font-size: 15px;
+  }
+  .bannerShrink .offerBoxOuter .offerInner .paymentPlanFig {
+    font-size: 18px;
   }
   .bannerShrink .offerBoxOuter .offerInner .paymentPlanFig img {
     filter: unset;
@@ -1360,7 +1603,6 @@ section {
     justify-content: center;
   }
   .Highlights .downloadBrochureOuter .dnHeroimageOuter {
-    height: 200px;
     margin-top: 20px;
   }
   .Highlights .downloadBrochureOuter .dnTextOuter {
@@ -1521,10 +1763,10 @@ section {
     display: none;
   }
   .footerPop .inner .countWhatsApp {
-    display: none;
+    display: flex;
   }
   .footerPop .inner .slide-submit {
-    display: flex;
+    display: none;
   }
   .footerPop .inner .enqtext {
     font-size: 25px;

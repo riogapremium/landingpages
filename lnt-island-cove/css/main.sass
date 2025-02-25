@@ -1,5 +1,6 @@
 $themeColor : #4d7f8a
 $secondaryColor: #fcfcfc
+// $secondaryColor: #fcfcfc
 $titleColor: #4d7f8a
 $opacity: 0.2
 $themeColorWithOpacity: rgba($themeColor, $opacity)
@@ -428,6 +429,15 @@ section
   align-items: center
   justify-content: left
 
+  .videoOuter
+    width: 100%
+    // margin-top: -60px
+    position: absolute
+
+    .videobanner
+      width: 100%
+      
+
   .bannerSlider 
     position: absolute
     top: 0
@@ -440,6 +450,9 @@ section
       width: 100%
       background-position: top
       background-size: cover
+
+      video
+        width: 100%
     .owl-item
       height: 100vh
 
@@ -453,7 +466,7 @@ section
     height: 100%
     display: flex
     align-items: center
-    background: linear-gradient(45deg, #000, transparent,transparent)
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.431372549), transparent)
     z-index: 1
 
 
@@ -521,12 +534,12 @@ section
         font-size: 18px
 
     .paymentPlanFig
-      // font-size: 30px
+      font-size: 25px
       img
         filter: brightness(50)
 
     .offerUSP
-      font-size: 20px
+      font-size: 25px
 
     .offerPaymentplan
       padding: 20px 0px
@@ -621,15 +634,40 @@ section
     border-radius: 12px
     overflow: hidden
     display: flex
-    height: 350px
-    box-shadow: 0 0 14px -10px $themeColor
+    // height: 350px
+    // box-shadow: 0 0 14px -10px $themeColor
+
+
+    .brochureImage
+      background: $themeColor
+      padding-bottom: 20px
+      margin-bottom: -8px
+      border-radius: 12px
+      overflow: hidden
+
+      .brochureimg
+        width: 100%
+        height: 100%
+
+    .secsubtitle
+      text-align: left
+
+    .enquireNowBtn
+      
+      display: inline-block
+      font-size: 17px
+      width: 100%
+      padding: 0 0 12px 0px
 
     iframe
       width: 100%
+      pointer-events: none
 
     img
       width: 100%
       // height: 380px
+
+    
 
   
   .dnTextOuter
@@ -640,6 +678,18 @@ section
     height: 100%
     justify-content: center
     text-align: justify
+
+
+    .brochureImage
+      background: #000000
+      padding-bottom: 20px
+      margin-bottom: -8px
+      border-radius: 12px
+      overflow: hidden
+
+      .brochureimg
+        width: 100%
+        height: 100%
 
     .secsubtitle
       text-align: left
@@ -748,10 +798,10 @@ section
         // color: $themeColor
 
         .configSQ
-          font-size: 18px
+          font-size: 20px
           color: #000
-          margin-top: 10px
-          margin-bottom: 10px
+          margin-top: 15px
+          margin-bottom: 15px
 
     
     .enquireNowBtn
@@ -769,7 +819,7 @@ section
       box-shadow: 0 0 14px -10px $themeColor
 
       .specialOffer
-        display: block
+        display: inline-block
         position: absolute
         top: 0
         left: 0
@@ -932,14 +982,257 @@ section
     box-shadow: 0 0 14px -10px $themeColor
 
 .virtual
-  iframe
+
+  .virtualouterpop
     width: 100%
-    height: 60vh
+    height: 50vh
     border-radius: 12px
-    box-shadow: 0 0 14px -5px #000
-    margin-top: 10px
+    overflow: hidden
+    position: relative
+      
+        
+    iframe
+      width: 100%
+      height: 100%
+
+  .virtualouter::before
+    content: 'Unlock Virtual Tour'
+    backdrop-filter: blur(5px)
+    color: #fff
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    background: rgb(0 0 0 / 40%)
+    font-size: 25px
 
 
+.videowalk
+  .bodyContent
+    overflow: hidden
+
+  .videomain
+    height: 60vh
+    iframe
+      pointer-events: none
+    .videoreplace
+      height: 100%
+      width: 100%
+      border-radius: 12px 
+      overflow: hidden
+  #sync1 
+    .item 
+      background: #0c83e7
+      // padding: 80px 0px
+      margin: 0px
+      color: #FFF
+      -webkit-border-radius: 3px
+      -moz-border-radius: 3px
+      border-radius: 3px
+      text-align: center
+      height: 55vh
+      border-radius: 12px 
+      overflow: hidden
+
+      iframe
+        width: 100%
+        height: 100%
+        pointer-events: none
+    
+    .owl-dots
+      opacity: 0
+  
+  #sync2 
+    margin-top: 20px
+    .item 
+      // background: #C9C9C9
+      // padding: 10px 0px
+      margin: 0px
+      // color: #FFF
+      -webkit-border-radius: 3px
+      -moz-border-radius: 3px
+      border-radius: 3px
+      text-align: center
+      cursor: pointer
+      display: flex
+      justify-content: center
+      h1 
+        font-size: 18px
+      
+    
+    .current .item
+      // background: #0c83e7
+
+
+    .imageVideoOuter
+      border-radius: 6px
+      overflow: hidden
+      box-shadow: 0 0 14px -10px
+
+    .videothumbouter
+      padding: 0
+      // display: flex
+      // align-items: center
+      // margin-bottom: 10px
+      .videothumbinner
+        // margin: 20px 0px
+
+      .videothumbnail
+        border-radius: 6px
+        overflow: hidden
+        box-shadow: 0 0 14px -10px
+
+    .videotextOuter
+      padding: 0
+      display: flex
+      padding: 10px
+      // margin: 0
+      .videotextInner
+        text-align: left
+        .videotitle
+          margin-top: 8px
+          font-size: 24px
+          font-weight: 600
+        
+        .videodescription
+          font-size: 18px
+    
+  
+  //arrows on first carousel
+  #sync1.owl-theme 
+    position: relative
+    .owl-next, .owl-prev 
+      width: 22px
+      height: 40px
+      margin-top: -20px
+      position: absolute
+      top: 50%
+    
+    .owl-prev 
+      left: 10px
+    
+    .owl-next 
+      right: 10px
+    
+  
+
+
+
+@media only screen and (max-width: 600px)
+
+  .videowalk
+    .videomain
+      height: 25vh
+
+    #sync1 
+      .item 
+        background: #0c83e7
+        // padding: 80px 0px
+        margin: 0px
+        color: #FFF
+        -webkit-border-radius: 3px
+        -moz-border-radius: 3px
+        border-radius: 3px
+        text-align: center
+        height: 25vh
+        border-radius: 12px 
+        overflow: hidden
+
+        iframe
+          width: 100%
+          height: 100%
+          pointer-events: none
+      
+      .owl-dots
+        opacity: 0
+    
+    #sync2 
+      margin-top: 10px
+      .item 
+        // background: #C9C9C9
+        // padding: 10px 0px
+        margin: 0px
+        // color: #FFF
+        -webkit-border-radius: 3px
+        -moz-border-radius: 3px
+        border-radius: 3px
+        text-align: center
+        cursor: pointer
+        display: flex
+        justify-content: center
+        h1 
+          font-size: 18px
+        
+      
+      .current .item
+        // background: #0c83e7
+
+
+      .imageVideoOuter
+        border-radius: 6px
+        overflow: hidden
+        box-shadow: 0 0 14px -10px
+
+      .videothumbouter
+        padding: 0
+        // display: flex
+        // align-items: center
+        // margin-bottom: 10px
+        .videothumbinner
+          // margin: 20px 0px
+
+        .videothumbnail
+          border-radius: 6px
+          overflow: hidden
+          box-shadow: 0 0 14px -10px
+
+      .videotextOuter
+        padding: 0
+        display: block
+        // margin: 0
+        .videotextInner
+          text-align: left
+          .videotitle
+            margin-top: 5px
+            font-size: 18px
+            font-weight: 600
+            text-align: left
+          
+          .videodescription
+            font-size: 12px
+            // display: none
+      
+    
+    //arrows on first carousel
+    #sync1.owl-theme 
+      position: relative
+      .owl-next, .owl-prev 
+        width: 22px
+        height: 40px
+        margin-top: -20px
+        position: absolute
+        top: 50%
+      
+      .owl-prev 
+        left: 10px
+      
+      .owl-next 
+        right: 10px
+      
+
+
+
+
+
+
+  // .bodyContent
+    
+
+    
 
 
 .Video
@@ -1407,7 +1700,7 @@ section
     text-align: center
 
     img
-      max-width: 70%
+      max-width: 80%
       height: auto
 
   .loadingicon
@@ -1469,6 +1762,8 @@ section
     box-shadow: 0 0 14px -5px #000
   .bannerShrink
     // background-image: url(../img/banner1.jpg)
+
+
     background-position: top
     background-size: cover
     background-repeat: no-repeat
@@ -1494,6 +1789,13 @@ section
         
       // to
       //   background-image: url(../img/banner2.jpg)
+
+    .videoOuter
+     
+      margin-top: -60px
+      
+
+    
 
     .bannerSlider 
       position: absolute
@@ -1527,7 +1829,7 @@ section
         width: 100%
 
         .offerUSP
-          font-size: 15px
+          font-size: 18px
         .AnimatePrice
           width: 100%
           position: relative
@@ -1537,12 +1839,12 @@ section
 
         .AnimatePrice::before
           animation-duration: 5s
-          background: conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0) 43%, $themeColor 100%)
+          // background: conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0) 43%, $themeColor 100%)
 
         .offerConifg
           position: relative
           z-index: 2
-          font-size: 15px
+          font-size: 16px
           background: #fff
           // border: 1px solid
           // margin: 10px 0px
@@ -1552,6 +1854,7 @@ section
           font-size: 15px
 
         .paymentPlanFig
+          font-size: 18px
           img
             filter: unset
           // font-size: 25px
@@ -1595,7 +1898,7 @@ section
       justify-content: center
 
       .dnHeroimageOuter
-        height: 200px
+        // height: 200px
         margin-top: 20px
 
       .dnTextOuter
@@ -1605,8 +1908,11 @@ section
 
         .enquireNowBtn
           width: 100%
+
         .dnTextInner
           text-align: justify
+
+
         .secsubtitle
           text-align: center
 
@@ -1785,9 +2091,9 @@ section
   .footerPop
     .inner
       .countWhatsApp
-        display: none
+        display: flex
       .slide-submit
-          display: flex
+          display: none
 
       .enqtext
         font-size: 25px

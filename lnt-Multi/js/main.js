@@ -539,7 +539,7 @@ setTimeout(()=>{
         var configDetails = ''
         getPrice = $(this).attr("data-price")
         priceBtn = $(this)
-        projname = ''
+        projname = 'LnT Realty'
 
         $("#typeofForm").attr("value",formtype)
 

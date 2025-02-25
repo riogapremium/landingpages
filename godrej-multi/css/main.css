@@ -511,15 +511,17 @@ section {
   right: 10px;
   color: #27262d;
   padding: 7px 17px;
-  background: rgba(255, 255, 255, 0.63);
+  background: rgba(0, 0, 0, 0.63);
   font-size: 13px;
   cursor: pointer;
   display: flex;
   align-items: center;
+  color: #fff;
 }
 .projects .bottom .bottomInner .innerProj .imgProjOuter .checkconfiguration img {
   width: 12px;
   margin-right: 7px;
+  filter: brightness(30);
 }
 .projects .bottom .bottomInner .innerProj .imgProjOuter .configPricesBody {
   position: absolute;
@@ -1692,10 +1694,10 @@ section {
     width: 100%;
   }
   .footerPop .inner .countWhatsApp {
-    display: none;
+    display: block;
   }
   .footerPop .inner .slide-submit {
-    display: flex;
+    display: none;
   }
   .footerPop .inner .enqtext {
     font-size: 25px;

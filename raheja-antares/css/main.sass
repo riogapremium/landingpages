@@ -1,7 +1,7 @@
-$themeColor : #3a2e82
-$secondaryColor: #fcfcfc
+$themeColor : #c09355
+$secondaryColor: #171717
 // $secondaryColor: #fcfcfc
-$titleColor: #9f7f3d
+$titleColor: #c09355
 $opacity: 0.2
 $themeColorWithOpacity: rgba($themeColor, $opacity)
 
@@ -10,7 +10,8 @@ $themeColorWithOpacity: rgba($themeColor, $opacity)
 html,body
   padding: 0
   margin: 0
-
+  background:#000
+  color: #fff
 
 
 
@@ -213,7 +214,7 @@ html,body
   .enquireNowBtn
     position: relative
     color: $themeColor
-    background: #fff
+    background: #000
     
     
 form
@@ -313,7 +314,7 @@ form
 
 
 header
-    background: rgba(250, 250, 252)
+    background: rgba(0, 0, 0, .8)
     // backdrop-filter: saturate(180%) blur(20px)
     position: fixed
     width: 100%
@@ -329,9 +330,10 @@ header
     .navbar-brand
       img
         height: 38px
+        // filter: brightness(50)
        
     .nav-link
-         color: #000 !important
+         color: $themeColor !important
          font-size: 12px
     .headernumber
       display: flex
@@ -363,6 +365,7 @@ header
       width: 25px
       margin-right: 10px
       height: auto
+      // filter: brightness(50)
 
 .outer
     width: 100
@@ -491,7 +494,7 @@ section
       // text-align: center
 
     #sitevisit
-      color: $themeColor
+      color: #fff
       width: unset
       display: inline-block
 
@@ -565,7 +568,7 @@ section
       .enquireNowBtn
         width: 100%
         // height: 100%
-        background: #fff
+        background: $themeColor
         color: #fff
 
    
@@ -718,6 +721,7 @@ section
       align-items: center
       background: rgb(255 255 255 / 45%)
       backdrop-filter: blur(2px)
+      color: #000
 
     .floorplanbackDrop2::before
       content: 'Request Initiated will share soon'
@@ -732,6 +736,7 @@ section
       background: rgb(255 255 255 / 45%)
       backdrop-filter: blur(2px)
       text-align: center
+      color: #000
 
 
   .item
@@ -763,7 +768,7 @@ section
 
         .configSQ
           font-size: 20px
-          color: #000
+          color: #fff
           margin-top: 15px
           margin-bottom: 15px
 
@@ -775,7 +780,7 @@ section
 
     .fpOuter
       position: relative
-      background: #ffffff
+      background: #000
       border-radius: 12px
       overflow: hidden
       padding: 20px
@@ -1181,7 +1186,7 @@ section
     transform: translate(-50%, -50%)
     // width: 25%
     // height: 50%
-    background: rgba(255, 255, 255, .8)
+    background: rgba(0, 0, 0, .8)
     backdrop-filter: saturate(180%) blur(20px)
     z-index: 21
     box-shadow: 0 0 14px -5px $themeColor
@@ -1197,6 +1202,8 @@ section
       top: 15px
       right: 15px
       width: 12px
+      img
+        filter: brightness(50)
 
     .or
         margin: 10px 0px
@@ -1213,6 +1220,8 @@ section
     .phoneEnq
       font-size: 17px
       margin-bottom: 10px
+      img
+        filter: brightness(50)
     
     .enqOffer
       // font-size: px
@@ -1298,7 +1307,7 @@ section
     
     width: 100%
     // height: 50%
-    background: rgba(255, 255, 255, .8)
+    background: rgba(0, 0, 0, .8)
     backdrop-filter: saturate(180%) blur(20px)
     z-index: 20
     box-shadow: 0 0 14px -5px $themeColor
@@ -1328,6 +1337,9 @@ section
     .phoneEnq
       font-size: 17px
       margin-bottom: 10px
+
+      img
+        filter: brightness(40)
     
     .enqOffer
       // font-size: px
@@ -1437,7 +1449,7 @@ section
   left: 0
   width: 100%
   height: 100%
-  background: rgba(250, 250, 252, .8)
+  background: rgba(0, 0, 0, .8)
   backdrop-filter: saturate(180%) blur(20px)
   z-index: 30
   justify-content: center
@@ -1572,11 +1584,11 @@ section
         text-align: center
         bottom: 0%
         transition: .6s ease-out
-        background: #fff
+        background: $secondaryColor
 
-        color: #000
+        color: #fff
         border-radius: 40px 40px 0px 0px
-        box-shadow: 0 0 14px -5px #000
+        box-shadow: 0 0 14px -5px $themeColor
         width: 100%
 
         .offerUSP
@@ -1586,7 +1598,7 @@ section
           position: relative
           margin: 10px 0px 3px 0px
           padding: 3px
-          background: $themeColorWithOpacity
+          background: $themeColor
 
         .AnimatePrice::before
           animation-duration: 5s
@@ -1596,7 +1608,7 @@ section
           position: relative
           z-index: 2
           font-size: 16px
-          background: #fff
+          background: #000
           // border: 1px solid
           // margin: 10px 0px
           padding: 10px 10px
@@ -1806,6 +1818,8 @@ section
         display: flex
         align-items: center
         justify-content: center
+        color: #000
+        background: #fff
 
         .enquireNowBtn
           font-size: 14px !important
@@ -1839,9 +1853,10 @@ section
   .footerPop
     .inner
       .countWhatsApp
-        display: none
+        display: block
       .slide-submit
-          display: flex
+          // display: flex
+          display: none
 
       .enqtext
         font-size: 25px
@@ -1857,6 +1872,7 @@ section
       width: 50px
       transform: translate(50%, 0)
       border-radius: 50px
+
 
       img
         filter: brightness(40)

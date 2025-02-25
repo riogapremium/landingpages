@@ -1,6 +1,8 @@
 html, body {
   padding: 0;
   margin: 0;
+  background: #000;
+  color: #fff;
 }
 
 .lato-regular {
@@ -194,13 +196,13 @@ html, body {
   position: relative;
   overflow: hidden;
   border-radius: 14px;
-  background: rgba(58, 46, 130, 0.2);
+  background: rgba(192, 147, 85, 0.2);
   transition: 1s linear;
 }
 .AnimatePrice .enquireNowBtn {
   position: relative;
-  color: #3a2e82;
-  background: #fff;
+  color: #c09355;
+  background: #000;
 }
 
 form {
@@ -211,7 +213,7 @@ form {
 .AnimatePrice::before {
   position: absolute;
   content: "";
-  background: conic-gradient(from 40deg at 50% 50%, rgba(255, 255, 255, 0) 43%, #3a2e82 100%);
+  background: conic-gradient(from 40deg at 50% 50%, rgba(255, 255, 255, 0) 43%, #c09355 100%);
   top: 0;
   left: 0;
   width: 100%;
@@ -285,11 +287,11 @@ form {
 }
 
 header {
-  background: rgb(250, 250, 252);
+  background: rgba(0, 0, 0, 0.8);
   position: fixed;
   width: 100%;
   z-index: 20;
-  box-shadow: 0 0 14px -5px #3a2e82;
+  box-shadow: 0 0 14px -5px #c09355;
 }
 header .inner {
   margin: auto 5%;
@@ -298,7 +300,7 @@ header .navbar-brand img {
   height: 38px;
 }
 header .nav-link {
-  color: #000 !important;
+  color: #c09355 !important;
   font-size: 12px;
 }
 header .headernumber {
@@ -316,7 +318,7 @@ header .headernumber {
 }
 
 .enquireNowBtn {
-  background: #3a2e82;
+  background: #c09355;
   text-align: center;
   color: #fff;
   border-radius: 12px;
@@ -346,7 +348,7 @@ section {
 .sectitle {
   font-size: 45px;
   text-align: center;
-  color: #9f7f3d;
+  color: #c09355;
   margin-bottom: 15px;
 }
 
@@ -438,7 +440,7 @@ section {
   left: 50px;
 }
 .bannerShrink .offerBoxOuter #sitevisit {
-  color: #3a2e82;
+  color: #fff;
   width: unset;
   display: inline-block;
 }
@@ -495,7 +497,7 @@ section {
 }
 .bannerShrink .offerBoxOuter .offerButtons .enquireNowBtn {
   width: 100%;
-  background: #fff;
+  background: #c09355;
   color: #fff;
 }
 
@@ -508,7 +510,7 @@ section {
   background-position: center;
   background-size: cover;
   color: #fff;
-  box-shadow: 0 0 14px -10px #3a2e82;
+  box-shadow: 0 0 14px -10px #c09355;
 }
 .Highlights .item::before {
   background: rgba(0, 0, 0, 0.3803921569);
@@ -527,18 +529,18 @@ section {
   text-shadow: 0 0 4px black;
 }
 .Highlights .downloadBrochureOuter {
-  background: #fcfcfc;
+  background: #171717;
   border-radius: 12px;
   padding: 30px;
   position: relative;
-  box-shadow: 0 0 14px -10px #3a2e82;
+  box-shadow: 0 0 14px -10px #c09355;
 }
 .Highlights .dnHeroimageOuter {
   border-radius: 12px;
   overflow: hidden;
   display: flex;
   height: 350px;
-  box-shadow: 0 0 14px -10px #3a2e82;
+  box-shadow: 0 0 14px -10px #c09355;
 }
 .Highlights .dnHeroimageOuter iframe {
   width: 100%;
@@ -566,7 +568,7 @@ section {
 }
 
 .Configuration {
-  background: #fcfcfc;
+  background: #171717;
 }
 .Configuration .container {
   overflow: hidden;
@@ -580,16 +582,16 @@ section {
   justify-content: space-between;
 }
 .Configuration .container .configTabButtons .configTabButtonsOuter .TabBtns {
-  border: 1px solid #3a2e82;
+  border: 1px solid #c09355;
   border-radius: 12px;
   background: #fff;
-  color: #3a2e82;
+  color: #c09355;
   padding: 10px 50px;
   margin: 10px 10px;
   cursor: pointer;
 }
 .Configuration .container .configTabButtons .configTabButtonsOuter .TabBtns-active {
-  background: #3a2e82;
+  background: #c09355;
   color: #fff;
 }
 .Configuration .bodyContent {
@@ -618,6 +620,7 @@ section {
   background: rgba(255, 255, 255, 0.45);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
+  color: #000;
 }
 .Configuration .bodyContent .floorplanbackDrop2::before {
   content: "Request Initiated will share soon";
@@ -633,6 +636,7 @@ section {
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   text-align: center;
+  color: #000;
 }
 .Configuration .item {
   overflow: hidden;
@@ -655,29 +659,29 @@ section {
 }
 .Configuration .item .floorPlanBottom .congigDetails .configSQ {
   font-size: 20px;
-  color: #000;
+  color: #fff;
   margin-top: 15px;
   margin-bottom: 15px;
 }
 .Configuration .item .enquireNowBtn {
   padding: 6px 30px;
   display: inline-block;
-  color: #3a2e82;
+  color: #c09355;
 }
 .Configuration .item .fpOuter {
   position: relative;
-  background: #ffffff;
+  background: #000;
   border-radius: 12px;
   overflow: hidden;
   padding: 20px;
-  box-shadow: 0 0 14px -10px #3a2e82;
+  box-shadow: 0 0 14px -10px #c09355;
 }
 .Configuration .item .fpOuter .specialOffer {
   display: inline-block;
   position: absolute;
   top: 0;
   left: 0;
-  background: #3a2e82;
+  background: #c09355;
   z-index: 1;
   color: #fff;
   padding: 6px 15px;
@@ -712,7 +716,7 @@ section {
   background-position: center;
   background-size: cover;
   color: #fff;
-  box-shadow: 0 0 14px -10px #3a2e82;
+  box-shadow: 0 0 14px -10px #c09355;
 }
 .Aminities .item::before {
   background: rgba(0, 0, 0, 0.3);
@@ -728,7 +732,7 @@ section {
     height: 170px;
     padding: 20px;
     border-radius: 12px;
-    background: #fcfcfc;
+    background: #171717;
     color: #000;
   }
 }
@@ -740,11 +744,11 @@ section {
   text-shadow: 0 0 4px black;
 }
 .Aminities .downloadBrochureOuter {
-  background: #fcfcfc;
+  background: #171717;
   border-radius: 12px;
   padding: 30px;
   position: relative;
-  box-shadow: 0 0 14px -10px #3a2e82;
+  box-shadow: 0 0 14px -10px #c09355;
 }
 .Aminities .wideImg {
   display: block;
@@ -755,7 +759,7 @@ section {
   align-items: center;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 0 14px -10px #3a2e82;
+  box-shadow: 0 0 14px -10px #c09355;
 }
 .Aminities .wideImg .AmiName {
   display: inline-block;
@@ -781,7 +785,7 @@ section {
   display: block;
   height: 100px;
   overflow: hidden;
-  box-shadow: 0 0 14px -10px #3a2e82;
+  box-shadow: 0 0 14px -10px #c09355;
 }
 .Aminities .imgBtn img {
   width: 100%;
@@ -797,7 +801,7 @@ section {
 }
 
 .Gallery {
-  background: #fcfcfc;
+  background: #171717;
 }
 .Gallery .owl-stage-outer {
   overflow: unset;
@@ -805,7 +809,7 @@ section {
 .Gallery .item {
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 0 14px -10px #3a2e82;
+  box-shadow: 0 0 14px -10px #c09355;
 }
 
 .virtual .virtualouterpop {
@@ -894,7 +898,7 @@ section {
 }
 .Location .bodyContent .expandConnect {
   position: relative;
-  background: #fcfcfc;
+  background: #171717;
   padding: 0px;
   overflow: hidden;
   width: 100%;
@@ -928,7 +932,7 @@ section {
 .Location .bodyContent .locTabsOuter {
   background: #ffffff;
   padding: 20px;
-  box-shadow: 0 0 14px -10px #3a2e82;
+  box-shadow: 0 0 14px -10px #c09355;
 }
 .Location .bodyContent .locTabsOuter .locIcon {
   padding-bottom: 20px;
@@ -943,7 +947,7 @@ section {
 .Location .bodyContent .locTabsOuter .locItems {
   justify-content: space-between;
   display: flex;
-  color: #3a2e82;
+  color: #c09355;
   padding-top: 10;
   border-top: 2px solid rgba(125, 125, 125, 0.937254902);
   font-size: 15px;
@@ -961,7 +965,7 @@ section {
 
 .About {
   padding-bottom: 80px;
-  background: #fcfcfc;
+  background: #171717;
 }
 .About .bodyContent {
   text-align: center;
@@ -1006,11 +1010,11 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.8);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
           backdrop-filter: saturate(180%) blur(20px);
   z-index: 21;
-  box-shadow: 0 0 14px -5px #3a2e82;
+  box-shadow: 0 0 14px -5px #c09355;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1023,6 +1027,9 @@ section {
   right: 15px;
   width: 12px;
 }
+.footerPop .closeform img {
+  filter: brightness(50);
+}
 .footerPop .or {
   margin: 10px 0px;
 }
@@ -1031,13 +1038,16 @@ section {
   text-decoration: none;
 }
 .footerPop .enqtext {
-  color: #3a2e82;
+  color: #c09355;
   margin-bottom: 10px;
   font-size: 30px;
 }
 .footerPop .phoneEnq {
   font-size: 17px;
   margin-bottom: 10px;
+}
+.footerPop .phoneEnq img {
+  filter: brightness(50);
 }
 .footerPop .enqOffer {
   margin-bottom: 10px;
@@ -1112,11 +1122,11 @@ section {
   bottom: 0%;
   left: 0%;
   width: 100%;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.8);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
           backdrop-filter: saturate(180%) blur(20px);
   z-index: 20;
-  box-shadow: 0 0 14px -5px #3a2e82;
+  box-shadow: 0 0 14px -5px #c09355;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1132,7 +1142,7 @@ section {
   text-decoration: none;
 }
 .footerSticky .enqtext {
-  color: #3a2e82;
+  color: #c09355;
   font-size: 18px;
   display: flex;
   /* width: 130px */
@@ -1144,6 +1154,9 @@ section {
 .footerSticky .phoneEnq {
   font-size: 17px;
   margin-bottom: 10px;
+}
+.footerSticky .phoneEnq img {
+  filter: brightness(40);
 }
 .footerSticky .enqOffer {
   margin-bottom: 20px;
@@ -1230,7 +1243,7 @@ section {
 
 .zoomIn:hover {
   transform: scale(1.02) !important;
-  box-shadow: 0 0 14px -5px #3a2e82 !important;
+  box-shadow: 0 0 14px -5px #c09355 !important;
 }
 
 .loadingImg {
@@ -1240,7 +1253,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(250, 250, 252, 0.8);
+  background: rgba(0, 0, 0, 0.8);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
           backdrop-filter: saturate(180%) blur(20px);
   z-index: 30;
@@ -1341,10 +1354,10 @@ section {
     text-align: center;
     bottom: 0%;
     transition: 0.6s ease-out;
-    background: #fff;
-    color: #000;
+    background: #171717;
+    color: #fff;
     border-radius: 40px 40px 0px 0px;
-    box-shadow: 0 0 14px -5px #000;
+    box-shadow: 0 0 14px -5px #c09355;
     width: 100%;
   }
   .bannerShrink .offerBoxOuter .offerInner .offerUSP {
@@ -1355,7 +1368,7 @@ section {
     position: relative;
     margin: 10px 0px 3px 0px;
     padding: 3px;
-    background: rgba(58, 46, 130, 0.2);
+    background: #c09355;
   }
   .bannerShrink .offerBoxOuter .offerInner .AnimatePrice::before {
     animation-duration: 5s;
@@ -1364,7 +1377,7 @@ section {
     position: relative;
     z-index: 2;
     font-size: 16px;
-    background: #fff;
+    background: #000;
     padding: 10px 10px;
     border-radius: 12px;
   }
@@ -1383,7 +1396,7 @@ section {
     justify-content: center;
   }
   .bannerShrink .offerBoxOuter .offerInner .offerButtons #sitevisit {
-    background: #3a2e82;
+    background: #c09355;
     color: #fff;
     width: 100%;
   }
@@ -1438,10 +1451,10 @@ section {
     display: block;
   }
   .Configuration .container .configTabButtons .configTabButtonsOuter .TabBtns {
-    border: 1px solid #3a2e82;
+    border: 1px solid #c09355;
     border-radius: 12px;
     background: #fff;
-    color: #3a2e82;
+    color: #c09355;
     cursor: pointer;
     padding: 10px 20px;
     margin: 10px 2px;
@@ -1449,7 +1462,7 @@ section {
     display: inline-block;
   }
   .Configuration .container .configTabButtons .configTabButtonsOuter .TabBtns-active {
-    background: #3a2e82;
+    background: #c09355;
     color: #fff;
   }
   .Configuration .container .bottom .bodyContent .hideConfig {
@@ -1459,7 +1472,7 @@ section {
     width: 100%;
   }
   .Configuration .container .bottom .AnimatePrice::before {
-    background: conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0) 43%, #3a2e82 100%);
+    background: conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0) 43%, #c09355 100%);
     transform: scale(20);
   }
   .Aminities .col-md-8 {
@@ -1488,17 +1501,17 @@ section {
     overflow: hidden;
   }
   .Location .bodyContent .locMobile .accordion-button:not(.collapsed) {
-    background-color: rgba(58, 46, 130, 0.2);
+    background-color: rgba(192, 147, 85, 0.2);
   }
   .Location .bodyContent .locMobile button:hover, .Location .bodyContent .locMobile button:focus, .Location .bodyContent .locMobile .button:hover, .Location .bodyContent .locMobile .button:focus {
-    background-color: rgba(58, 46, 130, 0.2);
+    background-color: rgba(192, 147, 85, 0.2);
     color: #000;
   }
   .Location .bodyContent .locMobile .accordion-button:focus {
     box-shadow: unset;
   }
   .Location .bodyContent .locMobile .accordion-button:focus {
-    border-color: #3a2e82;
+    border-color: #c09355;
   }
   .Location .bodyContent .locMobile .accordion-button:not(.collapsed)::after {
     filter: brightness(0);
@@ -1540,6 +1553,8 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #000;
+    background: #fff;
   }
   .footerSticky .mobileFooter .mobFooterPhone .enquireNowBtn, .footerSticky .mobileFooter .mobFooterWhatsapp .enquireNowBtn {
     font-size: 14px !important;
@@ -1568,10 +1583,10 @@ section {
     display: none;
   }
   .footerPop .inner .countWhatsApp {
-    display: none;
+    display: block;
   }
   .footerPop .inner .slide-submit {
-    display: flex;
+    display: none;
   }
   .footerPop .inner .enqtext {
     font-size: 25px;
@@ -1615,7 +1630,7 @@ section {
   position: fixed;
   top: 20%;
   right: 0px;
-  background: #3a2e82;
+  background: #c09355;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   color: #fff;

@@ -2,16 +2,13 @@
 
 $(document).ready(function() {
 
-
-
     $.getJSON("https://api.ipify.org/?format=json", function(e) {
         // alert(e.ip);
         $("#ipaddress").attr("value",e.ip)
     });
-
-
-     // Custom Toggle Function Start
-     (function($) {
+   
+    // Custom Toggle Function Start
+    (function($) {
         $.fn.clickToggle = function(func1, func2) {
             var funcs = [func1, func2];
             this.data('toggleclicked', 0);
@@ -27,6 +24,15 @@ $(document).ready(function() {
     // Custom Toggle Function Start
 
 
+    setTimeout(function(){
+        // alert();
+        $("#videotest")[0].src += "&autoplay=1&mute=1";
+        // ev.preventDefault();
+    },8000)
+    
+
+
+     
 
 // Form Submit Operations
     var queryString = window.location.search;
@@ -51,8 +57,9 @@ $(document).ready(function() {
 
     if(typeofDataForm == "Check Price" || typeofDataForm == "View Floor Plan" || typeofDataForm == "Download Plans"){
         $(".loadMessage").html("Unveiling latest Plans & Prices just for you<br>Please wait")
+        // $(".loadMessage").html("Request Initiated<br>Will Share Soon")
     }else if(typeofDataForm == "Download Brochure"){
-        $(".loadMessage").html("Request Initiated")
+        // $(".loadMessage").html("Request Initiated")
         $(".loadMessage").html("Brochure has been downloaded")
 
     }else if(typeofDataForm == "Schedule a Site Visit" || typeofDataForm == "Enquire Now"){
@@ -66,21 +73,45 @@ $(document).ready(function() {
         $("#aboutDB").attr("href",null)
         $("#aboutDB").attr("download",null)
 
-        $("#aboutDB button").html("Brochure Will Be Shared Soon")
+        // $("#aboutDB button").html("Download Brochure")
         // $(".dnBroBtnOuter .formPopTrigger").removeClass("formPopTrigger")
 
         // $(".floorplanImg").removeClass("floorplanbackDrop")
-        $(".floorplanImg").removeClass("formPopTrigger")
+        $(".dnHeroimageOuter").removeClass("formPopTrigger")
+        $(".dnHeroimageOuter iframe").css("pointer-events","unset")
 
-        // Floor Plan Visible
+
+        // Walkthrough
         $(".floorplanbackDrop").addClass("zoomImg")
         $(".floorplanbackDrop").removeClass("floorplanbackDrop")
 
+
+        
+        // Floor Plan Visible
+        // $(".floorplanbackDrop").addClass("zoomImg")
+        // $(".floorplanbackDrop").removeClass("floorplanbackDrop")
+
+        $(".floorplanbackDrop").each(function(){
+            if($(this).attr("data-configDetails") == "Boutique Office"  ){
+                $(this).addClass("floorplanbackDrop2")
+                $(this).removeClass("floorplanbackDrop")
+                $(this).addClass("zoomImg")
+            }else{
+                 
+                $(this).addClass("zoomImg")
+                $(this).removeClass("floorplanbackDrop")
+            }
+        });
+        // if(  == "")
 
         // Floorplan still hidden
         // $(".floorplanbackDrop").addClass("floorplanbackDrop2")
         // $(".floorplanbackDrop2").removeClass("floorplanbackDrop")
         // $(".floorplanImg").addClass("zoomImg")
+
+         //Virtual 360
+         $(".virtualouter").removeClass("formPopTrigger");
+         $(".virtualouter").removeClass("virtualouter");
 
 
         $(".floorPlanBottom .formPopTrigger").removeClass("formPopTrigger")
@@ -93,7 +124,8 @@ $(document).ready(function() {
         $(".Highlights iframe").css("pointer-events","unset !important")
 
         setTimeout(()=>{
-            $(".loadingImg").css("top","100%");
+            $(".loadingImg").fadeOut();
+            // $(".loadingImg").css("top","100%");
         },3000)
         // alert(tirgplan[tirgplan.length -1])
 
@@ -118,7 +150,8 @@ $(document).ready(function() {
         // $(".loadingImg").css("display","none")
 
         setTimeout(()=>{
-            $(".loadingImg").css("top","-100%");
+            $(".loadingImg").fadeOut();
+            // $(".loadingImg").css("top","-100%");
         },800)
 
         $("#aboutDB").attr("href",null)
@@ -251,7 +284,7 @@ $(document).ready(function() {
             // });
 
 
-            if ($("#About").offset().top - $(window).scrollTop() < (winHeight)) {
+            if ($("#Aminities").offset().top - $(window).scrollTop() < (winHeight)) {
                 // alert()
                 
                 if(about == 0){
@@ -275,7 +308,6 @@ $(document).ready(function() {
 
     
     })
-
 
 
 
@@ -436,6 +468,40 @@ setTimeout(()=>{
 // Pop Up Close Code
 
 
+
+
+// Video Thumbnail
+
+var addresstype;
+var videoaddress;
+var videodatasubmitted = 0
+$(".videothumbnail2").click(function(){
+
+    videoaddress = $(this).attr("data-address")
+    addresstype = $(this).attr("data-addresstype")
+
+    if(videodatasubmitted == 0){
+       
+        $("#videoreplace").attr("src",videoaddress)
+        $(".videomain").trigger("click")
+    }
+    else if(videodatasubmitted == 1){
+        $("#videoreplace").attr("src",videoaddress)
+        if(addresstype == "youtube")
+            {
+                $("#videoreplace")[0].src += "&autoplay=1&mute=1";
+            }
+            
+        // $(".videomain").trigger("click")
+        
+    }
+    // alert();
+   
+})
+
+// Video Thumbnail Close
+
+
     var flag = 0; 
     var sitevisite = 0;
 
@@ -506,6 +572,17 @@ setTimeout(()=>{
         if(formtypeData == "View Floor Plan")
             formtype = "View Floor Plan"
 
+        if(formtypeData == "Download Brochure")
+            formtype = "Download Brochure"
+
+
+        
+        if(formtypeData == "Play Video")
+            formtype = "Play Video"
+
+         if(formtypeData == "Unlock Virtual Tour")
+            formtype = "Unlock Virtual Tour"
+
         if(formtypeData == "Check Price" || formtypeData == "View Floor Plan" ){
             configDetails = $(this).attr("data-configdetails")
             plantrigger = $(this).attr("data-redirect")
@@ -533,6 +610,8 @@ setTimeout(()=>{
             // $(".lineswipe").css("left","100%")
             setTimeout(()=>{
                 $(".slide-submit button").css("left","0px")
+
+
                 
                 setTimeout(()=>{
                     
@@ -547,30 +626,7 @@ setTimeout(()=>{
     })
 
 
-    // $("#submitBtn").click(function(){
-    //     $(".popupBack").fadeOut();
-    //     $(".GalleryPopup").css("transform", "translate(-50%, -50%) scale(0)")
-    //     if(flag=1){
-    //         $("footer").removeClass()
-    //         $("footer").addClass("footerSticky");
-    //         $('footer').hide()
-    //         $('footer').fadeIn();
 
-    //         var formtype = "Enquire Now"
-    //         $("#typeofForm").attr("value",formtype)
-    //         $(".enqtext").html(formtype)
-    //         if(formtype == "Enquire Now")
-    //             formtype = "Get Instant Call Back"
-            
-    //         $("#submitBtn").html(formtype)
-    //         flag=0;
-
-    //         $("#sitevisitform").hide()
-    //     }
-    //     $(".slide-submit button").css("transition","all 400ms ease-out")
-    //     $(".mobileFooter").show()
-
-    // })
 
     
 // For Mobile Devices
@@ -627,19 +683,21 @@ form.addEventListener('submit', (e) => {
     let data = new FormData(form);
     // console.log(data)
     
-    
+    console.log("timer 0");
     fetch('https://script.google.com/macros/s/AKfycbyZZh85c6V3-6wVcYRk2kuTNt2GOd_DZ_5NqlGco-zljNwTZnHIH7pPEV8DWkfnITYIRA/exec', {
         method: "POST",
-        body: data
+        body: data,
+        
         
     })
+
     .then(res => res.text())
     .then(responseText => {
 
         // console.log("First response:", responseText);
         // Handle the response from the first fetch (optional)
         
-        
+        console.log("timer 1");
         // Now make a second fetch request to your PHP script to send the email
         let emailData = new FormData();
         emailData.append('name', form.name.value); 
@@ -654,7 +712,7 @@ form.addEventListener('submit', (e) => {
         emailData.append('utm_campaign', form.utm_campaign.value || ''); 
         emailData.append('utm_term', form.utm_term.value || ''); 
         emailData.append('project_name', form.project_name.value); 
-        console.log("timer 1");
+        console.log("timer 2");
         return fetch('sendmail.php', { // Replace with your PHP email script
             method: 'POST',
             body: emailData
@@ -667,12 +725,12 @@ form.addEventListener('submit', (e) => {
         // console.log("Email response:", emailResponse);
         // Handle the response from the email sending
         if(formtypeData == "Download Brochure"){
-            // $("#dbbtn .dbbtn").trigger("click")
+            $("#dbbtn .dbbtn").trigger("click")
         }
         $("#submitBtn").html("Submitted");
         $("#submitBtn").css("pointer-events","unset");
         // Optionally redirect after successful email send
-        if($(location).attr("href") == "https://island-cove-mahim.com")
+        if($(location).attr("href") == "https://purvaclermont-chembur.com/")
         {
             variques = "?"
         }
@@ -681,14 +739,42 @@ form.addEventListener('submit', (e) => {
         }
 
 
+        if(form.type.value == "Play Video"){
+            // alert();
+            $(".closeform").trigger("click")
+            
+
+            // if(addresstype == "nonyoutube")
+
+            // setTimeout(function(){
+            //     // alert();
+               
+            //     // ev.preventDefault();
+            // },8000)
+            if(addresstype == "youtube")
+            {
+                $("#videoreplace")[0].src += "&autoplay=1&mute=1";
+            }
+            $(".videomain").removeClass("formPopTrigger")
+            $("#videoreplace").css("pointer-events","unset")
+
+            videodatasubmitted = 1
+            
+
+
+        }else{
+            window.location.href = "https://island-cove-mahim.com?showData=true&type=" + formtypeData + "&plan=" + plantrigger;
+        }
+
         
-        window.location.href = "https://island-cove-mahim.com?showData=true&type=" + formtypeData + "&plan=" + plantrigger;
+        
     })
     .catch(error => {
         console.error('Error:', error);
         $("#submitBtn").html("Error, try again.");
     });
 });
+
 
 
 

@@ -2,6 +2,10 @@
 
 $(document).ready(function() {
 
+    $.getJSON("https://api.ipify.org/?format=json", function(e) {
+        // alert(e.ip);
+        $("#ipaddress").attr("value",e.ip)
+    });
 
 // Form Submit Operations
     var queryString = window.location.search;
@@ -51,6 +55,10 @@ $(document).ready(function() {
         // Floor Plan Visible
         // $(".floorplanbackDrop").addClass("zoomImg")
         // $(".floorplanbackDrop").removeClass("floorplanbackDrop")
+
+
+        $(".dnHeroimageOuter").removeClass("formPopTrigger")
+        $(".dnHeroimageOuter iframe").css("pointer-events","unset")
 
         $(".floorplanbackDrop").each(function(){
             if($(this).attr("data-configDetails") == "2 BHK" || $(this).attr("data-configDetails") == "3 BHK Large"  || $(this).attr("data-configDetails") == "3 BHK Compact" ){
@@ -103,6 +111,8 @@ $(document).ready(function() {
 
 
     }else{
+
+        $(".dnHeroimageOuter iframe").css("pointer-events","none")
 
         // $(".loadingImg").css("display","none")
 
@@ -463,6 +473,10 @@ setTimeout(()=>{
         
         if(formtypeData == "View Floor Plan")
             formtype = "View Floor Plan"
+
+        
+        if(formtypeData == "Play Video")
+            formtype = "Play Video"
 
         if(formtypeData == "Check Price" || formtypeData == "View Floor Plan" ){
             configDetails = $(this).attr("data-configdetails")

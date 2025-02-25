@@ -139,13 +139,13 @@ $(document).ready(function() {
 
         
         
-        // setTimeout(()=>{
-        //     if(popupopen == 0){
-        //         $(".usps").css("display","flex")
-        //         $("#popload").trigger("click");
-        //     }
+        setTimeout(()=>{
+            if(popupopen == 0){
+                // $(".usps").css("display","flex")
+                $("#popload").trigger("click");
+            }
             
-        // },30000)
+        },30000)
     }
 
 

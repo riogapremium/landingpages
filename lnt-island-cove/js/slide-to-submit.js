@@ -6,7 +6,7 @@
 	if (($(this).parent().width()/2) < ($(this).position().left + 100)) {
 	
 		// window.open(
-		// 	'https://api.whatsapp.com/send?phone=+917400167057&amp;text=I’m interested in the DLF Bhandup project. Please send brochure and price details.',
+		// 	'https://api.whatsapp.com/send?phone=+918291947281&amp;text=I’m interested in the DLF Bhandup project. Please send brochure and price details.',
 		// 	'_blank' // <- This is what makes it open in a new window.
 		//   );
 			// alert();
