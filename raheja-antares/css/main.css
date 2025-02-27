@@ -1078,6 +1078,9 @@ section {
 .footerPop .inner .phoneNumber {
   display: flex;
 }
+.footerPop .inner input {
+  color: #fff;
+}
 .footerPop .inner input, .footerPop .inner select {
   background: unset;
   border: none;
@@ -1097,9 +1100,9 @@ section {
   margin-bottom: 16px;
 }
 .footerPop .inner .form-control:focus, .footerPop .inner input[type=tel]:focus {
-  color: #000;
+  color: #fff;
   background-color: unset;
-  border-color: #000;
+  border-color: #fff;
   outline: 0;
   box-shadow: unset;
 }
@@ -1131,11 +1134,17 @@ section {
   align-items: center;
   justify-content: center;
 }
+.footerSticky input {
+  color: #fff;
+}
 .footerSticky .closeform {
   display: none;
 }
 .footerSticky .mobileFooter {
   display: none;
+}
+.footerSticky .mobileFooter input {
+  color: #fff;
 }
 .footerSticky a {
   color: unset;
@@ -1211,9 +1220,9 @@ section {
   top: -2px;
 }
 .footerSticky .inner .form-control:focus, .footerSticky .inner input[type=tel]:focus {
-  color: #000;
+  color: #fff;
   background-color: unset;
-  border-color: #000;
+  border-color: #fff;
   outline: 0;
   box-shadow: unset;
 }

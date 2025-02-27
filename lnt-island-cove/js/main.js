@@ -24,11 +24,11 @@ $(document).ready(function() {
     // Custom Toggle Function Start
 
 
-    setTimeout(function(){
-        // alert();
-        $("#videotest")[0].src += "&autoplay=1&mute=1";
-        // ev.preventDefault();
-    },8000)
+    // setTimeout(function(){
+    //     // alert();
+    //     $("#videotest")[0].src += "&autoplay=1&mute=1";
+    //     // ev.preventDefault();
+    // },8000)
     
 
 
@@ -472,7 +472,7 @@ setTimeout(()=>{
 
 // Video Thumbnail
 
-var addresstype;
+var addresstype = "youtube";
 var videoaddress;
 var videodatasubmitted = 0
 $(".videothumbnail2").click(function(){
@@ -760,6 +760,7 @@ form.addEventListener('submit', (e) => {
 
             videodatasubmitted = 1
             
+            gtag_report_conversion();
 
 
         }else{

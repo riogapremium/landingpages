@@ -133,7 +133,7 @@ curl_setopt_array($curl2, [
                     "medium" => $medium,
                     "term" => $term,
                     "source" => $source,
-                    "campaign" => $campaign
+                    "campaign" => $campaign,
                 ]
             ]
         ],

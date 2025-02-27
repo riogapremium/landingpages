@@ -2378,6 +2378,37 @@ gtag('config', 'AW-16806772673');
         <div class="privacy"><a href="privacy_policy.html" target="_blank">Privacy Policy And Terms And Conditions</a>
         </div>
 
+        <!-- Load Google reCAPTCHA v2 -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+        <script>
+            function verifyRecaptcha(event) {
+                event.preventDefault(); // Prevent immediate navigation
+                grecaptcha.execute();
+            }
+
+            function onRecaptchaSuccess() {
+                console.log("reCAPTCHA verified! Redirecting...");
+                window.location.href = "privacy_policy.html"; // Redirect on success
+            }
+
+            function onRecaptchaError() {
+                console.error("reCAPTCHA failed. Please try again.");
+                alert("Verification failed. Please try again.");
+            }
+        </script>
+
+        <!--<a href="#" id="privacyPolicyLink" onclick="verifyRecaptcha()">Privacy Policy</a>-->
+
+        <!-- Invisible reCAPTCHA -->
+        <div class="g-recaptcha"
+            data-sitekey="6Ler2-AqAAAAAAySNy_eIXRmtJRBD3Ce-Ytv89B4"
+            data-callback="onRecaptchaSuccess"
+            data-expired-callback="onRecaptchaError"
+            data-error-callback="onRecaptchaError"
+            data-size="invisible">
+        </div> 
+
 
       </div>
     </div>
