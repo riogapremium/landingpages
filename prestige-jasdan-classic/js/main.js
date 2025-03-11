@@ -609,6 +609,7 @@ form.addEventListener('submit', (e) => {
         emailData.append('utm_campaign', form.utm_campaign.value || ''); 
         emailData.append('utm_term', form.utm_term.value || ''); 
         emailData.append('project_name', form.project_name.value); 
+        
         console.log("timer 2");
         return fetch('sendmail.php', { // Replace with your PHP email script
             method: 'POST',

@@ -482,7 +482,7 @@ setTimeout(()=>{
 
 // Video Thumbnail
 
-var addresstype = "youtube";
+var addresstype = "nonyoutube";
 var videoaddress;
 var videodatasubmitted = 0
 $(".videothumbnail2").click(function(){
@@ -588,8 +588,8 @@ $(".videothumbnail2").click(function(){
 
 
         
-        if(formtypeData == "Play Video")
-            formtype = "Play Video"
+        if(formtypeData == "Unlock Virtual Tour")
+            formtype = "Unlock Virtual Tour"
 
          if(formtypeData == "Unlock Virtual Tour")
             formtype = "Unlock Virtual Tour"
@@ -750,7 +750,7 @@ form.addEventListener('submit', (e) => {
         }
 
 
-        if(form.type.value == "Play Video"){
+        if(form.type.value == "Unlock Virtual Tour"){
             // alert();
             $(".closeform").trigger("click")
             

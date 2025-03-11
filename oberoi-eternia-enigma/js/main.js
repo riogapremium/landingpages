@@ -3,6 +3,12 @@
 $(document).ready(function() {
 
 
+        $.getJSON("https://api.ipify.org/?format=json", function(e) {
+                // alert(e.ip);
+                $("#ipaddress").attr("value",e.ip)
+            });
+        
+
 // Form Submit Operations
     var queryString = window.location.search;
     // alert(queryString);

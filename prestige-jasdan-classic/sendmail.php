@@ -21,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $link = "bit.ly/G-skyt";
     $website = "https://prestiges-mahalaxmi.com/";
     $salesnumber = "919004555066";
+    
 
     $ProjectName = htmlspecialchars($_POST['project_name'] ?? '');
     $namenew = htmlspecialchars($_POST['name'] ?? '');

@@ -41,6 +41,9 @@ $(document).ready(function() {
         $(".dnBroBtnOuter .formPopTrigger").removeClass("formPopTrigger")
 
 
+        $(".dnHeroimageOuter").removeClass("formPopTrigger")
+        $(".dnHeroimageOuter iframe").css("pointer-events","unset")
+
         // Floor plans
 
         $(".floorplanImg").removeClass("floorplanbackDrop")
@@ -86,6 +89,7 @@ $(document).ready(function() {
 
     }else{
 
+        $(".dnHeroimageOuter iframe").css("pointer-events","none")
         // $(".loadingImg").css("display","none")
 
         setTimeout(()=>{
@@ -95,11 +99,11 @@ $(document).ready(function() {
         $("#aboutDB").attr("href",null)
         $("#aboutDB").attr("download",null)
 
-        setTimeout(()=>{
-            if(popupopen == 0){
-                $("#popload").trigger("click");
-            }
-        },1000)
+        // setTimeout(()=>{
+        //     if(popupopen == 0){
+        //         $("#popload").trigger("click");
+        //     }
+        // },1000)
 
         
         
@@ -422,6 +426,12 @@ setTimeout(()=>{
     
 
 
+    $(".seemore").click(function(){
+        $(this).css("display","none")
+        $(".seemorecontent").css("display","block")
+    });
+
+
     var getPrice = ''
     var formtypeData 
     var plantrigger = ''
@@ -452,6 +462,9 @@ setTimeout(()=>{
         
         if(formtypeData == "View Floor Plan")
             formtype = "View Floor Plan"
+
+        if(formtypeData == "Play Video")
+            formtype = "Play Video"
 
         if(formtypeData == "Check Price" || formtypeData == "View Floor Plan" ){
             configDetails = $(this).attr("data-configdetails")
