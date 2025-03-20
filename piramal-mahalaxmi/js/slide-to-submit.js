@@ -13,7 +13,7 @@
 		//   $('#whatsappClick button').trigger('click');
 		//   $('.whatsappClickClass').trigger('click');
 		
-		location.href = "https://api.whatsapp.com/send/?phone=%2B919004555066&text=I%27m+interested+in+Piramal+Mahalaxmi,+South+Mumbai+Project.+Please+send+brochure+and+price+details.&type=phone_number&app_absent=0";
+		location.href = "https://api.whatsapp.com/send/?phone=%2B917400499203&text=I%27m+interested+in+Piramal+Mahalaxmi,+South+Mumbai+Project.+Please+send+brochure+and+price+details.&type=phone_number&app_absent=0";
 	
 	  $(this).next().css({ "margin-left": 0}).text("Launching WhatsApp")
 	$(this).draggable('false');

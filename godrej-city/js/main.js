@@ -2,6 +2,11 @@
 
 $(document).ready(function() {
 
+    $.getJSON("https://api.ipify.org/?format=json", function(e) {
+        // alert(e.ip);
+        $("#ipaddress").attr("value",e.ip)
+    });
+        
 
 // Form Submit Operations
     var queryString = window.location.search;
@@ -581,7 +586,7 @@ form.addEventListener('submit', (e) => {
     // console.log(data)
     
     
-    fetch('https://script.google.com/macros/s/AKfycbxSdQjmsuyYvYX_rpRLwlMnmZ_kk3vwj_Og_bz_8BFDvPcghGdR7_AACrVsNQAXh6JXlA/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbyZZh85c6V3-6wVcYRk2kuTNt2GOd_DZ_5NqlGco-zljNwTZnHIH7pPEV8DWkfnITYIRA/exec', {
         method: "POST",
         body: data
         
@@ -592,6 +597,11 @@ form.addEventListener('submit', (e) => {
         // console.log("First response:", responseText);
         // Handle the response from the first fetch (optional)
         
+        let link = 'bit.ly/G-city';
+        let website = 'https://godrejs--panvel.com/';
+        let salesnumber = '917400466339';
+        let salesemail = 'pawank@riogapremium.com';
+        let salesname = 'Pawan K';
         
         // Now make a second fetch request to your PHP script to send the email
         let emailData = new FormData();
@@ -606,8 +616,19 @@ form.addEventListener('submit', (e) => {
         emailData.append('utm_medium', form.utm_medium.value || ''); 
         emailData.append('utm_campaign', form.utm_campaign.value || ''); 
         emailData.append('utm_term', form.utm_term.value || ''); 
+        emailData.append('project_name', form.project_name.value); 
+
+        emailData.append('sales_name', salesname); 
+        emailData.append('sales_email', salesemail); 
+        emailData.append('salenumber', salesnumber); 
+        emailData.append('website', website); 
+        emailData.append('bitly', link); 
+
+
+
+
         console.log("timer 1");
-        return fetch('sendmail.php', { // Replace with your PHP email script
+        return fetch('https://riogapremium.in/server/sendmail.php', { // Replace with your PHP email script
             method: 'POST',
             body: emailData
         });
@@ -625,17 +646,17 @@ form.addEventListener('submit', (e) => {
         $("#submitBtn").css("pointer-events","unset");
 
         // Optionally redirect after successful email send
-        if($(location).attr("href") == "https://godrejs--panvel.com")
-        {
-            variques = "&"
-        }
-        else{
-            variques = "?"
-        }
+        // if($(location).attr("href") == "https://godrejs--panvel.com")
+        // {
+        //     variques = "&"
+        // }
+        // else{
+        //     variques = "?"
+        // }
 
 
         
-        window.location.href = $(location).attr("href") + variques +"showData=true&type=" + formtypeData + "&plan=" + plantrigger;
+        window.location.href = "https://godrejs--panvel.com?showData=true&type=" + formtypeData + "&plan=" + plantrigger;
     })
     .catch(error => {
         console.error('Error:', error);

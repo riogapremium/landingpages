@@ -1581,11 +1581,11 @@ section
       background: unset
       align-items: flex-end
       justify-content: center
-      align-items: center
-      background: #0000008a
+      align-items: end
+      // background: #0000008a
 
       .mobBannerInner
-        display: block
+        display: none
 
         .offerButtons
           display: flex
@@ -1660,12 +1660,12 @@ section
         text-align: center
         bottom: 0%
         transition: .6s ease-out
-        display: none
-        // background: #fff
+        display: block
+        background: #fff
 
-        color: #fff
-        // border-radius: 40px 40px 0px 0px
-        // box-shadow: 0 0 14px -5px #000
+        color: #000
+        border-radius: 40px 40px 0px 0px
+        box-shadow: 0 0 14px -5px #000
         width: 100%
 
         .offerUSP
@@ -1679,16 +1679,16 @@ section
 
         .AnimatePrice::before
           animation-duration: 5s
-          // background: conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0) 43%, $themeColor 100%)
+          background: conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0) 43%, $themeColor 100%)
 
         .offerConifg
           position: relative
           z-index: 2
-          font-size: 15px
-          color: #fff
-          // background: #fff
-          // border: 1px solid
-          // margin: 10px 0px
+          font-size: 18px
+          color: #000
+          background: #fff
+          border: 2px solid #00000066
+          margin: 10px 0px
           padding: 10px 10px
           border-radius: 12px
 
@@ -1699,7 +1699,7 @@ section
 
         .paymentPlanFig
           img
-            filter: brightness(40px)
+            filter: brightness(0) !important
           // font-size: 25px
 
 
@@ -1710,7 +1710,7 @@ section
 
        
           #sitevisit
-            background: unset
+            background: $themeColor
             border: 1px solid #fff
             color: #fff
             width: 100%

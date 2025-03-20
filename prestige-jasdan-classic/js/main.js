@@ -45,7 +45,7 @@ $(document).ready(function() {
         
         $("#aboutDB").attr("href",null)
         $("#aboutDB").attr("download",null)
-        $(".dnHeroimageOuter2").removeClass(".dnHeroimageOuter2");
+        $(".dnHeroimageOuter2").removeClass("dnHeroimageOuter2");
 
         $("#aboutDB button").html("Brochure Will Be Shared Soon")
         // $(".dnBroBtnOuter .formPopTrigger").removeClass("formPopTrigger")
@@ -54,6 +54,7 @@ $(document).ready(function() {
         $(".floorplanImg").removeClass("formPopTrigger")
 
         $("#virtual .bodyContent").removeClass("formPopTrigger")
+        $("#virtual .bodyContent").removeClass("newvirtual")
         $("#virtual .bodyContent iframe").css("pointer-events","unset")
 
         // Floor Plan Visible

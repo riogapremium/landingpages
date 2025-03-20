@@ -99,27 +99,33 @@ $(document).ready(function() {
         $("#aboutDB").attr("href",null)
         $("#aboutDB").attr("download",null)
 
-        // setTimeout(()=>{
-        //     if(popupopen == 0){
-        //         $("#popload").trigger("click");
-        //     }
-        // },1000)
+        setTimeout(()=>{
+            if(popupopen == 0){
+                $(".usps").css("display","flex")
+                $("#popload").trigger("click");
+            }
+        },1000)
 
         
         
-        // setTimeout(()=>{
-        //     if(popupopen == 0){
-        //         $(".usps").css("display","flex")
-        //         $("#popload").trigger("click");
-        //     }
+        setTimeout(()=>{
+            if(popupopen == 0){
+                $(".usps").css("display","flex")
+                $("#popload").trigger("click");
+            }
             
-        // },30000)
+        },30000)
     }
 
 
 
 
+// See More
 
+$("#seemore").click(function(){
+    $("#hideAbout").show()
+    $(this).hide()
+});
 
 
 

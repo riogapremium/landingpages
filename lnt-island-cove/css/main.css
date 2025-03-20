@@ -495,8 +495,11 @@ section {
 }
 .bannerShrink .offerBoxOuter .offerButtons .enquireNowBtn {
   width: 100%;
-  background: #fff;
+  background: linear-gradient(195deg, #53d161, #23b73c);
   color: #fff;
+}
+.bannerShrink .offerBoxOuter .offerButtons .slide-submit {
+  display: none;
 }
 
 .Highlights .item {
@@ -1577,6 +1580,15 @@ section {
     padding-top: 10px;
     display: flex;
     justify-content: center;
+  }
+  .bannerShrink .offerBoxOuter .offerInner .offerButtons .countWhatsApp {
+    display: none;
+  }
+  .bannerShrink .offerBoxOuter .offerInner .offerButtons .slide-submit {
+    display: flex;
+  }
+  .bannerShrink .offerBoxOuter .offerInner .offerButtons .enquireNowBtn {
+    width: 100%;
   }
   .bannerShrink .offerBoxOuter .offerInner .offerButtons #sitevisit {
     background: #4d7f8a;

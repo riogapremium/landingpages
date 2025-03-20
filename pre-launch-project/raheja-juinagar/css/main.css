@@ -295,7 +295,7 @@ header .inner {
   margin: auto 5%;
 }
 header .navbar-brand img {
-  height: 30px;
+  height: 40px;
 }
 header .nav-link {
   color: #000 !important;
@@ -482,8 +482,11 @@ section {
 }
 .bannerShrink .offerBoxOuter .offerButtons .enquireNowBtn {
   width: 100%;
-  background: #fff;
+  background: #2ab93f;
   color: #fff;
+}
+.bannerShrink .offerBoxOuter .offerButtons .slide-submit {
+  display: none;
 }
 
 .Highlights .item {
@@ -541,6 +544,13 @@ section {
   height: 100%;
   justify-content: center;
   text-align: justify;
+}
+.Highlights .dnTextOuter #seemore {
+  color: blue;
+  cursor: pointer;
+}
+.Highlights .dnTextOuter #hideAbout {
+  display: none;
 }
 .Highlights .dnTextOuter .secsubtitle {
   text-align: left;
@@ -1334,6 +1344,15 @@ section {
     padding-top: 10px;
     display: flex;
     justify-content: center;
+  }
+  .bannerShrink .offerBoxOuter .offerInner .offerButtons .countWhatsApp {
+    display: none;
+  }
+  .bannerShrink .offerBoxOuter .offerInner .offerButtons .slide-submit {
+    display: flex;
+  }
+  .bannerShrink .offerBoxOuter .offerInner .offerButtons .enquireNowBtn {
+    width: 100%;
   }
   .bannerShrink .offerBoxOuter .offerInner .offerButtons #sitevisit {
     background: #284b8c;

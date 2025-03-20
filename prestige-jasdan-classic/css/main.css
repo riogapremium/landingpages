@@ -1349,11 +1349,10 @@ section {
     background: unset;
     align-items: flex-end;
     justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.5411764706);
+    align-items: end;
   }
   .bannerShrink .offerBoxOuter .mobBannerInner {
-    display: block;
+    display: none;
   }
   .bannerShrink .offerBoxOuter .mobBannerInner .offerButtons {
     display: flex;
@@ -1439,8 +1438,11 @@ section {
     text-align: center;
     bottom: 0%;
     transition: 0.6s ease-out;
-    display: none;
-    color: #fff;
+    display: block;
+    background: #fff;
+    color: #000;
+    border-radius: 40px 40px 0px 0px;
+    box-shadow: 0 0 14px -5px #000;
     width: 100%;
   }
   .bannerShrink .offerBoxOuter .offerInner .offerUSP {
@@ -1455,12 +1457,16 @@ section {
   }
   .bannerShrink .offerBoxOuter .offerInner .AnimatePrice::before {
     animation-duration: 5s;
+    background: conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0) 43%, #b7986c 100%);
   }
   .bannerShrink .offerBoxOuter .offerInner .offerConifg {
     position: relative;
     z-index: 2;
-    font-size: 15px;
-    color: #fff;
+    font-size: 18px;
+    color: #000;
+    background: #fff;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    margin: 10px 0px;
     padding: 10px 10px;
     border-radius: 12px;
   }
@@ -1468,7 +1474,7 @@ section {
     font-size: 15px;
   }
   .bannerShrink .offerBoxOuter .offerInner .paymentPlanFig img {
-    filter: brightness(40px);
+    filter: brightness(0) !important;
   }
   .bannerShrink .offerBoxOuter .offerInner .offerButtons {
     padding-top: 10px;
@@ -1476,7 +1482,7 @@ section {
     justify-content: center;
   }
   .bannerShrink .offerBoxOuter .offerInner .offerButtons #sitevisit {
-    background: unset;
+    background: #b7986c;
     border: 1px solid #fff;
     color: #fff;
     width: 100%;

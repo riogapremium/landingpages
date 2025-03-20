@@ -13,7 +13,7 @@
 		//   $('#whatsappClick button').trigger('click');
 		//   $('.whatsappClickClass').trigger('click');
 		
-		location.href = "https://api.whatsapp.com/send?phone=+919004555066&text=I%27m%20interested%20in%20Prestige%20Jasdan%20Classic%20Project+at+Mahalaxmi.%20Please%20send%20brochure%20and%20Price%20details.";
+		location.href = "https://api.whatsapp.com/send?phone=+917400499203&text=I%27m%20interested%20in%20Prestige%20Jasdan%20Classic%20Project+at+Mahalaxmi.%20Please%20send%20brochure%20and%20Price%20details.";
 	
 	  $(this).next().css({ "margin-left": 0}).text("Launching WhatsApp")
 	$(this).draggable('false');
