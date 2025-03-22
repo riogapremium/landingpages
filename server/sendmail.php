@@ -273,6 +273,8 @@ foreach ($errors as $error) {
 
 // Salesforce Integration
 
+$location = $received_on = '';
+
 function salesforce_integration($flat_type, $ProjectName, $fullname, $email_id, $country_code, $mobile, $form_type, $site_date, $campaign, $utm_source, $utm_medium, $utm_campaign, $location, $received_on) {
     
 

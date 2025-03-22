@@ -630,11 +630,11 @@ form.addEventListener('submit', (e) => {
         // Handle the response from the first fetch (optional)
 
 
-        let link = 'bit.ly/R-7mhlxm';
+        let link = 'bit.ly/R-7mahalxmi';
         let website = 'https://runwal-mahalaxmi.com/';
-        let salesnumber = '918291947281';
-        let salesemail = 'faisalg@riogapremium.com';
-        let salesname = 'Faisal G';
+        let salesnumber = '917400499203';
+        let salesemail = 'abhisheks@riogapremium.com';
+        let salesname = 'Abhishek S';
 
         
         console.log("timer 1");
