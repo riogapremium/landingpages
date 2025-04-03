@@ -2,7 +2,12 @@
 
 $(document).ready(function() {
 
+    $.getJSON("https://api.ipify.org/?format=json", function(e) {
+                // alert(e.ip);
+                $("#ipaddress").attr("value",e.ip)
+            });
 
+        
 // Form Submit Operations
     var queryString = window.location.search;
 
@@ -578,6 +583,17 @@ form.addEventListener('submit', (e) => {
         
         
         // Now make a second fetch request to your PHP script to send the email
+
+        let link = 'bit.ly/OGC-Thne';
+        let website = 'https://thane-garden-city.com/';
+        let salesnumber = '919867160002';
+        let salesemail = 'aasims@riogapremium.com';
+        let salesname = 'Aasim S';
+
+        let secondarysalesname = "";
+        let secondarysalesemail = "";
+
+
         let emailData = new FormData();
         emailData.append('name', form.name.value); 
         emailData.append('email', form.email.value);
@@ -591,8 +607,17 @@ form.addEventListener('submit', (e) => {
         emailData.append('utm_campaign', form.utm_campaign.value || ''); 
         emailData.append('utm_term', form.utm_term.value || ''); 
         emailData.append('project_name', form.project_name.value); 
+
+        emailData.append('sales_name', salesname); 
+        emailData.append('sales_email', salesemail); 
+        emailData.append('salenumber', salesnumber); 
+        emailData.append('website', website); 
+        emailData.append('bitly', link); 
+        emailData.append('secondarysales_name', secondarysalesname); 
+        emailData.append('secondarysales_email', secondarysalesemail);
+
         console.log("timer 1");
-        return fetch('sendmail.php', { // Replace with your PHP email script
+        return fetch('https://riogapremium.in/server/sendmail.php', { // Replace with your PHP email script
             method: 'POST',
             body: emailData
         });
@@ -611,13 +636,13 @@ form.addEventListener('submit', (e) => {
         $("#submitBtn").css("pointer-events","unset");
 
         // Optionally redirect after successful email send
-        if($(location).attr("href") == "https://thane-garden-city.com/")
-        {
-            variques = "?"
-        }
-        else{
-            variques = "&"
-        }
+        // if($(location).attr("href") == "https://thane-garden-city.com/")
+        // {
+        //     variques = "?"
+        // }
+        // else{
+        //     variques = "&"
+        // }
 
 
         

@@ -568,7 +568,7 @@ form.addEventListener('submit', (e) => {
     // console.log(data)
     
     
-    fetch('https://script.google.com/macros/s/AKfycbz-ouy_BZlXQkgpDPQgvzt8jLPkC2g1f0lTUz3Axu-eC1on6SyAjUBtpjblVadJ7kZhCQ/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbyZZh85c6V3-6wVcYRk2kuTNt2GOd_DZ_5NqlGco-zljNwTZnHIH7pPEV8DWkfnITYIRA/exec', {
         method: "POST",
         body: data
         
@@ -578,6 +578,16 @@ form.addEventListener('submit', (e) => {
 
         // console.log("First response:", responseText);
         // Handle the response from the first fetch (optional)
+
+
+        let link = 'bit.ly/rstmj-chm';
+        let website = 'https://rustomjee-chembur.com/';
+        let salesnumber = '917738055388';
+        let salesemail = 'kokilat@riogapremium.com';
+        let salesname = 'Kokila T';
+
+        let secondarysalesname = "";
+        let secondarysalesemail = "";
         
         
         // Now make a second fetch request to your PHP script to send the email
@@ -592,10 +602,21 @@ form.addEventListener('submit', (e) => {
         emailData.append('utm_source', form.utm_source.value || ''); 
         emailData.append('utm_medium', form.utm_medium.value || ''); 
         emailData.append('utm_campaign', form.utm_campaign.value || ''); 
-        emailData.append('utm_term', form.utm_term.value || ''); 
+        emailData.append('utm_term', form.utm_term.value || '');    
+        emailData.append('project_name', form.project_name.value);
+
+        emailData.append('sales_name', salesname); 
+        emailData.append('sales_email', salesemail); 
+        emailData.append('salenumber', salesnumber); 
+        emailData.append('website', website); 
+        emailData.append('bitly', link); 
+        emailData.append('secondarysales_name', secondarysalesname); 
+        emailData.append('secondarysales_email', secondarysalesemail);
+
+
     
         console.log("timer 1");
-        return fetch('sendmail.php', { // Replace with your PHP email script
+        return fetch('https://riogapremium.in/server/sendmail.php', { // Replace with your PHP email script
             method: 'POST',
             body: emailData
         });

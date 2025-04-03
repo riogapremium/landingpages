@@ -13,7 +13,7 @@
 		//   $('#whatsappClick button').trigger('click');
 		//   $('.whatsappClickClass').trigger('click');
 		https://wa.me/+919765277792?text=I'm%20interested%20in%20your%20car%20for%20sale
-		location.href = "https://wa.me/+919930077799?text=I’m+interested+to+know+about+LnT+Realty+projects.+Please+send+brochure+and+price+details.";
+		location.href = "https://api.whatsapp.com/send/?phone=%2B9136244741&text=I%E2%80%99m+interested+to+know+about+LnT+Realty+Projects.+Please+send+the+details.&type=phone_number&app_absent=0";
 	
 	  $(this).next().css({ "margin-left": 0}).text("Launching WhatsApp")
 	$(this).draggable('false');

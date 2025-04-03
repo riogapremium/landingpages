@@ -427,6 +427,13 @@ section {
   color: #fff;
   left: 50px;
 }
+.bannerShrink .offerBoxOuter .offerInner .slide-submit {
+  display: none;
+}
+.bannerShrink .offerBoxOuter .offerInner a {
+  display: block;
+  text-decoration: none;
+}
 .bannerShrink .offerBoxOuter #sitevisit {
   color: #a78655;
   width: unset;
@@ -462,7 +469,7 @@ section {
   filter: brightness(40);
 }
 .bannerShrink .offerBoxOuter .offerUSP {
-  font-size: 20px;
+  font-size: 25px;
 }
 .bannerShrink .offerBoxOuter .offerPaymentplan {
   padding: 20px 0px;
@@ -550,6 +557,25 @@ section {
   display: inline-block;
   font-size: 17px;
   width: 100%;
+}
+.Highlights .dnTextOuter .seemore {
+  color: blue;
+}
+.Highlights .dnTextOuter .seemorecontent {
+  display: none;
+}
+
+.infrastructure .infraouter {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 15px;
+}
+.infrastructure .infraouter .infraimg {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 .videos {
@@ -1333,8 +1359,15 @@ section {
     box-shadow: 0 0 14px -5px #000;
     width: 100%;
   }
+  .bannerShrink .offerBoxOuter .offerInner .slide-submit {
+    display: block;
+  }
+  .bannerShrink .offerBoxOuter .offerInner a {
+    display: none;
+    text-decoration: none;
+  }
   .bannerShrink .offerBoxOuter .offerInner .offerUSP {
-    font-size: 15px;
+    font-size: 18px;
   }
   .bannerShrink .offerBoxOuter .offerInner .AnimatePrice {
     width: 100%;
@@ -1350,7 +1383,7 @@ section {
   .bannerShrink .offerBoxOuter .offerInner .offerConifg {
     position: relative;
     z-index: 2;
-    font-size: 15px;
+    font-size: 18px;
     background: #fff;
     padding: 10px 10px;
     border-radius: 12px;

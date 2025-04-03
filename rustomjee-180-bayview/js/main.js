@@ -576,6 +576,12 @@ form.addEventListener('submit', (e) => {
 
         // console.log("First response:", responseText);
         // Handle the response from the first fetch (optional)
+        let link = 'bit.ly/180b-view';
+        let website = 'https://180-bayview-matunga.com/';
+        let salesnumber = '91704500640';
+        let salesemail = 'melroyp@riogapremium.com';
+        let salesname = 'Melroy P';
+
         
         console.log("timer 1");
         // Now make a second fetch request to your PHP script to send the email
@@ -592,8 +598,17 @@ form.addEventListener('submit', (e) => {
         emailData.append('utm_campaign', form.utm_campaign.value || ''); 
         emailData.append('utm_term', form.utm_term.value || ''); 
         emailData.append('project_name', form.project_name.value); 
+
+
+        emailData.append('sales_name', salesname); 
+        emailData.append('sales_email', salesemail); 
+        emailData.append('salenumber', salesnumber); 
+        emailData.append('website', website); 
+        emailData.append('bitly', link); 
+
+
         console.log("timer 2");
-        return fetch('sendmail.php', { // Replace with your PHP email script
+        return fetch('https://riogapremium.in/server/sendmail.php', { // Replace with your PHP email script
             method: 'POST',
             body: emailData
         });

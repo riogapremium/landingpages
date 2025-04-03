@@ -628,8 +628,22 @@ form.addEventListener('submit', (e) => {
 
         // console.log("First response:", responseText);
         // Handle the response from the first fetch (optional)
+
+
         
         console.log("timer 1");
+
+
+        let link = 'bit.ly/R-crown';
+        let website = 'https://rustomjee-crown-prabhadevi.in/';
+        let salesnumber = '917400002191';
+        let salesemail = 'rayeesm@riogapremium.com';
+        let salesname = 'Rayees M';
+
+        let secondarysalesname = "";
+        let secondarysalesemail = "";
+
+
         // Now make a second fetch request to your PHP script to send the email
         let emailData = new FormData();
         emailData.append('name', form.name.value); 
@@ -644,8 +658,17 @@ form.addEventListener('submit', (e) => {
         emailData.append('utm_campaign', form.utm_campaign.value || ''); 
         emailData.append('utm_term', form.utm_term.value || ''); 
         emailData.append('project_name', form.project_name.value); 
+
+        emailData.append('sales_name', salesname); 
+        emailData.append('sales_email', salesemail); 
+        emailData.append('salenumber', salesnumber); 
+        emailData.append('website', website); 
+        emailData.append('bitly', link); 
+        emailData.append('secondarysales_name', secondarysalesname); 
+        emailData.append('secondarysales_email', secondarysalesemail);
+
         console.log("timer 2");
-        return fetch('sendmail.php', { // Replace with your PHP email script
+        return fetch('https://riogapremium.in/server/sendmail.php', { // Replace with your PHP email script
             method: 'POST',
             body: emailData
         });

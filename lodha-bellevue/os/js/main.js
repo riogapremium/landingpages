@@ -2,6 +2,10 @@
 
 $(document).ready(function() {
 
+    $.getJSON("https://api.ipify.org/?format=json", function(e) {
+        // alert(e.ip);
+        $("#ipaddress").attr("value",e.ip)
+        });
 
 // Form Submit Operations
     var queryString = window.location.search;
@@ -571,6 +575,17 @@ form.addEventListener('submit', (e) => {
         // Handle the response from the first fetch (optional)
         
         
+       
+	let link = 'bit.ly/L-bllvue';
+    let website = 'https://bellevue-mahalaxmi.co/os/';
+    let salesnumber = '919136041127';
+    let salesemail = 'mohita@riogapremium.com';
+    let salesname = 'Mohit A';
+
+    let secondarysalesname = "Sunil U";
+    let secondarysalesemail = "sunilu@riogapremium.com";
+        
+        
         // Now make a second fetch request to your PHP script to send the email
         let emailData = new FormData();
         emailData.append('name', form.name.value); 
@@ -585,8 +600,17 @@ form.addEventListener('submit', (e) => {
         emailData.append('utm_campaign', form.utm_campaign.value || ''); 
         emailData.append('utm_term', form.utm_term.value || ''); 
         emailData.append('project_name', form.project_name.value); 
+
+
+        emailData.append('sales_name', salesname); 
+        emailData.append('sales_email', salesemail); 
+        emailData.append('salenumber', salesnumber); 
+        emailData.append('website', website); 
+        emailData.append('bitly', link); 
+        emailData.append('secondarysales_name', secondarysalesname); 
+        emailData.append('secondarysales_email', secondarysalesemail);
         console.log("timer 1");
-        return fetch('sendmail.php', { // Replace with your PHP email script
+        return fetch('https://riogapremium.in/server/sendmail.php', { // Replace with your PHP email script
             method: 'POST',
             body: emailData
         });

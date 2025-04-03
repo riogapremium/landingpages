@@ -6,14 +6,14 @@
 	if (($(this).parent().width()/2) < ($(this).position().left + 100)) {
 	
 		// window.open(
-		// 	'https://api.whatsapp.com/send?phone=+917506525717&amp;text=I’m interested in the DLF Bhandup project. Please send brochure and price details.',
+		// 	'https://api.whatsapp.com/send?phone=+917400433597&amp;text=I’m interested in the DLF Bhandup project. Please send brochure and price details.',
 		// 	'_blank' // <- This is what makes it open in a new window.
 		//   );
 			// alert();
 		//   $('#whatsappClick button').trigger('click');
 		//   $('.whatsappClickClass').trigger('click');
 		
-		location.href = "https://api.whatsapp.com/send?phone=+917506525717&text=I%27m%20interested%20in+New+Launch+Project+at+Juinagar.+Please%20send%20offers%20and%20price%20details";
+		location.href = "https://api.whatsapp.com/send?phone=+917400433597&text=I%27m%20interested%20in+New+Launch+Project+at+Juinagar.+Please%20send%20offers%20and%20price%20details";
 	
 	  $(this).next().css({ "margin-left": 0}).text("Launching WhatsApp")
 	$(this).draggable('false');

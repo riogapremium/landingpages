@@ -564,8 +564,11 @@ section
       .enquireNowBtn
         width: 100%
         // height: 100%
-        background: #fff
+        background: linear-gradient(195deg, #53d161, #23b73c)
         color: #fff
+
+      .slide-submit
+        display: none
 
    
 
@@ -628,6 +631,20 @@ section
     position: relative
     box-shadow: 0 0 14px -10px $themeColor
 
+  .dnHeroimageOuter2::before
+    content: 'Unlock Virtual Tour'
+    backdrop-filter: blur(5px)
+    color: #fff
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    background: rgb(0 0 0 / 40%)
+    font-size: 25px
 
   .dnHeroimageOuter
     border-radius: 12px
@@ -638,6 +655,10 @@ section
 
     iframe
       width: 100%
+      pointer-events: none
+
+   
+
 
     img
       width: 100%
@@ -963,8 +984,8 @@ section
       pointer-events: none
 
   .virtualouter::before
-    content: 'Unlock Virtual Tour'
-    backdrop-filter: blur(5px)
+    content: ''
+    // backdrop-filter: blur(5px)
     color: #fff
     position: absolute
     width: 100%
@@ -974,7 +995,7 @@ section
     display: flex
     align-items: center
     justify-content: center
-    background: rgb(0 0 0 / 40%)
+    // background: rgb(0 0 0 / 40%)
     font-size: 25px
 
 
@@ -1612,6 +1633,15 @@ section
           padding-top: 10px
           display: flex
           justify-content: center
+
+          .countWhatsApp
+            display: none
+
+          .slide-submit
+            display: flex
+
+          .enquireNowBtn
+            width: 100%
 
        
           #sitevisit
