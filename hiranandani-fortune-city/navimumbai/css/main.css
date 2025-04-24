@@ -390,6 +390,13 @@ section {
   align-items: center;
   justify-content: left;
 }
+.bannerShrink .videoOuter {
+  width: 100%;
+  position: absolute;
+}
+.bannerShrink .videoOuter .videobanner {
+  width: 100%;
+}
 .bannerShrink .bannerSlider {
   position: absolute;
   top: 0;

@@ -65,6 +65,9 @@ $(document).ready(function() {
 
         $(".dnBroBtnOuter .formPopTrigger").removeClass("formPopTrigger")
 
+        $(".backgallery").removeClass("formPopTrigger");
+        $(".backgallery").removeClass("backgallery");
+
 
         // Floor plans
 
@@ -744,11 +747,11 @@ form.addEventListener('submit', (e) => {
         // Handle the response from the first fetch (optional)
         
 
-        let link = 'bit.ly/Rstmj-BKC';
+        let link = 'bit.ly/R-BKC';
         let website = 'https://rustomjee-bkc.co/';
-        let salesnumber = '917400167057';
-        let salesemail = 'rajeshp@riogapremium.com';
-        let salesname = 'Rajesh P';
+        let salesnumber = '917045006401';
+        let salesemail = 'melroyp@riogapremium.com';
+        let salesname = 'Melroy P';
 
         let secondarysalesname = "";
         let secondarysalesemail = "";
@@ -795,7 +798,7 @@ form.addEventListener('submit', (e) => {
         $("#submitBtn").html("Submitted");
         $("#submitBtn").css("pointer-events","unset");
         // Optionally redirect after successful email send
-        if($(location).attr("href") == "https://godrej-homes-mumbai.com")
+        if($(location).attr("href") == "https://rustomjee-bkc.co")
         {
             variques = "?"
         }
@@ -805,7 +808,7 @@ form.addEventListener('submit', (e) => {
 
 
         
-        window.location.href = "https://godrej-homes-mumbai.com?showData=true&type=" + formtypeData + "&plan=" + plantrigger;
+        window.location.href = "https://rustomjee-bkc.co?showData=true&type=" + formtypeData + "&plan=" + plantrigger;
     })
     .catch(error => {
         console.error('Error:', error);

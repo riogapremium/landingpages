@@ -407,6 +407,14 @@ section {
 .bannerShrink .bannerSlider .owl-item {
   height: 100vh;
 }
+.bannerShrink .videoOuter {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.bannerShrink .videoOuter .videobanner {
+  width: 100%;
+}
 .bannerShrink .offerBoxOuter {
   osition: relative;
   width: 100%;

@@ -2,6 +2,11 @@
 
 $(document).ready(function() {
 
+    $.getJSON("https://api.ipify.org/?format=json", function(e) {
+        // alert(e.ip);
+        $("#ipaddress").attr("value",e.ip)
+        });
+
 
 // Form Submit Operations
     var queryString = window.location.search;
@@ -40,6 +45,9 @@ $(document).ready(function() {
 
         $(".dnBroBtnOuter .formPopTrigger").removeClass("formPopTrigger")
 
+
+        $(".dnHeroimageOuter").removeClass("formPopTrigger")
+        $(".dnHeroimageOuter iframe").css("pointer-events","unset")
 
         // Floor plans
 
@@ -86,6 +94,7 @@ $(document).ready(function() {
 
     }else{
 
+        $(".dnHeroimageOuter iframe").css("pointer-events","none")
         // $(".loadingImg").css("display","none")
 
         setTimeout(()=>{
@@ -95,11 +104,11 @@ $(document).ready(function() {
         $("#aboutDB").attr("href",null)
         $("#aboutDB").attr("download",null)
 
-        setTimeout(()=>{
-            if(popupopen == 0){
-                $("#popload").trigger("click");
-            }
-        },1000)
+        // setTimeout(()=>{
+        //     if(popupopen == 0){
+        //         $("#popload").trigger("click");
+        //     }
+        // },1000)
 
         
         
@@ -422,6 +431,12 @@ setTimeout(()=>{
     
 
 
+    $(".seemore").click(function(){
+        $(this).css("display","none")
+        $(".seemorecontent").css("display","block")
+    });
+
+
     var getPrice = ''
     var formtypeData 
     var plantrigger = ''
@@ -452,6 +467,9 @@ setTimeout(()=>{
         
         if(formtypeData == "View Floor Plan")
             formtype = "View Floor Plan"
+
+        if(formtypeData == "Play Video")
+            formtype = "Play Video"
 
         if(formtypeData == "Check Price" || formtypeData == "View Floor Plan" ){
             configDetails = $(this).attr("data-configdetails")
@@ -583,7 +601,7 @@ form.addEventListener('submit', (e) => {
     
     fetch('https://script.google.com/macros/s/AKfycbyZZh85c6V3-6wVcYRk2kuTNt2GOd_DZ_5NqlGco-zljNwTZnHIH7pPEV8DWkfnITYIRA/exec', {
         method: "POST",
-        body: data
+        body: data,
         
     })
     .then(res => res.text())
@@ -591,8 +609,18 @@ form.addEventListener('submit', (e) => {
 
         // console.log("First response:", responseText);
         // Handle the response from the first fetch (optional)
+
+
+        let link = 'bit.ly/HFC-pnvll';
+        let website = 'https://panvel-fortunecity.com/nri';
+        let salesnumber = '917700992646';
+        let salesemail = 'prachij@riogapremium.com';
+        let salesname = 'Prachi J';
+
+        let secondarysalesname = "";
+        let secondarysalesemail = "";
         
-        
+        console.log("timer 1");
         // Now make a second fetch request to your PHP script to send the email
         let emailData = new FormData();
         emailData.append('name', form.name.value); 
@@ -602,14 +630,24 @@ form.addEventListener('submit', (e) => {
         emailData.append('type', form.type.value); 
         emailData.append('config', form.config.value || '');
         emailData.append('date', form.date.value || ''); 
-        emailData.append('project_name', form.project_name.value || ''); 
         emailData.append('utm_source', form.utm_source.value || ''); 
         emailData.append('utm_medium', form.utm_medium.value || ''); 
         emailData.append('utm_campaign', form.utm_campaign.value || ''); 
         emailData.append('utm_term', form.utm_term.value || ''); 
+        emailData.append('project_name', form.project_name.value); 
+
+
+        emailData.append('sales_name', salesname); 
+        emailData.append('sales_email', salesemail); 
+        emailData.append('salenumber', salesnumber); 
+        emailData.append('website', website); 
+        emailData.append('bitly', link); 
+        emailData.append('secondarysales_name', secondarysalesname); 
+        emailData.append('secondarysales_email', secondarysalesemail);
         
-        console.log("timer 1");
-        return fetch('sendmail.php', { // Replace with your PHP email script
+
+        console.log("timer 2");
+        return fetch('https://riogapremium.in/server/sendmail.php', { // Replace with your PHP email script
             method: 'POST',
             body: emailData
         });
@@ -627,13 +665,13 @@ form.addEventListener('submit', (e) => {
         $("#submitBtn").css("pointer-events","unset");
 
         // Optionally redirect after successful email send
-        if($(location).attr("href") == "https://panvel-fortunecity.com/nri/")
-        {
-            variques = "?"
-        }
-        else{
-            variques = "&"
-        }
+        // if($(location).attr("href") == "https://panvel-fortunecity.com/")
+        // {
+        //     variques = "?"
+        // }
+        // else{
+        //     variques = "&"
+        // }
 
 
         

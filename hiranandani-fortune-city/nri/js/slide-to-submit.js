@@ -1,4 +1,4 @@
-	 // SLide to whatsapp
+ // SLide to whatsapp
 
  $(".slide-submit button").draggable({cancel: false, containment: "parent", axis: "x", stop: function() {
 	console.log($(this).parent().width())
@@ -13,7 +13,7 @@
 		//   $('#whatsappClick button').trigger('click');
 		//   $('.whatsappClickClass').trigger('click');
 		https://wa.me/+919765277792?text=I'm%20interested%20in%20your%20car%20for%20sale
-		location.href = "https://api.whatsapp.com/send/?phone=%2B917700992646&text=I%E2%80%99m+interested+in+Hiranandani+Fortune+City+project.+Please+send+brochure+and+price+details.&type=phone_number&app_absent=0";
+		location.href = "https://wa.me/+917700992646?text=I’m+interested+in+Hiranandani+Fortune+City+project.+Please+send+brochure+and+price+details.";
 	
 	  $(this).next().css({ "margin-left": 0}).text("Launching WhatsApp")
 	$(this).draggable('false');

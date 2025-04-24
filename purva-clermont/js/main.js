@@ -138,11 +138,11 @@ $(document).ready(function() {
         $("#aboutDB").attr("href",null)
         $("#aboutDB").attr("download",null)
 
-        // setTimeout(()=>{
-        //     if(popupopen == 0){
-        //         $("#popload").trigger("click");
-        //     }
-        // },1000)
+        setInterval(()=>{
+            if(popupopen == 0){
+                $("#popload").trigger("click");
+            }
+        },15000)
 
         
         
@@ -660,7 +660,7 @@ form.addEventListener('submit', (e) => {
         // Now make a second fetch request to your PHP script to send the email
         let emailData = new FormData();
         emailData.append('name', form.name.value); 
-        emailData.append('email', form.email.value);
+        emailData.append('email', form.email.value || 'blank@riogapremium.com');
         emailData.append('country', $(".iti__a11y-text").html());
         emailData.append('phone', form.phone.value);
         emailData.append('type', form.type.value); 

@@ -62,6 +62,10 @@ $(document).ready(function() {
         // $(".floorplanImg").addClass("zoomImg")
 
 
+        //Virtual 360
+        $(".virtualouter").removeClass("formPopTrigger");
+        $(".virtualouter").removeClass("virtualouter");
+
         $(".floorPlanBottom .formPopTrigger").removeClass("formPopTrigger")
         $(".actual_price").each(function(){
             $(this).html($(this).attr("data-checkprice"))
@@ -493,6 +497,13 @@ setTimeout(()=>{
         
         if(formtypeData == "View Floor Plan")
             formtype = "View Floor Plan"
+
+
+        if(formtypeData == "Unlock Virtual Tour")
+            formtype = "Unlock Virtual Tour"
+
+        
+
 
         if(formtypeData == "Check Price" || formtypeData == "View Floor Plan" ){
             configDetails = $(this).attr("data-configdetails")

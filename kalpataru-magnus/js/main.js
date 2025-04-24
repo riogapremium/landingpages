@@ -596,8 +596,8 @@ form.addEventListener('submit', (e) => {
         let salesemail = 'melroyp@riogapremium.com';
         let salesname = 'Melroy P';
 
-        let secondarysalesname = "sunilu@riogapremium.com";
-        let secondarysalesemail = "Sunil U";
+        let secondarysalesname = "Sunil U";
+        let secondarysalesemail = "sunilu@riogapremium.com";
 
         console.log("timer 1");
         // Now make a second fetch request to your PHP script to send the email

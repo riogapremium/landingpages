@@ -13,7 +13,7 @@
 		//   $('#whatsappClick button').trigger('click');
 		//   $('.whatsappClickClass').trigger('click');
 		https://wa.me/+919765277792?text=I'm%20interested%20in%20your%20car%20for%20sale
-		location.href = "https://api.whatsapp.com/send/?phone=%2B917400167057&text=Hi,+I%E2%80%99m+interested+to+know+about+Rustomjee+BKC+Projects.+Please+send+more+details.";
+		location.href = "https://api.whatsapp.com/send/?phone=%2B917045006401&text=Hi,+I%E2%80%99m+interested+to+know+about+Rustomjee+BKC+Projects.+Please+send+more+details.";
 	
 	  $(this).next().css({ "margin-left": 0}).text("Launching WhatsApp")
 	$(this).draggable('false');

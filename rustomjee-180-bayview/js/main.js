@@ -114,13 +114,13 @@ $(document).ready(function() {
 
         
         
-        // setTimeout(()=>{
-        //     if(popupopen == 0){
-        //         $(".usps").css("display","flex")
-        //         $("#popload").trigger("click");
-        //     }
+        setTimeout(()=>{
+            if(popupopen == 0){
+                // $(".usps").css("display","flex")
+                $("#popload").trigger("click");
+            }
             
-        // },30000)
+        },30000)
     }
 
 
@@ -455,6 +455,9 @@ setTimeout(()=>{
         
         if(formtypeData == "View Floor Plan")
             formtype = "View Floor Plan"
+
+        if(formtypeData == "Play Video")
+            formtype = "Play Video"
 
         if(formtypeData == "Offer"){
             formtype = "Get Offer Details"
